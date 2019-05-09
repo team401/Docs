@@ -6,7 +6,7 @@ nav_order: 1
 
 # GrabCAD
 
-Team 401 uses GrabCAD for all of our CAD storage and sharing. This lets us do version control, file locking, online previews, and maintain a library of COTS parts.
+GrabCAD is " a free cloud-based collaboration environment that helps engineering teams manage, view and share CAD files." Team 401 uses GrabCAD for all of our CAD storage and publishing. GrabCAD lets us do version control, file locking, online previews, and maintain a library of COTS parts.
 
 ## Procedure for joining the Team 401 GrabCAD:
 1. Sign up for GrabCAD at this address: [https://grabcad.com/profile/register](https://grabcad.com/profile/register). Make sure you write down exactly the email address you use, you'll need it for step 3.
