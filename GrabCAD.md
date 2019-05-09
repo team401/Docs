@@ -6,6 +6,8 @@ Team 401 uses GrabCAD for all of our CAD storage and sharing. This lets us do ve
 3. Request that a team leader add you to the team on GrabCAD. Follow up on this if they don't. Make sure they get your email address exactly correct, GrabCAD is picky.
 4. After being added to projects if you don't see the expected list of projects in the desktop app, you may have the wrong default account setup. To fix this, go to the settings menu in the app and click "Change default folder and account."
 
+![Fixing default account via settings.](res/changeAccount.png)
+
 ## Notes on uploading to GrabCAD
 * Always read the list of what you're about to upload before you actually do upload - don't upload things that you didn't actually work on!
 * Never upload OldVersions folders or files, GrabCAD serves this purpose for us and they are unnecessary.

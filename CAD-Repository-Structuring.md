@@ -23,3 +23,6 @@ This document provides a general structure for CAD repositories. While it is foc
 * Optional folders for Waterjet / Plasma / CNC layouts
      * Assemblies, parts, sketches, and DXFs intended solely for CNC use should go here.
 * Subsystem overall assembly (eg. `Chassis.iam`)
+
+### Example structure from 2019 Robot Project:
+![2019 Repo Structure](res/repoStruct.png)

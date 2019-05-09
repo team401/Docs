@@ -1,4 +1,6 @@
-Documentation for Team 401.
+An ongoing effort to improve Team 401.
+
+Github Repo: [https://github.com/team401/Docs](https://github.com/team401/Docs)
 
 ## CAD Topics:
 * [GrabCAD setup](GrabCAD.md)
