@@ -1,3 +1,11 @@
+---
+title: GrabCAD
+parent: CAD
+nav_order: 3
+---
+
+# GrabCAD
+
 Team 401 uses GrabCAD for all of our CAD storage and sharing. This lets us do version control, file locking, online previews, and maintain a library of COTS parts.
 
 ## Procedure for joining the Team 401 GrabCAD:
