@@ -10,8 +10,8 @@ CAD is one of the most important parts of Team 401 and is critical to our design
 
 ## Software we use:
 
-* Autodesk Inventor HSM
-* Inventor HSM Ultimate
+* Autodesk Inventor
+* HSM Ultimate
 * AutoCAD Electrical
 * [GrabCAD](GrabCAD.md)
 
