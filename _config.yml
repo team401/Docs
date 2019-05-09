@@ -1,3 +1,4 @@
 remote_theme: pmarsceill/just-the-docs
 title: 401 Docs
 description: Documentation for FRC Team 401
+search_enabled: true
