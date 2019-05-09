@@ -1,4 +1,4 @@
-# Team 401 Documentation
+Documentation for Team 401.
 
 ## CAD Topics:
 * [GrabCAD setup](GrabCAD.md)
