@@ -1,3 +1,6 @@
+`     `
+#CAD Repository Structuring
+
 This document provides a general structure for CAD repositories. While it is focused on robot projects, if you're doing something non-robot (cart, pit, etc) try to keep a similar structure so we stay organized.
 
 ## Project root:
