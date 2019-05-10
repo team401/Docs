@@ -6,3 +6,10 @@ color_scheme: "dark"
 aux_links:
   "401 Docs on GitHub":
     - "//github.com/team401/Docs"
+    
+markdown: kramdown
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
