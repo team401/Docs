@@ -33,4 +33,4 @@ This document provides a general structure for CAD repositories. While it is foc
 * Subsystem overall assembly (eg. `Chassis.iam`)
 
 ### Example structure from 2019 Robot Project:
-![2019 Repo Structure](res/repoStruct.png)
+![2019 Repo Structure](../res/repoStruct.png)
