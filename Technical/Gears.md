@@ -7,6 +7,7 @@ nav_order: 1
 ---
 
 # Gears
+
 {:toc}
 
 ---
@@ -27,7 +28,7 @@ One other important takeaway from this animation is the directionality of rotati
 
 ## Gear Ratios
 
-Gears can increase or decrease speed and torque. Speed is inversely dependent on torque - *"as speed increases, torque decreases"*. 
+Gears can increase or decrease speed and torque. Speed and torque are inversely dependent - *"as speed increases, torque decreases"*. 
 
 To calculate a gear ratio between an input gear and an output gear: $$ Ratio =  \frac{Teeth_{Input}}{Teeth_{Output}} $$
 
