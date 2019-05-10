@@ -7,10 +7,6 @@ nav_order: 1
 ---
 
 # Gears
-{: .no_toc }
-
-## Tabl;
-
 {:toc}
 
 ---
