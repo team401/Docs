@@ -34,3 +34,16 @@ For rotational speed: $$ Speed_{Output} = Speed_{Input} * Ratio $$
 
 And for torque: $$ Torque_{Output} = \frac{Torque_{Input}}{Ratio} $$
 
+### Example:
+
+![](../res/12to48.PNG)
+
+A 12 tooth gear spinning clockwise at a free speed of 100 revolutions per minute with a max torque of 10 foot-pounds meshes with a 48 tooth gear. What speed and torque will the 48 tooth gear have?
+
+Ratio: $$  Ratio =  \frac{Teeth_{Input}}{Teeth_{Output}} = \frac{12\ teeth}{48\ teeth} = \frac{1}{4} $$
+
+Speed:  $$  Speed_{Output} = Speed_{Input} * Ratio  = 100\ RPM * \frac{1}{4} = 25\ RPM$$
+
+Torque: $$ Torque_{Output} = \frac{Torque_{Input}}{Ratio} = \frac{10\ \text{ft-lb}}{\frac{1}{4}} = 4 * 10\ \text{ft-lb} = 40\ \text{ft-lb} $$
+
+The 48 tooth gear has a 1:4 gear ratio, so it will spin counterclockwise at one fourth the speed but will have four times the torque.
