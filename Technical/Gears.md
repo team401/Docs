@@ -8,10 +8,21 @@ nav_order: 1
 
 # Gears
 
+
+
 ```
 ## Table of contents
 {: .no_toc .text-delta }
 ```
+
+
+
+```
+1. TOC
+{:toc}
+```
+
+
 
 This document provides an introduction to gears with a focus on FRC. For more detail on a topic please ask a team lead or the internet.
 
