@@ -1,5 +1,6 @@
 ---
 title: CAD
+permalink: cad
 has_children: true
 nav_order: 2
 ---
