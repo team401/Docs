@@ -25,11 +25,10 @@ One other important takeaway from this animation is the directionality of rotati
 
 Gears can increase or decrease speed and torque. Speed is inversely dependent on torque - *"as speed increases, torque decreases"*. 
 
-To calculate a gear ratio between an input gear and an output gear: $ Ratio =  \frac{Teeth_{Input}}{Teeth_{Output}} $
+To calculate a gear ratio between an input gear and an output gear: $$ Ratio =  \frac{Teeth_{Input}}{Teeth_{Output}} $$
 
 Given the input speed and torque and gearing ratio the output speed and torque can be found. 
 
-For speed: $ Speed_{Output} = Speed_{Input} * Ratio $ 
+For speed: $$ Speed_{Output} = Speed_{Input} * Ratio $$ 
 
-And for torque: $ Torque_{Output} = \frac{Torque_{Input}}{Ratio} $
-
+And for torque: $$ Torque_{Output} = \frac{Torque_{Input}}{Ratio} $$
