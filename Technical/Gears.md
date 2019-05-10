@@ -7,22 +7,13 @@ nav_order: 1
 ---
 
 # Gears
+{: .no_toc }
 
+## Tabl;
 
-
-```
-## Table of contents
-{: .no_toc .text-delta }
-```
-
-
-
-```
-1. TOC
 {:toc}
-```
 
-
+---
 
 This document provides an introduction to gears with a focus on FRC. For more detail on a topic please ask a team lead or the internet.
 
@@ -50,7 +41,7 @@ For rotational speed: $$ Speed_{Output} = Speed_{Input} * Ratio $$
 
 And for torque: $$ Torque_{Output} = \frac{Torque_{Input}}{Ratio} $$
 
-#### Example:
+### Gear Ratio Example
 
 ![](../res/12to48.PNG)
 
