@@ -3,3 +3,6 @@ title: 401 Docs
 description: Documentation for FRC Team 401
 search_enabled: true
 color_scheme: "dark"
+aux_links:
+  "401 Docs on GitHub":
+    - "//github.com/team401/Docs"
