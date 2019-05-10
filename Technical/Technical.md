@@ -1,6 +1,6 @@
 ---
 title: Technical
-permalink: /technical
+permalink: Technical
 has_children: true
 nav_order: 5
 ---

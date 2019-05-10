@@ -1,6 +1,6 @@
 ---
 title: CAD
-permalink: cad
+permalink: CAD
 has_children: true
 nav_order: 2
 ---
@@ -18,3 +18,4 @@ CAD (computer-aided design) is one of the most important parts of Team 401 and i
 
 ## CAD Topics:
 * [Repository Structuring](CAD-Repository-Structuring.md)
+
