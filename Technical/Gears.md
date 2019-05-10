@@ -18,8 +18,6 @@ Most of the gears that we use are *spur* or *straight cut* gears that have teeth
 
 *Pinions* are input gears on motors (red). *Bull gears* or just *gears*  are output gears driven by a pinion (blue).
 
-![(../res/pinionAnimation.gif)
-
 ![Gear animation showing pinion and bull meshing](../res/pinionAnimation.gif)
 
 One other important takeaway from this animation is the directionality of rotation - *meshed gears spin in opposite directions*. Be sure to remember this when designing systems!
@@ -32,6 +30,7 @@ To calculate a gear ratio between an input gear and an output gear: $$ Ratio =  
 
 Given the input speed and torque and gearing ratio the output speed and torque can be found. 
 
-For speed: $$ Speed_{Output} = Speed_{Input} * Ratio $$ 
+For rotational speed: $$ Speed_{Output} = Speed_{Input} * Ratio $$ 
 
 And for torque: $$ Torque_{Output} = \frac{Torque_{Input}}{Ratio} $$
+
