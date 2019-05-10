@@ -8,6 +8,11 @@ nav_order: 1
 
 # Gears
 
+```
+1. TOC
+{:toc}
+```
+
 This document provides an introduction to gears with a focus on FRC. For more detail on a topic please ask a team lead or the internet.
 
 ## What is a Gear?
@@ -34,7 +39,7 @@ For rotational speed: $$ Speed_{Output} = Speed_{Input} * Ratio $$
 
 And for torque: $$ Torque_{Output} = \frac{Torque_{Input}}{Ratio} $$
 
-### Example:
+#### Example:
 
 ![](../res/12to48.PNG)
 
@@ -46,4 +51,4 @@ Speed:  $$  Speed_{Output} = Speed_{Input} * Ratio  = 100\ RPM * \frac{1}{4} = 2
 
 Torque: $$ Torque_{Output} = \frac{Torque_{Input}}{Ratio} = \frac{10\ \text{ft-lb}}{\frac{1}{4}} = 4 * 10\ \text{ft-lb} = 40\ \text{ft-lb} $$
 
-The 48 tooth gear has a 1:4 gear ratio, so it will spin counterclockwise at one fourth the speed but will have four times the torque.
+The gear pair a 1:4 gear ratio, so the 48 tooth gear will spin counterclockwise at one fourth the speed of the 12 tooth gear but will have four times the torque.
