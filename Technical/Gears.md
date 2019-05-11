@@ -11,8 +11,6 @@ nav_order: 1
 1. TOC
 {:toc}
 
----
-
 This document provides an introduction to gears with a focus on FRC. For more detail on a topic please ask a team lead or the internet.
 
 ## What is a Gear?
@@ -52,3 +50,54 @@ Speed:  $$  Speed_{Output} = Speed_{Input} * Ratio  = 100\ RPM * \frac{1}{4} = 2
 Torque: $$ Torque_{Output} = \frac{Torque_{Input}}{Ratio} = \frac{10\ \text{ft-lb}}{\frac{1}{4}} = 4 * 10\ \text{ft-lb} = 40\ \text{ft-lb} $$
 
 The gear pair a 1:4 gear ratio, so the 48 tooth gear will spin counterclockwise at one fourth the speed of the 12 tooth gear but will have four times the torque.
+
+## Idler Gears
+
+Idler or in-line gears are gears in a gear train between a pinion and and output gear. Idler gears do not effect overall gear ratio, but do effect output spin directionality. Idlers are commonly used exactly for this directional inversion, they provide an easy way to spin parts of a system opposite directions with only one motor. Idlers can also be used to adjust spacing in systems where the location of the input and output are constrained and the gearing ratio cannot be altered.
+
+### Idler Gears Example
+
+![](../res/idlerGear.PNG)
+
+In this example a 12 tooth gear spinning clockwise at 100 RPM with 10 ft-lb of torque drives a 19 tooth idler gear and then drives a 100 tooth output gear. To verify that our gear ratio (and thus output speed and torque) is unchanged we can treat the system as two discrete gearing reductions and then multiply to find the overall ratio:
+
+Considering only the 12 and 19 tooth gears: $$ Ratio_{12\text{-}to\text{-}19} = \frac{Teeth_{Input}}{Teeth_{Output}} = \frac{12}{19}$$ 
+
+And then considering only the 19 and 48 tooth gears: $$ Ratio_{19\text{-}to\text{-}48} = \frac{Teeth_{Input}}{Teeth_{Output}} = \frac{19}{48}$$
+
+The overall gear ratio can be found by multiplying these two partial ratios: $$ Ratio_{Overall} = Ratio_{12\text{-}to\text{-}19} * Ratio_{19\text{-}to\text{-}48} = \frac{12}{19} * \frac{19}{49} = \frac{12}{48} $$
+
+We can then find the output speed and torque of the gear train:
+
+Speed:  $$  Speed_{Output} = Speed_{Input} * Ratio  = 100\ RPM * \frac{1}{4} = 25\ RPM$$
+
+Torque: $$ Torque_{Output} = \frac{Torque_{Input}}{Ratio} = \frac{10\ \text{ft-lb}}{\frac{1}{4}} = 4 * 10\ \text{ft-lb} = 40\ \text{ft-lb} $$
+
+**This is the same as the gear ratio without the idler!** But be sure to think through directionality of spin - the 12 tooth gear was spinning clockwise, so the 19 tooth gear will spin counterclockwise, and the 48 tooth gear will then spin **clockwise**, unlike in the example without an idler. 
+
+## Compound Gearing
+
+Compound gearing puts two gears on the same axle (coaxial) to produce larger changes in speed and torque as the gear ratios for each gearing stage is multiplied. Gears that share an axle in a compound gearing setup will have the same speed and torque. The equation for overall gearing ratio in a compound gearing setup is: $$ Ratio_{Overall} = Ratio_{First\ Stage} * Ratio_{Second\ Stage} $$
+
+While this formula *is* identical to the idler gear case, in a compound gearing setup no gears are shared between gearing stages so the intermediate gears in the train will change the overall ratio and cannot be ignored.
+
+### Compound Gearing Example
+
+![](../res/coaxialGear.PNG)
+
+Consider a 12 tooth pinion spinning clockwise at 100 RPM with 10 ft-lb of torque driving a 48 tooth gear that is coaxial with a second 12 tooth gear, and let the second 12 tooth gear drive a second 48 tooth gear. What will be the overall gearing ratio, output speed, and output torque?
+
+For the first stage of gearing reduction: $$ Ratio_{First\ Stage} = \frac{Teeth_{Input}}{Teeth_{Output}} = \frac{12}{48} = \frac{1}{4} $$
+
+And for the second stage of gearing reduction: $$ Ratio_{Second\ Stage} = \frac{Teeth_{Input}}{Teeth_{Output}} = \frac{12}{48} = \frac{1}{4} $$
+
+The overall gearing ratio then is: $$ Ratio_{Overall} = Ratio_{First\ Stage} * Ratio_{Second\ Stage} = \frac{1}{4} * \frac{1}{4} = \frac{1}{16} $$
+
+Finding the output speed and torque:
+
+Speed:  $$  Speed_{Output} = Speed_{Input} * Ratio  = 100\ RPM * \frac{1}{16} = 6.25\ RPM$$
+
+Torque: $$ Torque_{Output} = \frac{Torque_{Input}}{Ratio} = \frac{10\ \text{ft-lb}}{\frac{1}{16}} = 16 * 10\ \text{ft-lb} = 160\ \text{ft-lb} $$
+
+Unlike the idler gearing example, compound gearing did produce a change in outputs. Directionality of output spin is worth considering in the compound gearing case: the first 12 tooth gear was spinning clockwise, the first 48 tooth gear will spin counterclockwise, the second 12 tooth gear is locked on the same axle as the 48 tooth gear so will also spin counterclockwise, and finally the output 48 tooth gear will spin clockwise. Directionality of the output in both idler and compound gearing setups depends on the number of gearing stages used, be sure to evaluate specific systems.  
+
