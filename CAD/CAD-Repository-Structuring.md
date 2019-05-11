@@ -13,9 +13,10 @@ This document provides a general structure for CAD repositories. While it is foc
 * Renders folder
 * Robot.iam assembly file
 * Robot project file (.ipj)
-     * Should be locked to one person)
+     * (Should be locked to one person)
 
 ## For each subsystem folder:
+
 * 3D Prints folder
      * Contains STL files, ZCode files here
 * Assemblies folder

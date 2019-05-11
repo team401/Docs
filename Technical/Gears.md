@@ -8,6 +8,7 @@ nav_order: 1
 
 # Gears
 
+1. TOC
 {:toc}
 
 ---
