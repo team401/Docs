@@ -9,7 +9,7 @@ nav_order: 4
 
 The following are quick tutorials on basic design tasks. If you have questions or any issues please ask a team lead for help.
 
-* Gear tooth count without counting
-* Correct spacing for two gears
+* [Finding gear tooth count without counting teeth](Finding-Gear-Tooth-Count.md)
+* [Correct spacing for two gears](Correct-Gear-Spacing.md)
 * Chain or belt center-to-center distance
 
