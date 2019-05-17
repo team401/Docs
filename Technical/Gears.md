@@ -2,7 +2,6 @@
 title: Gears
 parent: Technical
 has_children: true
-has_math: true
 nav_order: 1
 ---
 
