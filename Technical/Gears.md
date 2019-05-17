@@ -173,9 +173,9 @@ Using the equation for bending stress and setting the bending stress to the maxi
 
  $$ \sigma = \frac{W_t*P}{F*Y} * K_v \\ \sigma = S\\ S = \frac{W_t*P}{F*Y} * K_v\\ W_t = \frac{S*F*Y}{K_v * P} \\ W_t = \frac{S_{ut} * F * Y * 1200}{3 * P * (1200 + V)}$$ 
 
-## Design Calculator: [calc.team401.org](calc.team401.org)
+## Design Calculator: [calc.team401.org](http://calc.team401.org)
 
-All of the calculations discussed can be done manually, and knowing how to find center-to-center distance or gear pitch diameter is **very** useful, but some equations such as gear loading can be tedious and require look up tables. To save time students can use the Team 401 design calculator available at [calc.team401.org](calc.team401.org) to save time.
+All of the calculations discussed can be done manually, and knowing how to find center-to-center distance or gear pitch diameter is **very** useful, but some equations such as gear loading can be tedious and require look up tables. To save time students can use the Team 401 design calculator available at [calc.team401.org](http://calc.team401.org) to save time.
 
 ### Calculator Examples
 
