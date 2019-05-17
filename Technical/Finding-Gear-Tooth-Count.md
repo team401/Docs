@@ -26,3 +26,4 @@ Simply measuring the outer diameter of a gear and knowing the diametrical pitch 
 - Or for a 32 DP gear with 0.4375" OD:
 
   $$ K_t = OD * DP - 2 \\ K_t = 0.4375 * 32 - 2 \\ K_t = 12$$
+

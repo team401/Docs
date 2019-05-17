@@ -132,7 +132,53 @@ Unlike the idler gearing example, compound gearing did produce a change in outpu
 ### Equations
 
 - Gear pitch diameter ($$PD$$) given tooth count ($$K_t$$) and diametrical pitch ($$DP$$): $$ PD = \frac{K_t}{DP}$$
-
 - Gear outer diameter ($$OD$$) given tooth count and diametrical pitch: $$OD = \frac{K_t + 2}{DP}$$
 - Center distance ($$CtoC$$) given pitch diameter of two gears: $$ CtoC = \frac{PD_1 + PD_2}{2}$$
 
+### Gear Sizing Examples
+
+A 20 DP gear with 3.5" OD: 
+
+$$ K_t = OD * DP - 2 \\ K_t = 3.5 * 20 - 2 \\ K_t = 68$$
+
+Or for a 32 DP gear with 0.4375" OD:
+
+$$ K_t = OD * DP - 2 \\ K_t = 0.4375 * 32 - 2 \\ K_t = 12$$
+
+### Gear Spacing Examples
+
+A 20 DP 12 tooth gear meshes with an 84 tooth gear:
+
+$$ CtoC = \frac{K_{t1} + K_{t2}}{2*DP} + 0.003\text{"} \\ CtoC = \frac{12 + 84}{2 * 20} + 0.003 \text{"}\\ CtoC = 96 / 40 + 0.003\text{"} \\ CtoC = 2.403\text{"}$$
+
+A 32 DP 20 tooth gear meshes with a 65 tooth gear:
+
+$$ CtoC = \frac{K_{t1} + K_{t2}}{2*DP} + 0.003\text{"} \\ CtoC = \frac{20 + 65}{2 * 32} + 0.003 \text{"}\\ CtoC = 85 / 64 + 0.003\text{"} \\ CtoC = 1.331\text{"}$$
+
+## Gear Strength
+
+The maximum of gear teeth can be modeled by treating each gear tooth as a cantilevered beam with force applied tangentially at the tip. 
+
+![](../res/gearCantilever.PNG)
+
+Bending stress on a gear tooth ($$\sigma$$) can be defined as: $$\sigma = \frac{W_t*P}{F*Y}$$
+
+Where $$W_t$$ is the tangential load applied on the gear tooth, $$P$$ is the diametrical pitch of the gear, $$F$$ is the face width of the gear tooth, and $$Y$$ is a constant called a *Lewis Factor* determined by the pressure angle and number of teeth on the gear.
+
+The bending stress equation can then be modified to account for impacts at higher velocities that cause higher stresses using the *Barth Velocity Factor*: $$K_v = \frac{1200 + V}{1200}$$ where $$V$$ is the surface speed at the pitch diameter of the gear in feet per minute. The expanded bending equation becomes: $$\sigma = \frac{W_t*P}{F*Y} * K_v $$
+
+Using the ultimate tensile strength of the gear material ($$S_{ut}$$) a reasonable maximum allowable bending stress ($$S$$) can be defined as $$S=\frac{S_{ut}}{3}$$. 
+
+Using the equation for bending stress and setting the bending stress to the maximum allowed bending stress, maximum safe tooth load (W_t) can be found:
+
+ $$ \sigma = \frac{W_t*P}{F*Y} * K_v \\ \sigma = S\\ S = \frac{W_t*P}{F*Y} * K_v\\ W_t = \frac{S*F*Y}{K_v * P} \\ W_t = \frac{S_{ut} * F * Y * 1200}{3 * P * (1200 + V)}$$ 
+
+## Design Calculator: [calc.team401.org](calc.team401.org)
+
+All of the calculations discussed can be done manually, and knowing how to find center-to-center distance or gear pitch diameter is **very** useful, but some equations such as gear loading can be tedious and require look up tables. To save time students can use the Team 401 design calculator available at [calc.team401.org](calc.team401.org) to save time.
+
+### Calculator Examples
+
+![](../res/gearCalcExample.PNG) 
+
+![](../res/gearLoadingExample.PNG)
