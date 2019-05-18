@@ -168,7 +168,7 @@ The bending stress equation can then be modified to account for impacts at highe
 
 Using the ultimate tensile strength of the gear material ($$S_{ut}$$) a reasonable maximum allowable bending stress ($$S$$) can be defined as $$S=\frac{S_{ut}}{3}$$. 
 
-Using the equation for bending stress and setting the bending stress to the maximum allowed bending stress, maximum safe tooth load (W_t) can be found:
+Using the equation for bending stress and setting the bending stress to the maximum allowed bending stress, maximum safe tooth load ($$W_t$$) can be found:
 
  $$ \sigma = \frac{W_t*P}{F*Y} * K_v \\ \sigma = S\\ S = \frac{W_t*P}{F*Y} * K_v\\ W_t = \frac{S*F*Y}{K_v * P} \\ W_t = \frac{S_{ut} * F * Y * 1200}{3 * P * (1200 + V)}$$ 
 
