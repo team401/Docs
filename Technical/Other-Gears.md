@@ -61,9 +61,11 @@ Unlike spur gears, bevel gears cannot be mixed and matched; a 16 tooth bevel gea
 
 
 
-Common applications for bevel gears in FRC are on roller intakes to allow one motor to power multiple roller shafts, and to transfer power to swerve module wheels. 
+Common applications for bevel gears in FRC are on roller intakes to allow one motor to power multiple roller shafts, and to transfer power to swerve module wheels. Below is an example of Team 111: Wild Stang's 2016 intake using two pairs of miter gears on a *beaver tail* roller intake.
 
 ![](../res/bevelExample.jpg)
+
+Unlike spur gears, bevel gears will produce a force along their axis of rotation in addition to the standard tangential separation force.
 
 ## Worm Gears
 

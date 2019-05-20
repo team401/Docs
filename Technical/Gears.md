@@ -10,7 +10,7 @@ nav_order: 1
 1. TOC
 {:toc}
 
-This document provides an introduction to gears with a focus on FRC. For more detail on a topic please ask a team lead or the internet.
+This document provides an introduction to gears with a focus on FRC. For a discussion of other types of gears including shifters, bevels, and worm gears please see the [Other Gears](Other-Gears.md) document. For more detail on a topic please ask a team lead or the internet.
 
 ## What is a Gear?
 
@@ -172,6 +172,16 @@ Using the equation for bending stress and setting the bending stress to the maxi
 
  $$ \sigma = \frac{W_t*P}{F*Y} * K_v \\ \sigma = S\\ S = \frac{W_t*P}{F*Y} * K_v\\ W_t = \frac{S*F*Y}{K_v * P} \\ W_t = \frac{S_{ut} * F * Y * 1200}{3 * P * (1200 + V)}$$ 
 
+## Pressure Angles
+
+When two gears mesh correctly their *pitch circles* (circles based on the pitch diameter) should be tangent. The tangent line between these two pitch circles is called the pressure line, and the angle between the pressure line and a horizontal axis is called the *pressure angle*. Most gears in FRC are 14.5
+
+## Gear Forces
+
+
+
+![](../res/gearForces.PNG)
+
 ## Design Calculator: [calc.team401.org](http://calc.team401.org)
 
 All of the calculations discussed can be done manually, and knowing how to find center-to-center distance or gear pitch diameter is **very** useful, but some equations such as gear loading can be tedious and require look up tables. To save time students can use the Team 401 design calculator available at [calc.team401.org](http://calc.team401.org) to save time.
@@ -181,3 +191,7 @@ All of the calculations discussed can be done manually, and knowing how to find 
 ![](../res/gearCalcExample.PNG) 
 
 ![](../res/gearLoadingExample.PNG)
+
+## More Information
+
+For more information on gears, please review the [Other Gears](Other-Gears.md) document or consult with a team lead.
