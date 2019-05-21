@@ -8,7 +8,6 @@ nav_order: 1
 # Other Gears
 
 1. TOC
-
 {:toc}
 
 Beyond typical spur gears discussed in the Gears page, there are several special types of gears that may be encountered in FRC.

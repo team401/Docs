@@ -154,6 +154,16 @@ A 32 DP 20 tooth gear meshes with a 65 tooth gear:
 
 $$ CtoC = \frac{K_{t1} + K_{t2}}{2*DP} + 0.003\text{"} \\ CtoC = \frac{20 + 65}{2 * 32} + 0.003 \text{"}\\ CtoC = 85 / 64 + 0.003\text{"} \\ CtoC = 1.331\text{"}$$
 
+## Pressure Angles
+
+When two gears mesh correctly their *pitch circles* (circles based on the pitch diameter) should be tangent. The tangent line between these two pitch circles is called the pressure line, and the angle between the pressure line and a horizontal axis is called the *pressure angle*. Most gears in FRC are 14.5
+
+## Gear Forces
+
+
+
+![](../res/gearForces.PNG)
+
 ## Gear Strength
 
 The maximum of gear teeth can be modeled by treating each gear tooth as a cantilevered beam with force applied tangentially at the tip. 
@@ -171,16 +181,6 @@ Using the ultimate tensile strength of the gear material ($$S_{ut}$$) a reasonab
 Using the equation for bending stress and setting the bending stress to the maximum allowed bending stress, maximum safe tooth load ($$W_t$$) can be found:
 
  $$ \sigma = \frac{W_t*P}{F*Y} * K_v \\ \sigma = S\\ S = \frac{W_t*P}{F*Y} * K_v\\ W_t = \frac{S*F*Y}{K_v * P} \\ W_t = \frac{S_{ut} * F * Y * 1200}{3 * P * (1200 + V)}$$ 
-
-## Pressure Angles
-
-When two gears mesh correctly their *pitch circles* (circles based on the pitch diameter) should be tangent. The tangent line between these two pitch circles is called the pressure line, and the angle between the pressure line and a horizontal axis is called the *pressure angle*. Most gears in FRC are 14.5
-
-## Gear Forces
-
-
-
-![](../res/gearForces.PNG)
 
 ## Design Calculator: [calc.team401.org](http://calc.team401.org)
 
