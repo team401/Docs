@@ -156,7 +156,9 @@ $$ CtoC = \frac{K_{t1} + K_{t2}}{2*DP} + 0.003\text{"} \\ CtoC = \frac{20 + 65}{
 
 ## Pressure Angles
 
-When two gears mesh correctly their *pitch circles* (circles based on the pitch diameter) should be tangent. The tangent line between these two pitch circles is called the pressure line, and the angle between the pressure line and a horizontal axis is called the *pressure angle*. Most gears in FRC are 14.5
+When two gears mesh correctly their *pitch circles* (circles based on the pitch diameter) should be tangent. The tangent line between these two pitch circles is called the pressure line, and the angle between the pressure line and a horizontal axis is called the *pressure angle*. Most gears in FRC are 14.5$$^{\circ}$$ pressure angle, b32 DP gears commonly used with 775s are 20$$^{\circ}$$ pressure angle.
+
+
 
 ## Gear Forces
 
