@@ -162,7 +162,7 @@ When two gears mesh correctly their *pitch circles* (circles based on the pitch 
 
 ## Gear Forces
 
-In a gear mesh where torque is being transferred there are forces exerted onto the gears and the axles they ride on. Contact force along the pressure line of the gear mesh is called the *normal force* ($$W_n$$). Force tangent to the center line of the gear mesh is called the *tangential force* ($$W_t$$) and is used when calculating transmitted power and force exerted on gear teeth. Force exerted along the center line of the gear mesh is called the *radial force* ($$W_r$$) and is the component of the force applied to the shaft that each gear rides on.
+In a gear mesh where torque is being transferred there are forces exerted onto the gears and the axles they ride on. Contact force along the pressure line of the gear mesh is called the *normal force* ($$W_n$$). Force tangent to the center line of the gear mesh is called the *tangential force* ($$W_t$$) and is used when calculating transmitted power and force exerted on gear teeth. Force exerted along the center line of the gear mesh is called the *radial* or *separation force* ($$W_r$$) and is the component of the force applied to the shaft that each gear rides on.
 
 ![](../res/gearForces.PNG)
 

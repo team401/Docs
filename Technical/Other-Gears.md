@@ -64,7 +64,7 @@ Common applications for bevel gears in FRC are on roller intakes to allow one mo
 
 ![](../res/bevelExample.jpg)
 
-Unlike spur gears, bevel gears will produce a force along their axis of rotation in addition to the standard tangential separation force.
+Unlike spur gears, bevel gears will produce a force along their axis of rotation in addition to the standard tangential and radial forces.
 
 ## Worm Gears
 
