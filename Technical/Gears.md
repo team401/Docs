@@ -156,13 +156,15 @@ $$ CtoC = \frac{K_{t1} + K_{t2}}{2*DP} + 0.003\text{"} \\ CtoC = \frac{20 + 65}{
 
 ## Pressure Angles
 
-When two gears mesh correctly their *pitch circles* (circles based on the pitch diameter) should be tangent. The tangent line between these two pitch circles is called the pressure line, and the angle between the pressure line and a horizontal axis is called the *pressure angle*. Most gears in FRC are 14.5$$^{\circ}$$ pressure angle, b32 DP gears commonly used with 775s are 20$$^{\circ}$$ pressure angle.
+When two gears mesh correctly their *pitch circles* (circles based on the pitch diameter) should be tangent. The tangent line between these two pitch circles is called the *pressure line*, and the angle between the pressure line and a horizontal axis is called the *pressure angle*. Most gears in FRC are 14.5$$^{\circ}$$ pressure angle, 32 DP gears commonly used with 775s are 20$$^{\circ}$$ pressure angle. Different pressure angles correspond to different profile gear teeth, always make sure both diametrical pitch and pressure angle match for any geared system.
 
-
+![](../res/gearPressureAngle.png)
 
 ## Gear Forces
 
+In a gear mesh where torque is being transferred there are forces exerted onto the gears and the axles they ride on. Contact force along the pressure line of the gear mesh is called the *normal force* ($$W_n$$). Force tangent to the center line of the gear mesh is called the *tangential force* ($$W_t$$) and is used when calculating transmitted power and force exerted on gear teeth. Force exerted along the center line of the gear mesh is called the *radial force* ($$W_r$$) and is the component of the force applied to the shaft that each gear rides on.
 
+The relationships between these gear forces are: $$W_t = W_n * cos(\phi), W_r = W_n * sin(\phi), W_r = W_t * tan(\phi)$$
 
 ![](../res/gearForces.PNG)
 
