@@ -1,0 +1,11 @@
+---
+title: Brushed Motors
+has_children: false
+nav_order: 1
+---
+
+# Brushed DC Motors
+
+Most of the motors available for FRC are brushed DC motors.
+
+$$ V = I * R + \omega * K_v$$

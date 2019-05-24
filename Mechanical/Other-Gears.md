@@ -56,19 +56,19 @@ Some teams have reported issues with dog shifting setups in past years; if not d
 
 *Bevel gears* are gears where the axes of the two shafts intersect and the tooth-bearing faces of the gears themselves are conically shaped. Bevel gears are most often mounted on shafts that are 90 degrees apart, but can be designed to work at other angles as well. The pitch surface of bevel gears is a cone. A bevel gears in a set with a gearing ratio of 1.0 (same tooth count on both gears) are called *miter gears*.
 
-Unlike spur gears, bevel gears cannot be mixed and matched; a 16 tooth bevel gear designed to mesh with a 60 tooth bevel gear will **not** mesh with another 16 tooth bevel gear.
-
-
+Similar to standard spur gears, the gearing ratio for a bevel gear pair is determined by the ratio in tooth count between the input gear and the output gear. Bevel gears are also modeled as 98% efficient Unlike spur gears though, bevel gears cannot be mixed and matched; a 16 tooth bevel gear designed to mesh with a 60 tooth bevel gear will **not** mesh with another 16 tooth bevel gear.
 
 Common applications for bevel gears in FRC are on roller intakes to allow one motor to power multiple roller shafts, and to transfer power to swerve module wheels. Below is an example of Team 111: Wild Stang's 2016 intake using two pairs of miter gears on a *beaver tail* roller intake.
 
 ![](../res/bevelExample.jpg)
 
-Unlike spur gears, bevel gears will produce a force along their axis of rotation in addition to the standard tangential and radial forces.
+Unlike spur gears, bevel gears produce force along their axis of rotation in addition to the standard tangential and radial forces.
+
+Bevel gears, similar to spur gears, are modeled as 98% efficient for FRC purposes. 
 
 ## Worm Gears
 
-asdf
+A worm drive is a gearing setup where a gear in a screw form called a *worm* meshes with with a spur gear like *worm gear*. Similar to bevel gears worm gears transfer power 90$$^{\circ}$$ from their input. Unlike spur and bevel gears, 
 
 ## Planetary Gears
 

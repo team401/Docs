@@ -52,6 +52,10 @@ A 12 tooth gear spinning clockwise at a free speed of 100 revolutions per minute
 
 The gear pair a 1:4 gear ratio, so the 48 tooth gear will spin counterclockwise at one fourth the speed of the 12 tooth gear but will have four times the torque.
 
+### Gearing Efficiency
+
+While it is easy to treat gears as perfectly transferring speed and torque, there are losses in each stage of gearing. For FRC purposes we treat each spur gearing stage as 98 percent efficient. In the above example instead of getting $$25\ RPM$$ from the output get it would be expected to get $$25\ RPM * 0.98 = 24.5\ RPM$$ out. While this may seem trivial for a single stage of gearing reduction, when stacked over multiple gearing stages it can become significant as each additional stage has a multiplicative effect on efficiency: $$0.98 * 0.98 * 0.98* 0.98* 0.98* 0.98= 0.88$$. Over six stages of gearing 12% of transmitted power was lost!
+
 ## Idler Gears
 
 *Idler* or *in-line* gears are gears in a gear train between a pinion and and output gear. Idler gears do not effect overall gear ratio, but do effect output spin directionality. Idlers are commonly used exactly for this directional inversion, they provide an easy way to spin parts of a system opposite directions with only one motor. Idlers can also be used to adjust spacing in systems where the location of the input and output are constrained and the gearing ratio cannot be altered.
