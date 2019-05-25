@@ -91,15 +91,17 @@ Similar to bevel gears worm gears transfer power 90$$^{\circ}$$ from their input
 
 - Back-drivability: *the ability of load applied on an output gear to drive the input*. Worm gear systems are generally back-drivable if the lead angle is greater than eleven degrees: $$\gamma > 11^{\circ}\implies Backdrivable$$   
 
-### Calculator Use
+### Calculator Support
 
-The Team 401 Design Calculator has full support for worm gears and can be used instead of manual calculation.
+The [Team 401 Design Calculator](http://calc.team401.org) has full support for worm gears and can be used instead of manual calculation.
 
 ![](../res/wormGearCalcs.PNG)
 
 ## Planetary Gears
 
-asdf
+Planetary (or epicyclic) gear trains are special spur gear setups where outer *planet* gears revolve around a central *sun* gear while being supported by a *carrier* and contacting an outer *ring* gear.
+
+![](../res/planetaryTerms.png)
 
 ## Cycloidal Gears
 
