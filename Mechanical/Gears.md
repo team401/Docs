@@ -1,6 +1,6 @@
 ---
 title: Gears
-parent: Technical
+parent: Mechanical
 has_children: true
 nav_order: 1
 ---

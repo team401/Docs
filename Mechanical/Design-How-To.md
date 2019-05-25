@@ -1,6 +1,6 @@
 ---
 title: Design How-To's
-parent: Technical
+parent: Mechanical
 has_children: true
 nav_order: 4
 ---
