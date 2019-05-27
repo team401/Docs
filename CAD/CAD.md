@@ -13,7 +13,7 @@ CAD (computer-aided design) is one of the most important parts of Team 401 and i
 
 * Autodesk Inventor
 * HSM Ultimate
-* AutoCAD Electrical
+* [AutoCAD Electrical](AutoCAD-Electrical.md)
 * [GrabCAD](GrabCAD.md)
 
 ## CAD Topics:
