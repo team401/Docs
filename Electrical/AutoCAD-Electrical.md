@@ -80,3 +80,4 @@ Clicking "Insert Pneumatic Components" or using the command line will open the f
 ![](../res/acadePneumInsert.PNG)
 
 The most commonly used parts from this menu are the Manifold block, regulator, muffler, and the gauges found under the Meters category. Clicking one of these components will bring up the same "Insert / Edit Component" menu as pictured in the 401 Symbol Library section.
+
