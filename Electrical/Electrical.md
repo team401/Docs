@@ -10,6 +10,5 @@ nav_order: 6
 <<<<<<< Updated upstream
 Electrical topics covered will include basic electrical theory, DC motor equations, and FRC specific components.
 =======
-Electrical topics covered include basic electrical theory, DC motor equations, and FRC specific components. memememeemem3,
->>>>>>> Stashed changes
+Electrical topics covered include basic electrical theory, DC motor equations, and FRC specific components.
 
