@@ -103,7 +103,7 @@ Planetary (or epicyclic) gear trains are special spur gear setups where outer *p
 
 ![](../res/planetaryTerms.png)
 
-For standard planetary gearboxes in FRC the sun gear is used as an input to each stage, the ring is held static, and the carrier is used as the output. For this configuration the gearing ratio achieved in the planetary stage is given by $$Ratio = \frac{Teeth_{Sun}}{{Teeth_{Sun} + Teeth_{Ring}}}$$
+For standard planetary gearboxes in FRC the sun gear is used as an input to each stage, the ring is held static, and the carrier is used as the output. For this configuration the gearing ratio achieved in the planetary stage is given by $$Ratio = \frac{Teeth_{Sun}}{Teeth_{Sun} + Teeth_{Ring}}$$
 
 For a VersaPlanetary 5:1 stage, the ring has 72 teeth, and the sun has 18 teeth, giving a gearing ratio of: $$ \frac{18 }{18 + 72} = \frac{18}{90} = \frac{1}{5}$$
 
