@@ -2,7 +2,7 @@
 title: AutoCAD Electrical
 parent: Electrical
 has_children: false
-nav_order: 2
+nav_order: 3
 ---
 
 # AutoCAD Electrical
@@ -10,7 +10,6 @@ nav_order: 2
 Team 401 uses AutoCAD Electrical to create robot wiring diagrams in order to clearly show the components and connections of our controls system. Over the last two years, the team has developed a symbol library of commonly used FRC components which can be found in GrabCAD.
 
 1. TOC
-
 {:toc}
 
 ## Getting Started
