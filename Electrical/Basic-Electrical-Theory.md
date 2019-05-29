@@ -1,5 +1,5 @@
 ---
-title: AutoCAD Electrical
+title: Basic Electrical Theory
 parent: Electrical
 has_children: false
 nav_order: 1
@@ -10,7 +10,6 @@ nav_order: 1
 Electricity, in simplest terms, is defined as the movement of charge from positive to negative. Electric current refers to the flow of said charge. This page gives a basic overview of important concepts and formulas relating to electricity.
 
 1. TOC
-
 {:toc}
 
 ## Definitions
