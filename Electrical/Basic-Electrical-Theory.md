@@ -16,7 +16,7 @@ Electricity, in simplest terms, is defined as the movement of charge from positi
 
 There are four important quantities used to describe electricity:
 
-- Voltage, which is defined as "an electromotive force or potential difference expressed in volts."
+- Voltage, which is defined as "an electromotive force or potential difference expressed in volts." It describes the amount of work needed to move a point charge from one location to another.
 - Current, which refers to the rate at which charge flows through an electric circuit. This is measured in amperes.
 - Resistance, which refers to the circuit’s resistance of current flow. This quantity is measured in ohms.
   - Resistors are components used in circuits in order to divide voltage.
@@ -26,6 +26,22 @@ There are two types of electric current: DC (Direct Current) and AC (Alternating
 
 The only type of current used in FIRST Robotics is DC.
 
+## Series and Parallel Circuits
+
+There are two types of basic circuits which are important to cover before discussing formulas and their applications.
+
+A series circuit consists of components wired in series, or one after the other, following the power supply. Here is an example of a DC series circuit:
+
+![](../res/seriesCircuitExample.png)
+
+In this image, current moves through three components with known resistance values.
+
+Unlike a series circuit, a parallel circuit consists of branching paths from the power supply. The following is an example of a DC parallel circuit:
+
+![](../res/parallelCircuitExample.png)
+
+It is important to note the differences between each type of circuit with respect to voltage and current: a series circuit will have a consistent current between components and the voltage for each component will vary, while a parallel circuit will have divided current between the branching paths and consistent voltage for each component.
+
 ## Important Formulas 
 
 There are several important formulas for understanding the relationship between voltage, current, resistance, and power.
@@ -34,5 +50,13 @@ There are several important formulas for understanding the relationship between 
 
 $$V = I*R$$ 
 
-Where V represents voltage, I represents current, and R represents resistance. 
+Where V represents voltage, I represents current, and R represents resistance.
+
+#### Applying Ohm's Law
+
+
+
+### Joule's Law
+
+
 
