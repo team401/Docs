@@ -1,5 +1,5 @@
 ---
-title: Brushed Motors
+title: FRC Component Guide
 parent: Electrical
 has_children: false
 nav_order: 3
