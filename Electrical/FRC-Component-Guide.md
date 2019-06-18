@@ -1,4 +1,9 @@
-
+---
+title: FRC Component Guide
+parent: Electrical
+has_children: false
+nav_order: 3
+---
 
 # FRC Component Guide
 
