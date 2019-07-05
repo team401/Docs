@@ -34,6 +34,7 @@ In addition to this, the roboRIO also provides the power for the Robot Signal Li
 | Pneumatic Control Module    | CAN output to PCM                                            | CAN port                  | [CAN Wire](https://www.vexrobotics.com/vexpro/motors-electronics/electricalwire.html) (22 AWG Yellow/Green) |
 | Servo                       | PWM output to servo from roboRIO PWM rail                    | PWM Channels 0-9          | 22 AWG 3 pin wire (ribbon cable)                             |
 | Banner Photoelectric Sensor | Banner Sensor data output to roboRIO Digital Input/Output (DIO) rail | DIO Channels 0-9          | 22 AWG 3 pin wire (ribbon cable)                             |
+| RIOduino                    | RIOduino power and signal                                    | Custom Electronics Port   | N/A                                                          |
 
 ### Wiring Information
 

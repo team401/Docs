@@ -70,7 +70,7 @@ $$ P = I * E $$
 
 Where P represents power, I represents current, and E represents voltage. 
 
-When Ohm's Law and Joule's Law are used in conjunction, they can be used to find power, current, voltage, or resistance for the circuit based on what values are known. This is shown in the table below.
+When Ohm's Law and Joule's Law are used together, they can be used to find power, current, voltage, or resistance for the circuit based on known values. This is shown in the table below.
 
 ![](../res/rearrangedFormulas.png)
 
@@ -78,7 +78,7 @@ When Ohm's Law and Joule's Law are used in conjunction, they can be used to find
 
 [Automation Direct - Basic Electrical Theory](https://library.automationdirect.com/basic-electrical-theory/): This is a more detailed overview of the concepts covered on this page. It also features worked examples of Ohm's Law and discusses further laws, such as Kirchhoff's Voltage and Current Laws.
 
- [PHET - Ohm's Law](https://phet.colorado.edu/en/simulation/ohms-law): This is an interactive simulation of Ohm's Law; the voltage and resistance of a simple circuit can be manipulated to affect current.
+[PHET - Ohm's Law](https://phet.colorado.edu/en/simulation/ohms-law): This is an interactive simulation of Ohm's Law; the voltage and resistance of a simple circuit can be manipulated to affect current.
 
 [Khan Academy - Ohm's Law](https://www.khanacademy.org/science/ap-physics-1/ap-circuits-topic/current-ap/v/circuits-part-1): This video provides a useful metaphor for describing the concepts of voltage, current, and resistance. It also touches on the history of conventional current flow vs. electron flow.
 

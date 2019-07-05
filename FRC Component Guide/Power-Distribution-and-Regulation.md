@@ -39,14 +39,28 @@ The [Power Distribution Panel](https://www.andymark.com/products/power-distribut
 
 #### WAGO Connectors
 
-The 30A and 40A channels on the PDP are each composed of one red and one black 745 series WAGO connector ([example for reference](https://www.amazon.com/WAGO-745-308-Board-Terminal-Positions/dp/B005T8UYSQ)). The steps for inserting a wire into one of these WAGO connectors are as follows:
+![](../res/WAGOConnector.jpg)
 
-1. Strip the end of the 12 AWG wire to be inserted in a WAGO connector, and twist the exposed wire contacts clockwise.
-2. Insert a small flathead screwdriver or WAGO tool into the 
+The 30A and 40A channels on the PDP are each composed of one red and one black 745 series WAGO connector (an example of which is pictured above). The steps for inserting a wire into one of these WAGO connectors are as follows:
 
-## Voltage Regulation Module
+1. Strip approximately 5/16" of jacketing off the end of the 12 AWG wire to be inserted into the WAGO connector, then twist the exposed wire contacts clockwise.
+2. Insert a small flathead screwdriver or [WAGO tool](https://firstchoicebyandymark.com/fc-wagotool) at a shallow angle into the rectangular hole of the connector.
+3. Angle the tool further upward as you push the tool in to actuate the lever and open the terminal. If done properly, it is possible to leave the tool in place and keep the terminal open.
+4. Insert the wire into the terminal, then remove the tool. You should be unable to pull the wire out of the WAGO connector.
+
+#### Breakers and Fuses
+
+Examples of the proper orientation and location of PDP breakers and fuses are displayed in the two images below:
+
+![](../res/breakerExample.jpg)
+
+In this image, four 40A breakers have been plugged into four of the PDP's 40A channels (channels 2, 3, 12, and 13). As is shown, each breaker corresponds with the nearest positive terminal.
 
 ## 120A Circuit Breaker
+
+
+
+## Voltage Regulation Module
 
 ## 12V Lead Acid Battery
 
