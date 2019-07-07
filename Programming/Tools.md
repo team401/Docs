@@ -10,6 +10,7 @@ nav_order: 1
 
 This page covers the various tools we use during the FRC software development process.  Some of these tools are optional for pure code development.  The order of this list represents the order each tool should be installed, and links are provided to more detailed installation instructions if applicable.
 
+1. TOC
 {:toc}
 
 ## Java SE (Installation Required)
