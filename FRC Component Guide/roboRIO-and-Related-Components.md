@@ -170,7 +170,7 @@ Ideally, every Banner sensor found in the stock room already has its blue and br
 
 #### Sensor Data
 
-
+application dependent
 
 
 

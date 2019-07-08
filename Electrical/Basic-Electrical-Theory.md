@@ -16,11 +16,11 @@ Electricity, in simplest terms, is defined as the movement of charge from positi
 
 There are four primary quantities used to describe electricity:
 
-- Voltage, which is defined as "an electromotive force or potential difference expressed in volts." It describes the amount of work per unit charge needed to move a charge from one point to another.
-- Current, which refers to the rate at which charge flows through an electric circuit. This is measured in amperes.
-- Resistance, which refers to the circuit’s resistance of current flow. This quantity is measured in ohms.
+- **Voltage**, which is defined as "an electromotive force or potential difference expressed in volts." It describes the amount of work per unit charge needed to move a charge from one point to another.
+- **Current**, which refers to the rate at which charge flows through an electric circuit. This is measured in amperes.
+- **Resistance**, which refers to the circuit’s resistance of current flow. This quantity is measured in ohms.
   - Resistors are components used in circuits in order to divide voltage.
-- Power, which is defined as the "rate, per unit time, at which electrical energy is transferred by an electric circuit." The SI unit for power is the watt, or one joule/second.
+- **Power**, which is defined as the "rate, per unit time, at which electrical energy is transferred by an electric circuit." The SI unit for power is the watt, or one joule/second.
 
 ### Types of Electric Current
 
