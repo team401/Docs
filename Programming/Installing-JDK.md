@@ -2,7 +2,7 @@
 title: Installing the Oracle Java SE JDK
 parent: Tools
 has_children: false
-nav_order: 1
+nav_exclude: true
 ---
 
 # Installing the Oracle Java SE JDK
