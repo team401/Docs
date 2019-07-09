@@ -1,7 +1,7 @@
 ---
 title: CAD Repository Structuring
 parent: CAD
-nav_order: 2
+nav_order: 3
 ---
 
 # CAD Repository Structuring
@@ -9,6 +9,7 @@ nav_order: 2
 This document provides a general structure for CAD repositories. While it is focused on robot projects, if you're doing something non-robot (cart, pit, etc) try to keep a similar structure so we stay organized.
 
 ## Project root:
+
 * Folders for each subsystem
 * Renders folder
 * Robot.iam assembly file
