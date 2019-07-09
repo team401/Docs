@@ -1,8 +1,8 @@
 ---
 title: FRC Component Guide
-parent: Electrical
+permalink: FRC Component Guide
 has_children: true
-nav_order: 3
+nav_order: 7
 ---
 
 # FRC Component Guide
