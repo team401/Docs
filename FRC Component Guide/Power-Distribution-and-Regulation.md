@@ -56,6 +56,8 @@ Examples of the proper orientation and location of PDP breakers and fuses are di
 
 In this image, four 40A breakers have been plugged into four of the PDP's 40A channels (channels 2, 3, 12, and 13). As is shown, each breaker corresponds with the nearest positive terminal.
 
+![](../res/PDP30ABreakers.jpeg)
+
 ## 120A Circuit Breaker
 
 
