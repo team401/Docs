@@ -2,7 +2,7 @@
 title: Pneumatics
 parent: FRC Component Guide
 has_children: false
-nav_order: 5
+nav_order: 6
 ---
 
 # Pneumatics
@@ -25,3 +25,4 @@ nav_order: 5
 ## Tank
 
 ## Pressure Transducer
+

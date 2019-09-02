@@ -2,7 +2,7 @@
 title: Motor Control
 parent: FRC Component Guide
 has_children: false
-nav_order: 3
+nav_order: 4
 ---
 
 # Motor Control
@@ -16,9 +16,4 @@ nav_order: 3
 
 ## Victor SPX
 
-## REV SPARKMAX
-
-## Magnetic Encoder
-
-## Pigeon IMU
-
+## REV SPARK MAX
