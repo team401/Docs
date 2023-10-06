@@ -1,8 +1,7 @@
-remote_theme: just-the-docs/just-the-docs
-title: 401 Docs
-description: Documentation for FRC Team 401
-search_enabled: true
-color_scheme: nil
-aux_links:
-  "401 Docs on GitHub":
-    - "//github.com/team401/Docs"
+title: "401 Docs"
+description: "Documentation for FRC Team 401"
+theme: just-the-docs
+color_scheme: light
+
+url: https://team401.github.io/Docs
+

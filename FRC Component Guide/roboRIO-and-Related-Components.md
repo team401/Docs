@@ -1,8 +1,7 @@
 ---
 title: roboRIO and Related Components
 parent: FRC Component Guide
-has_children: false
-nav_order: 1
+layout: home
 ---
 
 # roboRIO and Related Components

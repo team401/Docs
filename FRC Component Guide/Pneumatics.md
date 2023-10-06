@@ -1,8 +1,7 @@
 ---
 title: Pneumatics
 parent: FRC Component Guide
-has_children: false
-nav_order: 6
+layout: home
 ---
 
 # Pneumatics

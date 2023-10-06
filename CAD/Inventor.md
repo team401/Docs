@@ -1,8 +1,7 @@
 ---
 title: Autodesk Inventor
 parent: CAD
-has_children: true
-nav_order: 1
+layout: home
 ---
 
 # Autodesk Inventor

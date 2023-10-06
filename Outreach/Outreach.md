@@ -2,7 +2,7 @@
 title: Outreach
 permalink: Outreach
 has_children: true
-nav_order: 8
+layout: home
 ---
 
 # Outreach

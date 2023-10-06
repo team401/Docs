@@ -2,7 +2,7 @@
 title: FRC Component Guide
 permalink: FRC Component Guide
 has_children: true
-nav_order: 7
+layout: home
 ---
 
 # FRC Component Guide

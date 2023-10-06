@@ -1,8 +1,7 @@
 ---
 title: Correct Gear Spacing
 parent: Design How-To's
-has_children: false
-nav_order: 2
+layout: home
 ---
 
 # Correct Gear Spacing

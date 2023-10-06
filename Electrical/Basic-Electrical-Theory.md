@@ -2,7 +2,7 @@
 title: Basic Electrical Theory
 parent: Electrical
 has_children: false
-nav_order: 1
+layout: home
 ---
 
 # Basic Electrical Theory

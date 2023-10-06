@@ -1,8 +1,7 @@
 ---
 title: Motor Control
 parent: FRC Component Guide
-has_children: false
-nav_order: 4
+layout: home
 ---
 
 # Motor Control

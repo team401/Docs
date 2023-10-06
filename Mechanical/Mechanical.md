@@ -2,7 +2,7 @@
 title: Mechanical
 permalink: Mechanical
 has_children: true
-nav_order: 5
+layout: home
 ---
 
 

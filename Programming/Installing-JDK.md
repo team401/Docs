@@ -1,8 +1,10 @@
 ---
 title: Installing the Oracle Java SE JDK
 parent: Tools
+grand_parent: Programming
 has_children: false
-nav_exclude: true
+nav_order: 3
+layout: home
 ---
 
 # Installing the Oracle Java SE JDK

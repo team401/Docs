@@ -1,7 +1,7 @@
 ---
 title: Axle Designer
 parent: CAD
-nav_order: 4
+layout: home
 ---
 
 # Axle Designer
