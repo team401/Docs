@@ -1,8 +1,8 @@
 ---
 title: Other Gears
 parent: Gears
-has_children: false
-nav_order: 1
+grand_parent: Mechanical
+layout: home
 ---
 
 # Other Gears

@@ -1,8 +1,7 @@
 ---
 title: Power Distribution and Regulation
 parent: FRC Component Guide
-has_children: false
-nav_order: 2
+layout: home
 ---
 
 # Power Distribution and Regulation

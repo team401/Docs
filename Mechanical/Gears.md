@@ -2,7 +2,7 @@
 title: Gears
 parent: Mechanical
 has_children: true
-nav_order: 1
+layout: home
 ---
 
 # Gears

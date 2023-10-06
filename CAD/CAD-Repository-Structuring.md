@@ -1,7 +1,7 @@
 ---
 title: CAD Repository Structuring
 parent: CAD
-nav_order: 3
+layout: home
 ---
 
 # CAD Repository Structuring

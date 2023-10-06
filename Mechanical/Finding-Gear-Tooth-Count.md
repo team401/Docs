@@ -1,8 +1,7 @@
 ---
 title: Finding Gear Tooth Count
 parent: Design How-To's
-has_children: false
-nav_order: 1
+layout: home
 ---
 
 

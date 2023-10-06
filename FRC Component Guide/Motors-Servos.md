@@ -1,8 +1,7 @@
 ---
 title: Motors/Servos
 parent: FRC Component Guide
-has_children: false
-nav_order: 5
+layout: home
 ---
 
 # Motors/Servos

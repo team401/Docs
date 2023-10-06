@@ -1,7 +1,7 @@
 ---
 title: Brushed Motors
-has_children: false
-nav_exclude: true
+parent: Electrical
+layout: home
 ---
 
 # Brushed DC Motors

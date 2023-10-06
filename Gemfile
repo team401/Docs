@@ -1,3 +1,4 @@
-gem "github-pages", group: :jekyll_plugins
-gem "jekyll-remote-theme", group: :jekyll_plugins
 source 'https://rubygems.org'
+
+gem "jekyll", "~> 4.3.2" # installed by `gem jekyll`
+gem "just-the-docs", "0.6.2" # pinned to the current release

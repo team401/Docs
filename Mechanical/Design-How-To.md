@@ -1,8 +1,7 @@
 ---
 title: Design How-To's
 parent: Mechanical
-has_children: true
-nav_order: 4
+layout: home
 ---
 
 # Design How-To's

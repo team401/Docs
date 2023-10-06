@@ -1,8 +1,7 @@
 ---
 title: Sensors
 parent: FRC Component Guide
-has_children: false
-nav_order: 3
+layout: home
 ---
 
 # Sensors
