@@ -29,9 +29,11 @@ After these programs are installed, your development environment is ready to use
 
 Consider installing some of the [Optional Software](/Programming/Optional-Software.html) as needed. Normally you do not need to do this unless you are the lead programmer or if you are working on specific hardware.
 
-## Read Software Development Workflow
+## Understand the Process
 
-With a correctly configured development environment, follow the [Software Development Workflow](/Programming/Software-Workflow.html) while working on code.
+Becoming familiar with the following resources is required before contributing to the repository:
+- The [Software Development Workflow](/Programming/Software-Workflow.html) defines the process for making code changes on the team.
+- [Coding Standards](/Programming/Coding-Standards.html) 
 
 
 

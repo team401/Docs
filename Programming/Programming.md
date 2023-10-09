@@ -7,4 +7,4 @@ layout: home
 
 # Programming
 
-TODO
+Check out the table of contents below for valuable programming resources.
