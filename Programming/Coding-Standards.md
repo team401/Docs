@@ -9,23 +9,23 @@ layout: home
 
 Code standards are a set of guidelines and rules that software teams adhere to when writing code. This ensures consistency throught all codebases. These standards make it easier for developers to collaborate, maintain, and understand code, ultimately improving the quality and reliability of software.
 
-The [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) serves as a reference for developers both within and outside Google. By default, follow it's rules. Any deviations or additions will be detailed here, but follow this document when in doubt.
+The [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) serves as a reference for developers both within and outside Google. By default, follow its rules. Any deviations or additions will be detailed here, but follow this document when in doubt.
 
 **Right now, this document is incomplete and unconfirmed. Its word is not law.**
 
-## Formatting Basics
+## Style Standards
 
 ### Spacing
 
-We indent 4 spaces. End of sentence.
+We indent 4 spaces. End of story.
 
-### Variable Naming
+### Symbol Naming
 
-We do not use Hungarian prefixes (eg: `m_RobotContainer`). If you copy code from WPI's examples, rename the variables. Instead, we follow cammel case convention (eg: `fluffyDog`). Try to name your variables as clearly as possible. Include exactly what they represent and what units they are in.
+We do not use Hungarian prefixes/suffixes (eg: `m_RobotContainer`).  Instead, we follow cammel case convention (eg: `fluffyDog`). If you copy code from WPI's examples, rename the variables.
 
-**Warning:** Do not mess with files that aren't meant to be edited (eg: `BuildConstants.java`)!
+Try to name your variables as clearly as possible. Include exactly what they represent and what units they are in. Variable names should be relatively brief: instead of `distanceToTravel`, try `travelDistance`.
 
-### Other Emphasized Items
+### Some Emphasized Items
 
 * No single-line if/else blocks.
 * One statement per line.
@@ -33,9 +33,13 @@ We do not use Hungarian prefixes (eg: `m_RobotContainer`). If you copy code from
 * Separate reserved words and brackets (`()`) or curly brackets (`{}`) with a space.
 * When necessary, use parentheses to group complex math expressions. Do not assume people know Java's precise order of operations.
 
+## FRC-specific guidelines
+
+Commands can be named after nouns or verbs, but should not be confusing. A command that handles intaking in auto, but is not used in teleop or elsewhere, should be either named `AutoIntake`, or placed under folder marked for auto.
+
 ## Code Review
 
-Expect reviewers to comment on your code style and readability. They may request seemingly meaningless changes to variable names and file formatting. You should follow these requests in stride; keep in mind that reviewers are not critisizing your intelligence, or the structure of your code. We just need all our code to **look the same**.
+Expect reviewers to comment on your code style and readability. They may request seemingly meaningless changes to variable names and file formatting. You should follow these requests in stride; keep in mind that reviewers are not critisizing your intelligence, nor the structure of your code. We just need all our code to **look the same**.
 
 ## Installing a Formatter
 
