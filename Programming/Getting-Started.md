@@ -33,7 +33,7 @@ Consider installing some of the [Optional Software](/Programming/Optional-Softwa
 
 Becoming familiar with the following resources is required before contributing to the repository:
 - The [Software Development Workflow](/Programming/Software-Workflow.html) defines the process for making code changes on the team.
-- [Coding Standards](/Programming/Coding-Standards.html) 
+- Learn about our [Coding Standards](/Programming/Coding-Standards.html) to ensure your code passes review.
 
 
 
