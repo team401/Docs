@@ -15,6 +15,14 @@ If you are just trying to get started with progrmaming, don't worry about instal
 
 Some FRC vendors, such as Cross the Road Electronics and REV Robotics, provide their own software tools for configuring their components.  The installation instructions for these tools can be found on the vendor websites.  Latest versions of these tools should be installed on the Driver Station laptop.  ***If you are the Lead Programmer, you are responsible for ensuring the latest version of this software is installed on the Driver Station laptop!***
 
+### Common Vendor Tools
+ - Rev Hardware Client
+ - CTRE Tuner X
+
+## Elastic Dashboard
+
+The WPIlib suite comes with SmartDashboard and the Shuffleboard dashboard, but SmartDashboard is extremely bare and students tend to report Shuffleboard as buggy and tiresome to use. Elastic Dashboard is a newer Fluttr dashboard prefered by the drive team. ***The Lead Programmer should ensure that Elastic is installed on the Driver Station laptop. This is what the drive team is used to using to check robot status and select the auto routine.***
+
 ## FRC Update Suite (Windows Only)
 
 The FRC Update Suite is a large installer released by FIRST and National Instruments every year.  Despite the confusing name, the installer is actually standalone, and does not "update" anything.  The Update Suite will remove older versions of itself if installing a new version, but it can also be installed by itself without any previous versions.  The FRC Update Suite installs the following software:
