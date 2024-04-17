@@ -1,5 +1,5 @@
 ---
-title: Outreach
+# title: Outreach
 permalink: Outreach
 has_children: true
 layout: home

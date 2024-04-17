@@ -1,5 +1,5 @@
 ---
-title: Mechanical
+# title: Mechanical
 permalink: Mechanical
 has_children: true
 layout: home
