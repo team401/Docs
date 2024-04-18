@@ -1,5 +1,5 @@
 ---
-title: CAD
+# title: CAD
 permalink: CAD
 has_children: true
 layout: home
