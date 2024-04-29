@@ -29,6 +29,10 @@ After these programs are installed, your development environment is ready to use
 
 Consider installing some of the [Optional Software](/Programming/Optional-Software.html) as needed. Normally you do not need to do this unless you are the lead programmer or if you are working on specific hardware.
 
+## Learn the Language
+
+On 401, we use Java to program the robot. If you're coming from AP CSA, read the [Post-CSA Supplement](/Programming/Post-CSA.html). Otherwise, please learn Java.
+
 ## Understand the Process
 
 Becoming familiar with the following resources is required before contributing to the repository:
