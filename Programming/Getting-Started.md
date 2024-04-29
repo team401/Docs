@@ -20,24 +20,24 @@ First, you will need to [create a GitHub account](https://github.com) in order t
 ## Install Required Software
 
 Next, download the required software:
-- [Installing Git](/Programming/Installing-Git.html)
-- [Installing WPILib](/Programming/Installing-WPILib.html)
+- [Installing Git](/Docs/Programming/Installing-Git.html)
+- [Installing WPILib](/Docs/Programming/Installing-WPILib.html)
 
 After these programs are installed, your development environment is ready to use.
 
 ### Install Optional Software
 
-Consider installing some of the [Optional Software](/Programming/Optional-Software.html) as needed. Normally you do not need to do this unless you are the lead programmer or if you are working on specific hardware.
+Consider installing some of the [Optional Software](/Docs/Programming/Optional-Software.html) as needed. Normally you do not need to do this unless you are the lead programmer or if you are working on specific hardware.
 
 ## Learn the Language
 
-On 401, we use Java to program the robot. If you're coming from AP CSA, read the [Post-CSA Supplement](/Programming/Post-CSA.html). Otherwise, please learn Java.
+On 401, we use Java to program the robot. If you're coming from AP CSA, read the [Post-CSA Supplement](/Docs/Programming/Post-CSA.html). Otherwise, please learn Java.
 
 ## Understand the Process
 
 Becoming familiar with the following resources is required before contributing to the repository:
-- The [Software Development Workflow](/Programming/Software-Workflow.html) defines the process for making code changes on the team.
-- Learn about our [Coding Standards](/Programming/Coding-Standards.html) to ensure your code passes review.
+- The [Software Development Workflow](/Docs/Programming/Software-Workflow.html) defines the process for making code changes on the team.
+- Learn about our [Coding Standards](/Docs/Programming/Coding-Standards.html) to ensure your code passes review.
 
 
 
