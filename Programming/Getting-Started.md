@@ -31,7 +31,7 @@ Consider installing some of the [Optional Software](/Programming/Optional-Softwa
 
 ## Learn the Language
 
-On 401, we use Java to program the robot. If you're coming from AP CSA, read the [Post-CSA Supplement](/Programming/Post-CSA.html). If you have knowledge of programming, but not Java, refer to [Helpful Java Resources](/Programming/Java-Resources.html). If you need a complete introduction to Java, we recommend reading [the W3 Schools Java tutorial series](https://www.w3schools.com/java/default.asp).
+On 401, we use Java to program the robot. If you're coming from AP CSA, read the [Post-CSA Supplement](/Programming/Post-CSA.html). Otherwise, please learn Java.
 
 ## Understand the Process
 
