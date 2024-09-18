@@ -39,5 +39,13 @@ Becoming familiar with the following resources is required before contributing t
 - The [Software Development Workflow]({{ site.basename }}/Programming/Software-Workflow.html) defines the process for making code changes on the team.
 - Learn about our [Coding Standards]({{ site.basename }}/Programming/Coding-Standards.html) to ensure your code passes review.
 
+## Understand our Library: Coppercore
+
+Coppercore is our way of keeping useful code the same year-year. Classes in this library help find locations on a field, add deadbands to joysticks, and interface with wpilib
+
+#### Use Coppercore in a new project
+
+
+
 
 
