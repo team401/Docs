@@ -1,6 +1,7 @@
 ---
 title: Using AprilTags
-parent: Programming
+parent: Vision
+grand_parent: Programming
 has_children: true
 layout: home
 ---
