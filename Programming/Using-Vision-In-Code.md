@@ -11,7 +11,7 @@ To import vision simply add this line to the robot code's build.gradle under dep
 ```
 dependencies {
     ...
-    implementation "io.github.team401.coppercore:version"
+    implementation "io.github.team401.coppercore:vision:$version"
     ...
 }
 ```
