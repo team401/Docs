@@ -77,3 +77,4 @@ drive.setDefaultCommand(
     )
 );
 ```
+***Note:*** If joysticks behave with too much sensitivity (barely tapping causes movement) increase the deadband, maybe 0.05 -> 0.1
