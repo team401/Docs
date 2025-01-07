@@ -31,7 +31,7 @@ public class SwerveDrive implements DriveTemplate {
 ***Note:*** by implementing DriveTemplate, you DO NOT have to extend SubsystemBase, this step is already included within the DriveTemplate. 
 
 ### Adding SetGoalSpeeds method
-The DriveTemplate also requires that the driveSubsytem have a setGoalSpeeds method. This is how the DriveWithJoysticks command will tell drive what speeds are being commmanded. An example of adding this to the talonrfx-swerve used in 2025 is shown below.
+The DriveTemplate also requires that the driveSubsytem have a setGoalSpeeds method. This is how the DriveWithJoysticks command will tell drive what speeds are being commmanded. An example of adding this to the talonfx-swerve used in 2025 is shown below.
 ```
 public class Drive implements DriveTemplate {
     public ChassisSpeeds goalSpeeds = new ChassisSpeeds();
