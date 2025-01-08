@@ -1,8 +1,6 @@
 ---
 title: Using Overlayroot
 parent: Using AprilTags
-grand_parent: Vision
-has_children: false
 layout: home
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Coppercore - Drive With Joysticks Command
 parent: Programming
-has_children: false
 layout: home
 ---
 
