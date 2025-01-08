@@ -1,7 +1,6 @@
 ---
 title: Using Pheonix Swerve
 parent: Programming
-has_children: false
 layout: home
 ---
 

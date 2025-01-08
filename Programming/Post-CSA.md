@@ -1,8 +1,6 @@
 ---
 title: Post CSA Supplement
 parent: Getting Started
-grand_parent: Programming
-has_children: false
 layout: home
 ---
 
