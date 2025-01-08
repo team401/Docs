@@ -1,6 +1,6 @@
 ---
 title: Common PhotonVision Problems
-parent: Using AprilTags
+parent: Vision
 grand_parent: Programming
 has_children: false
 layout: home

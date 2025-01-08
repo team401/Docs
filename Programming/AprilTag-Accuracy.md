@@ -1,6 +1,6 @@
 ---
 title: What Affects AprilTag Accuracy?
-parent: Using AprilTags
+parent: Vision
 grand_parent: Programming
 has_children: false
 layout: home

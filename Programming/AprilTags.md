@@ -2,12 +2,11 @@
 title: Using AprilTags
 parent: Vision
 grand_parent: Programming
-has_children: true
+has_children: false
 layout: home
 ---
 
 # Using AprilTags
-{: .no_toc }
 
 AprilTags are a vital part of the modern FRC control system. They allow a robot to localize itself on the field without relying on dead-reckoning. Use the topics on this document to set up a robust AprilTag localization system.
 
