@@ -1,6 +1,8 @@
 ---
 title: Using Coppercore Vision In Code
 parent: Vision
+grand_parent: Programming
+has_children: false
 layout: home
 ---
 

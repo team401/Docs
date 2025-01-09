@@ -1,6 +1,7 @@
 ---
 title: Software Development Workflow
 parent: Programming
+has_children: false
 layout: home
 ---
 

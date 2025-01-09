@@ -1,6 +1,7 @@
 ---
 title: Vison
 parent: Programming
+has_children: true
 layout: home
 ---
 
