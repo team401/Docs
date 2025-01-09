@@ -1,5 +1,5 @@
 ---
-title: Vison
+title: Vision
 parent: Programming
 has_children: true
 layout: home
