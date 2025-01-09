@@ -63,6 +63,19 @@ public class Drive implements DriveTemplate {
 ```
 Furthermore, to keep things uniform throughout code, any other commands for running velocity should now be sent to setGoalSpeeds method. Braking could be done like so `drive.setGoalSpeeds(new ChassisSpeeds(0));`
 
+### Adjusting RunVelocity
+finally, remove the parameter from runVelocity method like above, and add this runVelocity method to the end of the drivetrains periodic method. If you notice drive isn't moving, you likely forgot this step.
+```
+@Override
+public void periodic {
+    //...
+    this.runVelocity();
+    //...
+}
+```
+
+***Note:*** This is needed because the DriveWithJoysticks command calls setGoalSpeeds every loop, however, without ever running runVelocity the robot would never move. Speeds would be updated but never sent to drive motors.
+
 ## Adding Command to RobotContainer
 This just involved setting the default command for drive to a new instance of the DriveWithJoysticks command. Linear and angular speeds should match the max of those set in drive subsystem.
 ```
