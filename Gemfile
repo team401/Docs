@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem "jekyll", "~> 4.3.2" # installed by `gem jekyll`
-gem "just-the-docs", "0.6.2" # pinned to the current release
+gem "jekyll", "~> 4.3.4" # installed by `gem jekyll`
+gem "just-the-docs", "0.10.1" # pinned to the current release
