@@ -1,4 +1,4 @@
-site_name: 401 Docs
+site_name: Docs
 site_url: https://team401.github.io
 
 repo_url: https://github.com/team401/Docs
@@ -8,7 +8,7 @@ extra_css:
   - stylesheets/colors.css
 theme:
   name: material
-  favicon: images/logo.png
+  favicon: images/logo_sq.png
   logo: images/logo.png
   palette:
     # Light mode
@@ -39,3 +39,8 @@ theme:
 
 extra:
   generator: false
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
