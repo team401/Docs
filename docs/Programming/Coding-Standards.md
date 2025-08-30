@@ -1,9 +1,3 @@
----
-title: Coding Standards
-parent: Programming
-has_children: false
-layout: home
----
 
 # Team 401 Code Standards
 
@@ -53,6 +47,6 @@ In order to automatically format a file, you can run `Format Document` in the co
 
 *TODO:* Steps will be added on how to attach the formatter to `build.gradle`. Essentially, the formatter will run whenever the robot code is built.
 
-###  GitHub Actions
+### GitHub Actions
 
 *TODO:* The GitHub repository will have an action to automatically format all code that is pushed to main. This does not mean that formatting should be disregarded on the individual's side though.

@@ -1,19 +1,11 @@
----
-title: Using AprilTags
-parent: Vision
-grand_parent: Programming
-has_children: false
-layout: home
----
 
 # Using AprilTags
-{: .no_toc }
 
 AprilTags are a vital part of the modern FRC control system. They allow a robot to localize itself on the field without relying on dead-reckoning. Use the topics on this document to set up a robust AprilTag localization system.
 
 ## PhotonVision
 
-Team 401 uses a piece of open-source software called [PhotonVision](https://photonvision.org) to run our vision pipeline. We recommend reading their [docs](https://docs.photonvision.org/en/latest) to learn how to set it up for your year. Also feel free to read [Common PhotonVision Problems]({{ site.baseurl }}/Programming/PhotonVision-Problems.html).
+Team 401 uses a piece of open-source software called [PhotonVision](https://photonvision.org) to run our vision pipeline. We recommend reading their [docs](https://docs.photonvision.org/en/latest) to learn how to set it up for your year. Also feel free to read [Common PhotonVision Problems](../PhotonVision-Problems).
 
 ## Overlayroot
 

@@ -1,10 +1,3 @@
----
-title: What Affects AprilTag Accuracy?
-parent: Vision
-grand_parent: Programming
-has_children: false
-layout: home
----
 
 # What Affects AprilTag Accuracy?
 
@@ -18,7 +11,7 @@ We recommend setting your AprilTag strategy in PhotonVision to `MULTI_TAG_PNP_ON
 
 ## Distance
 
-The accuracy of an AprilTag measurement is inversely proportional to the average distance of the tags from the camera. We don't have a standardized mechanism for gauging accuracy based on distance, but it is recommended to test heavily, especially in auto. 
+The accuracy of an AprilTag measurement is inversely proportional to the average distance of the tags from the camera. We don't have a standardized mechanism for gauging accuracy based on distance, but it is recommended to test heavily, especially in auto.
 
 ## Angle
 

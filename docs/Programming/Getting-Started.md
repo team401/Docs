@@ -1,17 +1,7 @@
----
-title: Getting Started
-parent: Programming
-has_children: true
-layout: home
----
 
 # Getting Started
-{: .no_toc }
 
 Follow the steps in this document to begin contributing to robot software projects on the team.
-
-1. TOC
-{:toc}
 
 ## Create GitHub Account
 
@@ -20,8 +10,9 @@ First, you will need to [create a GitHub account](https://github.com) in order t
 ## Install Required Software
 
 Next, download the required software:
-- [Installing Git]({{ site.basename }}/Programming/Installing-Git.html)
-- [Installing WPILib]({{ site.baseurl }}/Programming/Installing-WPILib.html)
+
+- [Installing Git](docs/Programming/Installing-Git.html)
+- [Installing WPILib](docs/Programming/Installing-WPILib.html)
 
 After these programs are installed, your development environment is ready to use.
 
@@ -36,6 +27,7 @@ On 401, we use Java to program the robot. If you're coming from AP CSA, read the
 ## Understand the Process
 
 Becoming familiar with the following resources is required before contributing to the repository:
+
 - The [Software Development Workflow]({{ site.basename }}/Programming/Software-Workflow.html) defines the process for making code changes on the team.
 - Learn about our [Coding Standards]({{ site.basename }}/Programming/Coding-Standards.html) to ensure your code passes review.
 
@@ -43,9 +35,4 @@ Becoming familiar with the following resources is required before contributing t
 
 Coppercore is our way of keeping useful code the same year-year. Classes in this library help find locations on a field, add deadbands to joysticks, and interface with wpilib
 
-#### Use Coppercore in a new project
-
-
-
-
-
+### Use Coppercore in a new project
