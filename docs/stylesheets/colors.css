@@ -1,14 +1,21 @@
 
 /* Light mode */
-[data-md-color-scheme="default"] {
+[data-md-color-scheme] {
     --md-primary-fg-color: #d35401;
     --md-primary-fg-color--light: #d35401;
     --md-primary-fg-color--dark: #d35401;
 }
 
-/* Dark mode */
-[data-md-color-scheme="slate"] {
-    --md-primary-fg-color: #d35401;
-    --md-primary-fg-color--light: #d35401;
-    --md-primary-fg-color--dark: #d35401;
+.md-nav__link--active {
+    color: #d35401 !important;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #d35401 !important;
+    text-decoration: underline;
+}
+
+.md-typeset a {
+    color: #d35401 !important;
 }

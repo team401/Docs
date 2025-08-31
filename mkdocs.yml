@@ -27,13 +27,13 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.tracking
-    - navigation.tabs
-    - navigation.sections
+    # - navigation.tabs
+    # - navigation.sections
     - navigation.expand
     - navigation.path
     - navigation.footer
     - toc.follow
-    - toc.integrate
+    # - toc.integrate
     - navigation.top
     - search.suggest
     - search.highlight
