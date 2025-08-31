@@ -1,12 +1,5 @@
----
-title: Programming Your Radio
-parent: Hardware Setup
-grand_parent: Programming
-has_children: false
-layout: home
----
 
-# Programming Your Radio
+# Radio Programming
 
 As of the 2025 season, Team 401 uses the [VH-109 radio from VividHosting](https://frc-radio.vivid-hosting.net/).
 
@@ -28,8 +21,8 @@ You will still need the radio on your robot to be configured as a robot radio. Y
 
 To connect to the radio for shop testing, you can:
 
- - Use a wifi-6 capable laptop
- - Use an ethernet cable to connect directly to the access point radio
+- Use a wifi-6 capable laptop
+- Use an ethernet cable to connect directly to the access point radio
 
 ### Use the Robot Radio as a 2.4 GHz Access Point
 

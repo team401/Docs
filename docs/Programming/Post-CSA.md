@@ -1,10 +1,3 @@
----
-title: Post CSA Supplement
-parent: Getting Started
-grand_parent: Programming
-has_children: false
-layout: home
----
 
 # Post CSA Supplement
 
@@ -24,8 +17,8 @@ The benefit of an interface is that it's a contract. The interface defines a set
 
 When writing robot code, we tend to prefer interfaces to super classes when:
 
- - We're trying to isolate IO from subsystem logic, eg: `private ArmIO io;` -- there's no 'true' `ArmIO`, only different implementations. We don't have to start out with a default class that implements all of the arm's behavior, and then pave over it with subclasses. See the [AdvantageKit documentation](https://github.com/Mechanical-Advantage/AdvantageKit/blob/main/docs/RECORDING-INPUTS.md) for more details.
- - We're trying to describe an optional property/behavior a subsystem can have, eg: in 2024 we defined the `Tunable` interface, which provided utility methods to tune the mechanisms of a subsystem.
+- We're trying to isolate IO from subsystem logic, eg: `private ArmIO io;` -- there's no 'true' `ArmIO`, only different implementations. We don't have to start out with a default class that implements all of the arm's behavior, and then pave over it with subclasses. See the [AdvantageKit documentation](https://github.com/Mechanical-Advantage/AdvantageKit/blob/main/docs/RECORDING-INPUTS.md) for more details.
+- We're trying to describe an optional property/behavior a subsystem can have, eg: in 2024 we defined the `Tunable` interface, which provided utility methods to tune the mechanisms of a subsystem.
 
 ## Generics
 

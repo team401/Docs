@@ -11,8 +11,8 @@ First, you will need to [create a GitHub account](https://github.com) in order t
 
 Next, download the required software:
 
-- [Installing Git](docs/Programming/Installing-Git.html)
-- [Installing WPILib](docs/Programming/Installing-WPILib.html)
+- [Installing Git](installing-git.md)
+- [Installing WPILib](installing-wpilib.md)
 
 After these programs are installed, your development environment is ready to use.
 

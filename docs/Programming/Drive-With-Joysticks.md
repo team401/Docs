@@ -1,38 +1,43 @@
----
-title: Coppercore - Drive With Joysticks Command
-parent: Programming
-has_children: false
-layout: home
----
 
 # Drive With Joysticks Command
+
 This command, placed inside of coppercore's wpilib_interface library, has several advanced features to help make driving smoother. These include:
+
 - enhanced sensitivity via squaring the magnitude of linear and rotational velocities
 - adjustable deadbands
 - adjustable max speeds (linear and rotational)
 
-# Using the Command
-## Importing Library
+## Using the Command
+
+### Importing Library
+
 To import the command simply add this line to the robot code's build.gradle under dependencies similar to how other coppercore dependencies are added
-```
+
+```text
 dependencies {
     ...
     implementation "io.github.team401.coppercore:wpilib_interface:$version"
     ...
 }
 ```
+
 ## Setting Up Drive Subsystem
+
 In order to use this command, the drive subsystem must implement the DriveTemplate located in wpilib_interface library:
-```
+
+```java
 public class SwerveDrive implements DriveTemplate {
     ...
 }
 ```
-***Note:*** by implementing DriveTemplate, you DO NOT have to extend SubsystemBase, this step is already included within the DriveTemplate. 
+
+***Note:*** by implementing DriveTemplate, you DO NOT have to extend SubsystemBase, this step is already included within the DriveTemplate.
 
 ### Adding SetGoalSpeeds method
+
 The DriveTemplate also requires that the driveSubsytem have a setGoalSpeeds method. This is how the DriveWithJoysticks command will tell drive what speeds are being commmanded. An example of adding this to the talonfx-swerve used in 2025 is shown below.
-```
+
+```java
 public class Drive implements DriveTemplate {
     public ChassisSpeeds goalSpeeds = new ChassisSpeeds();
     //...
@@ -61,11 +66,14 @@ public class Drive implements DriveTemplate {
     }
 }
 ```
+
 Furthermore, to keep things uniform throughout code, any other commands for running velocity should now be sent to setGoalSpeeds method. Braking could be done like so `drive.setGoalSpeeds(new ChassisSpeeds(0));`
 
 ### Adjusting RunVelocity
+
 finally, remove the parameter from runVelocity method like above, and add this runVelocity method to the end of the drivetrains periodic method. If you notice drive isn't moving, you likely forgot this step.
-```
+
+```java
 @Override
 public void periodic {
     //...
@@ -77,8 +85,10 @@ public void periodic {
 ***Note:*** This is needed because the DriveWithJoysticks command calls setGoalSpeeds every loop, however, without ever running runVelocity the robot would never move. Speeds would be updated but never sent to drive motors.
 
 ## Adding Command to RobotContainer
+
 This just involved setting the default command for drive to a new instance of the DriveWithJoysticks command. Linear and angular speeds should match the max of those set in drive subsystem.
-```
+
+```java
 drive.setDefaultCommand(
     new DriveWithJoysticksCommand(
         drive, // type: DriveTemplate
@@ -90,4 +100,5 @@ drive.setDefaultCommand(
     )
 );
 ```
+
 ***Note:*** If joysticks behave with too much sensitivity (barely tapping causes movement) increase the deadband, maybe 0.05 -> 0.1

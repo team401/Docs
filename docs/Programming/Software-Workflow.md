@@ -137,13 +137,10 @@ Once you believe your code is ready to merge into the `main` branch, make a pull
 2. Click on the Branches button:
 ![Click on branches](../images/pullRequestBranches.png)
 3. Look for your branch. Click the "New Pull Request" button:
-
 ![New pull request button](../images/pullRequestNewPR.png)
 
-- If the "New Pull Request" button isn't available, then a PR already exists for the branch. You should be able to see that for your branch.
-
+If the "New Pull Request" button isn't available, then a PR already exists for the branch. You should be able to see that for your branch.
 4. Name the pull request something descriptive and fill out the description with a bulleted list of changes you made.
-
 5. Click "Create pull request" (or hit the down arrow and click "Create draft pull request" if it isn't ready for review).
 6. If creating a PR for review (not a draft), then assign someone on the programming team to review it.
 
