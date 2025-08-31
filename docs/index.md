@@ -7,7 +7,9 @@
 This site uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), visit their docs to see what customization options are available.
 
 Clone this repo by running: `#!bash git clone https://github.com/team401/Docs`
+
 Then install Material for MkDocs and its dependencies: `#!bash pip install -r requirements.txt`
+
 Serve the site locally: `#!bash mkdocs serve`
 
 ## Project layout
