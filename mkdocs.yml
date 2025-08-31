@@ -23,6 +23,7 @@ theme:
         icon: material/lightbulb-outline
         name: Switch to Light Mode
   features:
+    - navigation.indexes
     - navigation.instant
     - navigation.instant.progress
     - navigation.tracking
@@ -30,6 +31,7 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.path
+    - navigation.footer
     - toc.follow
     - toc.integrate
     - navigation.top
@@ -44,4 +46,3 @@ plugins:
   - search
   - git-revision-date-localized:
       enable_creation_date: true
-      enable_git_follow: false

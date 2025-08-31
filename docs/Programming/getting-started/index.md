@@ -18,18 +18,18 @@ After these programs are installed, your development environment is ready to use
 
 ### Install Optional Software
 
-Consider installing some of the [Optional Software]({{ site.baseurl }}/Programming/Optional-Software.html) as needed. Normally you do not need to do this unless you are the lead programmer or if you are working on specific hardware.
+Consider installing some of the [Optional Software](optional-software.md) as needed. Normally you do not need to do this unless you are the lead programmer or if you are working on specific hardware.
 
 ## Learn the Language
 
-On 401, we use Java to program the robot. If you're coming from AP CSA, read the [Post-CSA Supplement]({{ site.baseurl }}/Programming/Post-CSA.html). Otherwise, please learn Java.
+On 401, we use Java to program the robot. If you're coming from AP CSA, read the [Post-CSA Supplement](post-csa.md). Otherwise, please learn Java.
 
 ## Understand the Process
 
 Becoming familiar with the following resources is required before contributing to the repository:
 
-- The [Software Development Workflow]({{ site.basename }}/Programming/Software-Workflow.html) defines the process for making code changes on the team.
-- Learn about our [Coding Standards]({{ site.basename }}/Programming/Coding-Standards.html) to ensure your code passes review.
+- The [Software Development Workflow](../software-workflow.md) defines the process for making code changes on the team.
+- Learn about our [Coding Standards](../coding-standards.md) to ensure your code passes review.
 
 ## Understand our Library: Coppercore
 
