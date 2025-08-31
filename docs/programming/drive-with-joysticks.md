@@ -67,7 +67,7 @@ public class Drive implements DriveTemplate {
 }
 ```
 
-Furthermore, to keep things uniform throughout code, any other commands for running velocity should now be sent to setGoalSpeeds method. Braking could be done like so `drive.setGoalSpeeds(new ChassisSpeeds(0));`
+Furthermore, to keep things uniform throughout code, any other commands for running velocity should now be sent to setGoalSpeeds method. Braking could be done like so `#!java drive.setGoalSpeeds(new ChassisSpeeds(0));`
 
 ### Adjusting RunVelocity
 

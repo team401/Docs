@@ -7,7 +7,7 @@ If you've taken AP CSA, you have a pretty good overview of the Java language and
 
 _See: [W3 Schools](https://www.w3schools.com/java/java_interface.asp), [Oracle](https://docs.oracle.com/javase/tutorial/java/concepts/interface.html)_
 
-In brief, an interface is like a class, except it defines no instance variables, does not define a constructor, and cannot have instances constructed directly. Additionally, methods described in an interface have no body unless the `default` keyword is used.
+In brief, an interface is like a class, except it defines no instance variables, does not define a constructor, and cannot have instances constructed directly. Additionally, methods described in an interface have no body unless the `#!java default` keyword is used.
 
 _Q: So what? It's just a list of methods?_
 
@@ -17,7 +17,7 @@ The benefit of an interface is that it's a contract. The interface defines a set
 
 When writing robot code, we tend to prefer interfaces to super classes when:
 
-- We're trying to isolate IO from subsystem logic, eg: `private ArmIO io;` -- there's no 'true' `ArmIO`, only different implementations. We don't have to start out with a default class that implements all of the arm's behavior, and then pave over it with subclasses. See the [AdvantageKit documentation](https://github.com/Mechanical-Advantage/AdvantageKit/blob/main/docs/RECORDING-INPUTS.md) for more details.
+- We're trying to isolate IO from subsystem logic, eg: `#!java private ArmIO io;` -- there's no 'true' `ArmIO`, only different implementations. We don't have to start out with a default class that implements all of the arm's behavior, and then pave over it with subclasses. See the [AdvantageKit documentation](https://github.com/Mechanical-Advantage/AdvantageKit/blob/main/docs/RECORDING-INPUTS.md) for more details.
 - We're trying to describe an optional property/behavior a subsystem can have, eg: in 2024 we defined the `Tunable` interface, which provided utility methods to tune the mechanisms of a subsystem.
 
 ## Generics

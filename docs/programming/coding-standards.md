@@ -21,10 +21,10 @@ Try to name your variables as clearly as possible. Include exactly what they rep
 
 ### Some Emphasized Items
 
-* No single-line if/else blocks. (eg: No: `if (true) { completeAction() }`)
-* One statement per line. (eg: No: `first(); second();`)
-* One variable per declaration (Multi-declarations mess up the Gradle LSP). (eg: No: `int a, b = 5;`)
-* Separate reserved words and brackets (`()`) or curly brackets (`{}`) with a space. (eg: No: `else{...}`, Yes: `else {...}`)
+* No single-line if/else blocks. (eg: No: `#!java if (true) { completeAction() }`)
+* One statement per line. (eg: No: `#!java first(); second();`)
+* One variable per declaration (Multi-declarations mess up the Gradle LSP). (eg: No: `#!java int a, b = 5;`)
+* Separate reserved words and brackets (`()`) or curly brackets (`{}`) with a space. (eg: No: `#!java else{...}`, Yes: `#!java else {...}`)
 * When necessary, use parentheses to group complex math expressions. Do not assume people know Java's precise order of operations.
 
 ## FRC-specific guidelines

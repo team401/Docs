@@ -15,7 +15,7 @@ Follow the tutorial on the generator site to create a new project.
 
 - When [verifying steer](https://pro.docs.ctr-electronics.com/en/latest/docs/tuner/tuner-swerve/validating-drivetrain.html#verify-steer), you might encounter a problem where the "Start" and "Stop" buttons are missing, they are simply underneath the toolbar. Hide it and the buttons should appear!
 - The variable `kSlipCurrentA` in `TunerConstants` should be the current at which the wheels start to slip **per individual motor**.
-- When controlling the drivetrain with `setControl(...)`, make sure to include `.withDriveRequestType(DriveRequestType.Velocity)` inside the method. This will allow you to utilize the feedforward and feedback values you tuned earlier in `TunerConstants`. For example:
+- When controlling the drivetrain with `setControl(...)`, make sure to include `#!java .withDriveRequestType(DriveRequestType.Velocity)` inside the method. This will allow you to utilize the feedforward and feedback values you tuned earlier in `TunerConstants`. For example:
 
 ```java linenums="1"
 setControl(

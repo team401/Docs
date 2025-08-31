@@ -5,7 +5,7 @@
 
 ## Installation
 
-Overlayroot can be installed with `sudo apt install overlayroot`. Along with installing the utility, this creates an empty file at `/etc/overlayroot.conf`.
+Overlayroot can be installed with `#!bash sudo apt install overlayroot`. Along with installing the utility, this creates an empty file at `/etc/overlayroot.conf`.
 
 ## Configuration
 
@@ -37,19 +37,19 @@ overlayroot="tmpfs:swap=1,recurse=0"
 
 ## Enabling/Disabling Overlayroot
 
-The process of enabling overlayroot when it is disabled should be fairly obvious: edit the config file using `sudo vim` or `sudo nano`, and reboot the device.
+The process of enabling overlayroot when it is disabled should be fairly obvious: edit the config file using `#!bash sudo vim` or `#!bash sudo nano`, and reboot the device.
 
-Disabling overlayroot when it is enabled is more complicated. If the config file is edited and the device rebooted, the config file will revert, and overlayroot will remain enabled! In order to make persistent file changes when overlayroot is enabled, run `sudo overlayroot-chroot`. Now the config file can be edited, and the filesystem will be mutable after a reboot.
+Disabling overlayroot when it is enabled is more complicated. If the config file is edited and the device rebooted, the config file will revert, and overlayroot will remain enabled! In order to make persistent file changes when overlayroot is enabled, run `#!bash sudo overlayroot-chroot`. Now the config file can be edited, and the filesystem will be mutable after a reboot.
 
 In conclusion, to enable overlayroot:
 
- 1. Run `sudo nano /etc/overlayroot.conf`
- 2. Edit the file so that the uncommented section reads `overlayroot="tmpfs:swap=1,recurse=0"`
+ 1. Run `#!bash sudo nano /etc/overlayroot.conf`
+ 2. Edit the file so that the uncommented section reads `#!bash overlayroot="tmpfs:swap=1,recurse=0"`
  3. Save and reboot
 
 To disable overlayroot:
 
- 1. Run `sudo overlayroot-chroot`
- 2. Run `nano /etc/overlayroot-chroot`
- 3. Edit the file so that the uncommented section reads `overlayroot=""`
- 4. Save, `exit` and reboot
+ 1. Run `#!bash sudo overlayroot-chroot`
+ 2. Run `#!bash nano /etc/overlayroot-chroot`
+ 3. Edit the file so that the uncommented section reads `#!bash overlayroot=""`
+ 4. Save, `#!bash exit` and reboot
