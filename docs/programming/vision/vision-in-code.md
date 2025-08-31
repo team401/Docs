@@ -3,7 +3,7 @@
 
 To import vision simply add this line to the robot code's build.gradle under dependencies similar to how other coppercore dependencies are added
 
-```text
+```groovy linenums="1"
 dependencies {
     ...
     implementation "io.github.team401.coppercore:vision:$version"
@@ -19,7 +19,7 @@ Begin by initializing drive subsystem followed by instantiating a VisionLocalize
 
 ***Sim Example:***
 
-```java
+```java linenums="1"
 vision =
             new VisionLocalizer(
                 swerveDrive::addVisionMeasurement,
@@ -38,7 +38,7 @@ Additionally, the visionConsumer can be changed within a later method by running
 
 For replay, io implementations are disabled (the same number of io's should still be added) like so:
 
-```java
+```java linenums="1"
 vision = new VisionLocalizer(swerveDrive::addVisionMeasurement, VisionConstants.fieldLayout, new double[0], new VisionIO() {}, new VisionIO() {});
 ```
 

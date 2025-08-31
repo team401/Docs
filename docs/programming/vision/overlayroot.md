@@ -11,13 +11,13 @@ Overlayroot can be installed with `sudo apt install overlayroot`. Along with ins
 
 In the context of a 401 PhotonVision coprocessor, the overlayroot config file is only ever in one of two states:
 
-```bash
+```bash linenums="1"
 overlayroot=""
 ```
 
 ...which disables overlayroot, and:
 
-```bash
+```bash linenums="1"
 overlayroot="tmpfs:swap=1,recurse=0"
 ```
 
@@ -25,7 +25,7 @@ overlayroot="tmpfs:swap=1,recurse=0"
 
 We would recommend arranging this file like so:
 
-```bash
+```bash linenums="1"
 # ON:
 overlayroot="tmpfs:swap=1,recurse=0"
 

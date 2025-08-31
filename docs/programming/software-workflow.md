@@ -36,14 +36,14 @@ On the right side panel, make sure to assign someone, add a label, and add the i
 
 When starting work on an issue, it's helpful to mark the Issue as "In Progress" on whatever milestone it's on (if applicable). To start the code work, use your favorite Git client on your computer to checkout and pull the `main` branch (to get the latest updates). In Git bash this looks like:
 
-```bash
+```bash linenums="1"
 git checkout main
 git pull
 ```
 
 Then create a new branch off of `main` with:
 
-```bash
+```bash linenums="1"
 git checkout -b new-branch-name
 ```
 
@@ -67,19 +67,19 @@ You also **must commit and push your code before leaving at the end of the day.*
 
 To commit your code, make sure to add the files you want to the commit (stage the changes). To add all the files in the current directory with Git Bash:
 
-```bash
+```bash linenums="1"
 git add .
 ```
 
 Then make a commit. Commits should have useful messages and it is helpful if they contain a reference to the issue number your branch is related to.
 
-```bash
+```bash linenums="1"
 git commit -m "#issue-number: a helpful and concise message that details the work done in this commit"
 ```
 
 Finally, push the code to GitHub:
 
-```bash
+```bash linenums="1"
 git push
 ```
 
@@ -98,34 +98,34 @@ TODO: Put a diagram explaining how rebase works
 
 First, make sure `main` is updated:
 
-```bash
+```bash linenums="1"
 git checkout main
 git pull
 ```
 
 Now you can rebase the current branch on top of `main` like so:
 
-```bash
+```bash linenums="1"
 git checkout branch-you-want-to-rebase
 git rebase main
 ```
 
 Rebase works by going through each commit and stacking it on top of the parent branch (in this case `main`). If there are merge conflicts for any commit, rebase will pause for you to resolve the conflict. You can resolve the conflict in VS Code and then do the following to continue the rebase:
 
-```bash
+```bash linenums="1"
 git add .
 git rebase --continue
 ```
 
 After a successful rebase, whenever you want to push the code to GitHub you will need to do so with force. It is best practice to do the following:
 
-```bash
+```bash linenums="1"
 git push --force-with-lease
 ```
 
 However, if you know that nobody else is working on your branch you can do
 
-```bash
+```bash linenums="1"
 git push -f
 ```
 

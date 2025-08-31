@@ -17,7 +17,7 @@ Follow the tutorial on the generator site to create a new project.
 - The variable `kSlipCurrentA` in `TunerConstants` should be the current at which the wheels start to slip **per individual motor**.
 - When controlling the drivetrain with `setControl(...)`, make sure to include `.withDriveRequestType(DriveRequestType.Velocity)` inside the method. This will allow you to utilize the feedforward and feedback values you tuned earlier in `TunerConstants`. For example:
 
-```java
+```java linenums="1"
 setControl(
     new new SwerveRequest.FieldCentric()
         .withVelocityX(vx)

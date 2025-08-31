@@ -13,7 +13,7 @@ This command, placed inside of coppercore's wpilib_interface library, has severa
 
 To import the command simply add this line to the robot code's build.gradle under dependencies similar to how other coppercore dependencies are added
 
-```text
+```groovy linenums="1"
 dependencies {
     ...
     implementation "io.github.team401.coppercore:wpilib_interface:$version"
@@ -25,7 +25,7 @@ dependencies {
 
 In order to use this command, the drive subsystem must implement the DriveTemplate located in wpilib_interface library:
 
-```java
+```java linenums="1"
 public class SwerveDrive implements DriveTemplate {
     ...
 }
@@ -37,7 +37,7 @@ public class SwerveDrive implements DriveTemplate {
 
 The DriveTemplate also requires that the driveSubsytem have a setGoalSpeeds method. This is how the DriveWithJoysticks command will tell drive what speeds are being commmanded. An example of adding this to the talonfx-swerve used in 2025 is shown below.
 
-```java
+```java linenums="1"
 public class Drive implements DriveTemplate {
     public ChassisSpeeds goalSpeeds = new ChassisSpeeds();
     //...
@@ -73,7 +73,7 @@ Furthermore, to keep things uniform throughout code, any other commands for runn
 
 finally, remove the parameter from runVelocity method like above, and add this runVelocity method to the end of the drivetrains periodic method. If you notice drive isn't moving, you likely forgot this step.
 
-```java
+```java linenums="1"
 @Override
 public void periodic {
     //...
@@ -88,7 +88,7 @@ public void periodic {
 
 This just involved setting the default command for drive to a new instance of the DriveWithJoysticks command. Linear and angular speeds should match the max of those set in drive subsystem.
 
-```java
+```java linenums="1"
 drive.setDefaultCommand(
     new DriveWithJoysticksCommand(
         drive, // type: DriveTemplate
