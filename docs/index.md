@@ -1,17 +1,21 @@
-# Welcome to MkDocs
+# 401 Docs Overview
 
-For fulla documentation visit [mkdocs.org](https://www.mkdocs.org).
+401 Docs was started in the summer of 2019 and is an ongoing effort to improve Team 401 by documenting our procedures and experiences.
 
-## Commands
+## Testing and Running Locally
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+This site uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), visit their docs to see what customization options are available.
+
+Clone this repo by running: `#!bash git clone https://github.com/team401/Docs`
+Then install Material for MkDocs and its dependencies: `#!bash pip install -r requirements.txt`
+Serve the site locally: `#!bash mkdocs serve`
 
 ## Project layout
 
     mkdocs.yml    # The configuration file.
     docs/
         index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+        programming/
+            index.md # Programming section homepage
+            ... # Other programming files
+        ... # Other markdown pages, images and other files.
