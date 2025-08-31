@@ -38,7 +38,7 @@ _See: [W3 Schools](https://www.w3schools.com/java/java_lambda.asp), [Oracle](htt
 
 Explaining functional programming lies mostly beyond my abilities. I will venture to clear up some confusion I've seen regarding lambda expressions.
 
-```java linenums="1"
+```java
 class Main {
     public static void main(String[] args) {
         Runnable a = () -> someMethod();
