@@ -11,7 +11,7 @@ Github Issues are the way we track the software work we are doing. If you are as
 
 If you find a bug or come up with an idea for something to improve in the code, create an issue. To do this, go to the repository on GitHub, click the Issues tab, and then click "New Issue"
 
-![Create a new issue](../res/createNewIssue.png)
+![Create a new issue](../images/createNewIssue.png)
 
 From there, name your issue something descriptive. To fill out the description section, consider using the following template:
 
