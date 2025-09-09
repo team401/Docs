@@ -6,11 +6,24 @@
 
 This site uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), visit their docs to see what customization options are available.
 
-Clone this repo by running: `#!bash git clone https://github.com/team401/Docs`
+1. Clone this repo by running: `#!bash git clone https://github.com/team401/Docs`
 
-Then install Material for MkDocs and its dependencies: `#!bash pip install -r requirements.txt`
+2. Optionally, to avoid installing the Python packages into your user account,
+create a virtual environment first:
+```
+$ virtualenv venv
+```
+You must activate the environment every time you wish to use it:
+```
+$ source venv/bin/activate
+```
+where `venv` is a name and directory location you can choose.
+If you don't set up and activate a virtual environment first,
+`pip` will install `MkDocs` into your personal account.
 
-Serve the site locally: `#!bash mkdocs serve`
+3. Then install Material for MkDocs and its dependencies: `#!bash pip install -r requirements.txt`
+
+4. Serve the site locally: `#!bash mkdocs serve`
 
 ## Project layout
 
