@@ -15,7 +15,9 @@ $ python -m venv venv
 ```
 You must activate the environment every time you wish to use it:
 ```
-$ source venv/bin/activate
+$ source venv/bin/activate   # on Unix/Linux/macOS
+$ venv\Scripts\activate      # on Windows, command prompt
+$ venv\Scripts\Activate.ps1  # on Windows, PowerShell
 ```
 where `venv` is a name and directory location you can choose.
 If you don't set up and activate a virtual environment first,
