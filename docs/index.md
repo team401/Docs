@@ -20,7 +20,7 @@ You must activate the environment every time you wish to use it:
 ```bash
 source venv/bin/activate   # on Unix/Linux/macOS
 ```
-```
+```text
 venv\Scripts\activate      # on Windows, command prompt
 venv\Scripts\Activate.ps1  # on Windows, PowerShell
 ```
