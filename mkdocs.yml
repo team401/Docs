@@ -1,0 +1,60 @@
+site_name: Docs
+site_url: https://team401.github.io
+
+repo_url: https://github.com/team401/Docs
+edit_uri: edit/main/docs/
+
+extra_css:
+  - stylesheets/colors.css
+theme:
+  name: material
+  favicon: images/logo_sq.png
+  logo: images/logo.png
+  palette:
+    # Light mode
+    - scheme: default
+      toggle:
+        icon: material/lightbulb
+        name: Switch to Dark Mode
+
+    # Dark mode
+    - scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to Light Mode
+  features:
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    # - navigation.tabs
+    # - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.footer
+    - toc.follow
+    # - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.select
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+extra:
+  generator: false
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
