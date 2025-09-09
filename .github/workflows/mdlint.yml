@@ -1,0 +1,23 @@
+name: Markdown Linting
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  linting:
+    name: "Linter"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Check out the code
+      - uses: DavidAnson/markdownlint-cli2-action@v20
+        name: Lint markdown files
+        with:
+          fix: true
+          config: ".markdownlint.json"
+          globs: "**/*.md"
