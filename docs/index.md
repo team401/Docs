@@ -11,7 +11,7 @@ This site uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material
 2. Optionally, to avoid installing the Python packages into your user account,
 create a virtual environment first:
 ```
-$ virtualenv venv
+$ python -m venv venv
 ```
 You must activate the environment every time you wish to use it:
 ```
