@@ -34,6 +34,7 @@ theme:
     - navigation.path
     - navigation.footer
     - toc.follow
+
     # - toc.integrate
     - navigation.top
     - search.suggest
@@ -51,6 +52,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - toc:
+      permalink: ""
 
 extra:
   generator: false
