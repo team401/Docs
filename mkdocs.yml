@@ -1,5 +1,5 @@
 site_name: Docs
-site_url: https://team401.github.io
+site_url: https://team401.github.io/Docs
 site_description: "FIRST Robotics Competition documentation developed by \nFRC Team 401: Copperhead Robotics"
 
 repo_url: https://github.com/team401/Docs
@@ -46,6 +46,8 @@ theme:
 validation:
   links:
     absolute_links: relative_to_docs
+    anchors: warn
+    unrecognized_links: warn
 
 markdown_extensions:
   - pymdownx.highlight:
