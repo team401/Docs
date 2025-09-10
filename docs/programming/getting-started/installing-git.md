@@ -22,8 +22,9 @@ Settings, then Developer Settings, then Personal Access Tokens:
 ![create a personal access token on github](/images/create-pat-on-github.png)
 
 Check the repo box, give it a name and an expiration date, and create the token.
-Once created, make a copy of it - it will be displayed only once.
-Keep the copy secure.
+Once created, copy the key and store it somewhere secure. GitHub will
+only display it to you once, so it's important to store it elsewhere so
+that you can use it to authenticate later.
 
 Your token will look like this: `ghp_rv4djkhsdfEWIkJHSKJfd787fsRV`.
 
@@ -38,7 +39,7 @@ using the `https` methods, which is shown here:
 You would therefore use
 `https://ghp_rv4djkhsdfEWIkJHSKJfd787fsRV@github.com/team401/Docs.git` to clone 
 it using your token, for instance,
-```
+```bash
 git clone https://ghp_rv4djkhsdfEWIkJHSKJfd787fsRV@github.com/team401/Docs.git
 ```
 
@@ -46,12 +47,12 @@ It is also possible to change the method of authentication after the fact.
 We could use this on shared laptops that may be used by multiple students
 if they end up working in the same project directory.
 For instance, to change the current upstream URL of a repo, use
-```
+```bash
 git remote set-url origin https://ghp_rv4djkhsdfEWIkJHSKJfd787fsRV@github.com/team401/Docs.git
 ```
 To ensure that commit messages appear under your name, you should also reset
 the name and email settings for this repo.
-```
+```bash
 git config --local user.email your@email
 git config --local user.name "Your Name"
 ```

@@ -1,5 +1,5 @@
 site_name: Docs
-site_url: https://team401.github.io
+site_url: https://team401.github.io/Docs
 
 repo_url: https://github.com/team401/Docs
 edit_uri: edit/main/docs/
@@ -40,6 +40,10 @@ theme:
     - search.share
     - content.code.copy
     - content.code.select
+
+validation:
+  links:
+    absolute_links: relative_to_docs
 
 markdown_extensions:
   - pymdownx.highlight:
