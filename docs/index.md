@@ -2,49 +2,38 @@
 
 401 Docs was started in the summer of 2019 and is an ongoing effort to improve Team 401 by documenting our procedures and experiences.
 
-## Testing and Running Locally
+<div class="grid cards" markdown>
 
-This site uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), visit their docs to see what customization options are available.
+- :material-lightning-bolt:{ .lg .middle } **Electrical**
+  
+    ---
 
-1. Clone this repo by running: `#!bash git clone https://github.com/team401/Docs`
+    Explains electrical components and schematic software we use.
 
-2. Optionally, to avoid installing the Python packages into your user account,
-create a virtual environment first:
+    [:octicons-arrow-right-24: Electrical](electrical/fritzing.md)
 
-```bash
-python -m venv venv
-```
+- :octicons-file-code-16:{ .lg .middle .card} **Programming**
 
-You must activate the environment every time you wish to use it:
+    ---
 
-```bash
-source venv/bin/activate   # on Unix/Linux/macOS
-```
-```text
-venv\Scripts\activate      # on Windows, command prompt
-venv\Scripts\Activate.ps1  # on Windows, PowerShell
-```
+    Guides on getting started with programming on Team 401.
 
-where `venv` is a name and directory location you can choose.
-If you don't set up and activate a virtual environment first,
-`pip` will install `MkDocs` into your personal account.
+    [:octicons-arrow-right-24: Getting Started](programming/getting-started/index.md)
 
-3 Then install Material for MkDocs and its dependencies: `#!bash pip install -r requirements.txt`
+- :material-pencil-ruler:{ .lg .middle .card} **Design**
 
-4 Serve the site locally: `#!bash mkdocs serve`
+    ---
 
-## Project layout
+    Tutorials and training for getting started with the Team 401 Design team.
 
-``` text linenums="0"
-mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    programming/
-        index.md # Programming section homepage
-        ... # Other programming files
-    ... # Other markdown pages, images and other files.
-```
+    [:octicons-arrow-right-24: Design](design/index.md)
 
-## Recommended VSCode Extensions
+- :octicons-tools-16:{ .lg .middle .card} **Fabrication**
 
-- [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) automatically checks for style errors in markdown files.
+    ---
+
+    Documentation and procedures for machine tools used by Team 401.
+
+    [:octicons-arrow-right-24: Fabrication](fabrication/index.md)
+
+</div>
