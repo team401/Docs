@@ -50,6 +50,10 @@ validation:
     unrecognized_links: warn
 
 markdown_extensions:
+  - toc:
+      permalink: ""
+  - attr_list
+  - md_in_html
   - pymdownx.highlight:
       linenums: true
       anchor_linenums: true
@@ -58,11 +62,26 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-  - toc:
-      permalink: ""
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
+copyright: Copyright &copy; FRC Team 401 2025
 extra:
   generator: false
+  social:
+    - icon: material/email-box
+      link: mailto:team401@mcps.org
+    - icon: simple/github
+      link: https://github.com/team401
+    - icon: simple/instagram
+      link: https://instagram.com/team401
+    - icon: simple/facebook
+      link: https://www.facebook.com/copperheadrobotics/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/frcteam401
+    - icon: simple/youtube
+      link: https://www.youtube.com/@FRCTeam401CopperheadRobotics
 
 plugins:
   - search
