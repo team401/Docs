@@ -14,4 +14,5 @@ public class JsonConstants {
   }
 
   public static FeatureFlags featureFlags;
+public static Object pivotConstants;
 }
