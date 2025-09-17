@@ -5,7 +5,6 @@ import static edu.wpi.first.units.Units.Rotations;
 
 import com.ctre.phoenix6.configs.CurrentLimitsConfigs;
 import com.ctre.phoenix6.configs.FeedbackConfigs;
-import com.ctre.phoenix6.configs.MagnetSensorConfigs;
 import com.ctre.phoenix6.configs.MotionMagicConfigs;
 import com.ctre.phoenix6.configs.MotorOutputConfigs;
 import com.ctre.phoenix6.configs.Slot0Configs;
@@ -18,6 +17,7 @@ import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.signals.FeedbackSensorSourceValue;
 import com.ctre.phoenix6.signals.GravityTypeValue;
 import com.ctre.phoenix6.signals.NeutralModeValue;
+
 import edu.wpi.first.units.AngularAccelerationUnit;
 import edu.wpi.first.units.AngularVelocityUnit;
 import edu.wpi.first.units.VoltageUnit;
@@ -31,6 +31,9 @@ import frc.robot.constants.JsonConstants;
 
 public class PivotIOTalonFX implements PivotIO {
     TalonFX pivotMotor = new TalonFX(JsonConstants.pivotConstants.pivotMotorId);
+    
+    RotorSensor pivotRotorSensor = new RotorSensor(JsonConstants.pivotConstants.pivotRotorSensorId);
+
     private TalonFXConfiguration talonFXConfigs;
 
     private MutAngle pivotGoalPosition = Rotations.mutable(0.0);//placeholder
@@ -41,10 +44,10 @@ public class PivotIOTalonFX implements PivotIO {
 
     private boolean isOverriding = false;
 
-    private MutCurrent ovverideCurrent = Amps.mutable(0.0);
+    private MutCurrent overrideCurrent = Amps.mutable(0.0);
 
     public PivotIOTalonFX() {
-        talonFXConfigs = new TalonFXConfiguration()
+        talonFXConfigs = new TalonFXConfiguration();
         .withFeedback(new FeedbackConfigs(pivotRotorSensor.Id)
         .withFeedbackSensorSource(FeedbackSensorSourceValue.FusedCancoder)
         .withSensorToMechanismRatio(
@@ -94,8 +97,84 @@ public class PivotIOTalonFX implements PivotIO {
         
             inputs.pivotSupplyCurrent.mut_replace(pivotMotor.getSupplyCurrent().getValue());
             inputs.pivotStatorCurrent.mut_replace(pivotMotor.getStatorCurrent().getValue());
-    
-        
     }
+    public void applyOutputs(PivotIOInputs outputs){
+        if (motorsDisabled) {
+            pivotMotor.setControl(new VoltageOut(0.0));
+            outputs.pivotClosedLoopOutput = 0.0;
+            return;
+
+        }
+        else if (isOverriding) {
+            pivotMotor.setControl(new TorqueCurrentFOC(overrideCurrent));
+            outputs.pivotClosedLoopOutput = overrideCurrent.in(Amps);
+            
+            return;
+        }
+        pivotMotor.setControl(request.withPosition(pivotGoalPosition));
+        outputs.pivotClosedLoopOutput = pivotMotor.getClosedLoopOutput().getValue();
+    }
+
+    public void setPivotGoalPos(Angle goalPos) {
+        pivotGoalPosition.mut_replace(goalPos);
+    }
+
+    public void setPID(double kP, double kI, double kD) {
+        talonFXConfigs.Slot0.kP = kP;//check if im slot zero
+        talonFXConfigs.Slot0.kI = kI;
+        talonFXConfigs.Slot0.kD = kD;
+        
+        pivotMotor.getConfigurator().apply(talonFXConfigs);
+    }
+
+    public void setMaxProfile(
+        AngularVelocity makVelocity,
+        Per<VoltageUnit, AngularAccelerationUnit> expo_kA,
+        Per<VoltageUnit, AngularVelocityUnit> expo_kV) {
+            talonFXConfigs.withMotionMagic(
+                new MotionMagicConfigs()
+                .withMotionMagicCruiseVelocity(makVelocity)
+                .withMotionMagicExpo_kA(expo_kA)
+                .withMotionMagicExpo_kV(expo_kV));
+        pivotMotor.getConfigurator().apply(talonFXConfigs);
+    }
+        
+    
+    public void setFF(double kS, double kV, double kA, double kG) {
+        talonFXConfigs.Slot0.kS = kS;
+        talonFXConfigs.Slot0.kV = kV;
+        talonFXConfigs.Slot0.kA = kA;
+        talonFXConfigs.Slot0.kG = kG;
+
+        pivotMotor.getConfigurator().apply(talonFXConfigs);
+    }
+
+    public void setBrakeMode(boolean brakeMode) {
+        if (brakeMode) {
+          talonFXConfigs.MotorOutput.NeutralMode = NeutralModeValue.Brake;
+        } else {
+          talonFXConfigs.MotorOutput.NeutralMode = NeutralModeValue.Coast;
+        }
+    
+        pivotMotor.getConfigurator().apply(talonFXConfigs);
+      }
+    
+      public void setCurrentLimits(CurrentLimitsConfigs limits) {
+        talonFXConfigs.withCurrentLimits(limits);
+    
+        pivotMotor.getConfigurator().apply(talonFXConfigs);
+      }
+    
+      public void setMotorsDisabled(boolean disabled) {
+        motorsDisabled = disabled;
+      }
+    
+      public void setOverrideMode(boolean override) {
+        isOverriding = override;
+      }
+    
+      public void setOverrideCurrent(Current current) {
+        overrideCurrent.mut_replace(current);
+      }  
 
 } 
