@@ -62,4 +62,4 @@ jobs:
           path: site
 
       - name: Deploy docs
-        run: uv run mkdocs gh-deploy --force --dirty
+        run: mkdocs gh-deploy --force --dirty
