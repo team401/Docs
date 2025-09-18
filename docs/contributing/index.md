@@ -7,29 +7,31 @@ This site uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material
 1. Install uv  
 uv provides a standalone installer to download and install uv:
 
-=== "macOS and Linux"
+    === "macOS and Linux"
 
-    Use `curl` to download the script and execute it with `sh`:
+        Use `curl` to download the script and execute it with `sh`:
 
-    ```bash
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    ```
+        ```bash
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        ```
 
-    If your system doesn't have `curl`, you can use `wget`:
+        If your system doesn't have `curl`, you can use `wget`:
 
-    ```bash
-    wget -qO- https://astral.sh/uv/install.sh | sh
-    ```
+        ```bash
+        wget -qO- https://astral.sh/uv/install.sh | sh
+        ```
 
-=== "Windows"
+    === "Windows"
 
-    Use `irm` to download the script and execute it with `iex`:
+        Use `irm` to download the script and execute it with `iex`:
 
-    ```pwsh
-    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-    ```
+        ```pwsh
+        powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+        ```
 
-    Changing the [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4#powershell-execution-policies) allows running a script from the internet.
+        Changing the [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4#powershell-execution-policies) allows running a script from the internet.
+
+Information on other installation methods (PyPi, Homebrew, WinGet, Scoop, etc.) is available in the [uv install docs](https://docs.astral.sh/uv/getting-started/installation/).
 
 2\. Clone this repo:
     ```bash
