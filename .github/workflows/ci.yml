@@ -55,6 +55,14 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
+      - name: Install uv and enable cache
+        uses: astral-sh/setup-uv@v6.5.0
+        with:
+          enable-cache: true
+
+      - name: Sync environment
+        run: uv sync --all-extras --dev
+
       - name: Download built site
         uses: actions/download-artifact@v4
         with:
@@ -62,4 +70,4 @@ jobs:
           path: site
 
       - name: Deploy docs
-        run: mkdocs gh-deploy --force --dirty
+        run: uv run mkdocs gh-deploy --force --dirty
