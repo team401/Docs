@@ -1,36 +1,48 @@
 # Contributing to 401 Docs
 
-## Testing and Running Locally
+This site uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), visit their docs to see what customization options are available. The [uv package manager](https://docs.astral.sh/uv/) is used to handle python packages and virtual environments.
 
-This site uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), visit their docs to see what customization options are available.
+## Running 401 Docs Locally
 
-1. Clone this repo by running: `#!bash git clone https://github.com/team401/Docs`
+1. Install uv  
+uv provides a standalone installer to download and install uv:
 
-2. Optionally, to avoid installing the Python packages into your user account,
-create a virtual environment first:
+=== "macOS and Linux"
 
-```bash
-python -m venv venv
-```
+    Use `curl` to download the script and execute it with `sh`:
 
-You must activate the environment every time you wish to use it:
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
 
-```bash
-source venv/bin/activate   # on Unix/Linux/macOS
-```
+    If your system doesn't have `curl`, you can use `wget`:
 
-```text
-venv\Scripts\activate      # on Windows, command prompt
-venv\Scripts\Activate.ps1  # on Windows, PowerShell
-```
+    ```bash
+    wget -qO- https://astral.sh/uv/install.sh | sh
+    ```
 
-where `venv` is a name and directory location you can choose.
-If you don't set up and activate a virtual environment first,
-`pip` will install `MkDocs` into your personal account.
+=== "Windows"
 
-3 Then install Material for MkDocs and its dependencies: `#!bash pip install -r requirements.txt`
+    Use `irm` to download the script and execute it with `iex`:
 
-4 Serve the site locally: `#!bash mkdocs serve`
+    ```pwsh
+    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
+
+    Changing the [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4#powershell-execution-policies) allows running a script from the internet.
+
+2\. Clone this repo:
+    ```bash
+    git clone https://github.com/team401/Docs
+    ```  
+3. Install Material for MkDocs and its dependencies:
+    ```bash
+    uv sync
+    ```  
+4. Serve the site locally:
+    ```bash
+    mkdocs serve
+    ```
 
 ## Project layout
 
@@ -47,3 +59,4 @@ docs/
 ## Recommended VSCode Extensions
 
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) automatically checks for style errors in markdown files.
+- [UV Toolkit](https://marketplace.visualstudio.com/items?itemName=the0807.uv-toolkit) adds uv features to the vscode command palette and adds highlighting.
