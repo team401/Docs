@@ -34,7 +34,7 @@ jobs:
         run: uv run mkdocs build --clean
 
       - name: Upload built site
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mkdocs-site
           path: site
@@ -56,7 +56,7 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
       - name: Download built site
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: mkdocs-site
           path: site
