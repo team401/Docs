@@ -1254,18 +1254,25 @@ FRC Team 401: Copperhead Robotics" >
 
 
 <h1 id="installing-git">Installing Git<a class="headerlink" href="#installing-git" title="Permanent link"></a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="installing-git-macos-and-linux" name="__tabbed_1" type="radio" /><input id="installing-git-windows" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="installing-git-macos-and-linux">macOS and Linux</label><label for="installing-git-windows">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>If you are on a Linux or Macintosh, <code>git</code> should already be installed or can
+be installed through the package manager of your OS.</p>
+</div>
+<div class="tabbed-block">
 <p>On Windows, follow <a href="https://git-scm.com/">this link</a> to go to the Git homepage.</p>
 <p><img alt="Git-Download" src="../../../images/Git-Download.PNG" /></p>
 <p>Click the blue download button inside the picture of a computer monitor.  This screenshot shows the Windows version selected, but the link should automatically be set for whatever operating system you are using.</p>
-<p>If you are on a Linux or Macintosh, <code>git</code> should already be installed or can
-be installed through the package manager of your OS.</p>
+</div>
+</div>
+</div>
 <h2 id="setting-up-git-access-to-a-repository">Setting up git access to a repository<a class="headerlink" href="#setting-up-git-access-to-a-repository" title="Permanent link"></a></h2>
 <p>When you are cloning a private repository, or pushing changes to one, you need
 to be authenticated by Github.  This requires the use of a private key or of
 a token.  We suggest that you create a personal access token (PAT).</p>
 <p>Go to <a href="https://github.com/settings/tokens">Personal Access Tokens</a> on github.com.
-The <a href="https://github.com/settings/tokens">link</a> should work, if it doesn't, go to 
-Settings, then Developer Settings, then Personal Access Tokens:</p>
+The <a href="https://github.com/settings/tokens">link</a> should work, if it doesn't, go to Settings, then Developer Settings, then Personal Access Tokens:</p>
 <p><img alt="create a personal access token on github" src="../../../images/create-pat-on-github.png" /></p>
 <p>Check the repo box, give it a name and an expiration date, and create the token.
 Once created, copy the key and store it somewhere secure. GitHub will
@@ -1275,30 +1282,26 @@ that you can use it to authenticate later.</p>
 <p>Now you are able to use this token as follows.
 Whenever you are cloning a Github repository, use the <code>https</code> method (not <code>ssh</code>)
 and insert the token in the URL.</p>
-<p>For instance, the repo for these Docs is at <code>https://github.com/team401/Docs.git</code> when 
-using the <code>https</code> methods, which is shown here:
+<p>For instance, the repo for these Docs is at <code>https://github.com/team401/Docs.git</code> when using the <code>https</code> methods, which is shown here:
 <img alt="clone from github" src="../../../images/clone-from-github.png" /></p>
 <p>You would therefore use
-<code>https://ghp_rv4djkhsdfEWIkJHSKJfd787fsRV@github.com/team401/Docs.git</code> to clone 
-it using your token, for instance,
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://ghp_rv4djkhsdfEWIkJHSKJfd787fsRV@github.com/team401/Docs.git
-</span></code></pre></div></td></tr></table></div></p>
+<code>https://ghp_rv4djkhsdfEWIkJHSKJfd787fsRV@github.com/team401/Docs.git</code> to clone it using your token, for instance,</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://ghp_rv4djkhsdfEWIkJHSKJfd787fsRV@github.com/team401/Docs.git
+</code></pre></div>
 <p>It is also possible to change the method of authentication after the fact.
 We could use this on shared laptops that may be used by multiple students
 if they end up working in the same project directory.
-For instance, to change the current upstream URL of a repo, use
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>https://ghp_rv4djkhsdfEWIkJHSKJfd787fsRV@github.com/team401/Docs.git
-</span></code></pre></div></td></tr></table></div>
-To ensure that commit messages appear under your name, you should also reset
-the name and email settings for this repo.
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span>your@email
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
-</span></code></pre></div></td></tr></table></div></p>
+For instance, to change the current upstream URL of a repo, use</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>https://ghp_rv4djkhsdfEWIkJHSKJfd787fsRV@github.com/team401/Docs.git
+</code></pre></div>
+<p>To ensure that commit messages appear under your name, you should also reset
+the name and email settings for this repo.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span>your@email
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
+</code></pre></div>
 <p><em>Note</em> this method is <strong>not</strong> necessary if students work in different project
 directories. In that case, the settings from the active project directory will be used.</p>
-<p><em>Side note</em> an alternative authentication method is to use private ssh keys, in which case 
-the remote URL will start with <code>git@github.com</code>, e.g. <code>git@github.com:team401/Docs.git</code>.</p>
+<p><em>Side note</em> an alternative authentication method is to use private ssh keys, in which case the remote URL will start with <code>git@github.com</code>, e.g. <code>git@github.com:team401/Docs.git</code>.</p>
 
 
 
@@ -1321,7 +1324,7 @@ the remote URL will start with <code>git@github.com</code>, e.g. <code>git@githu
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 10, 2025 01:12:47 UTC">September 10, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 18, 2025 20:04:01 UTC">September 18, 2025</span>
   </span>
 
     
@@ -1348,6 +1351,8 @@ the remote URL will start with <code>git@github.com</code>, e.g. <code>git@githu
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -1490,7 +1495,7 @@ the remote URL will start with <code>git@github.com</code>, e.g. <code>git@githu
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.expand", "navigation.path", "navigation.footer", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.expand", "navigation.path", "navigation.footer", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>

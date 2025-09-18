@@ -1175,9 +1175,9 @@ FRC Team 401: Copperhead Robotics" >
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#testing-and-running-locally" class="md-nav__link">
+  <a href="#running-401-docs-locally" class="md-nav__link">
     <span class="md-ellipsis">
-      Testing and Running Locally
+      Running 401 Docs Locally
     </span>
   </a>
   
@@ -1221,43 +1221,55 @@ FRC Team 401: Copperhead Robotics" >
 
 
 <h1 id="contributing-to-401-docs">Contributing to 401 Docs<a class="headerlink" href="#contributing-to-401-docs" title="Permanent link"></a></h1>
-<h2 id="testing-and-running-locally">Testing and Running Locally<a class="headerlink" href="#testing-and-running-locally" title="Permanent link"></a></h2>
-<p>This site uses <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>, visit their docs to see what customization options are available.</p>
+<p>This site uses <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>, visit their docs to see what customization options are available. The <a href="https://docs.astral.sh/uv/">uv package manager</a> is used to handle python packages and virtual environments.</p>
+<h2 id="running-401-docs-locally">Running 401 Docs Locally<a class="headerlink" href="#running-401-docs-locally" title="Permanent link"></a></h2>
 <ol>
 <li>
-<p>Clone this repo by running: <code class="language-bash highlight">git<span class="w"> </span>clone<span class="w"> </span>https://github.com/team401/Docs</code></p>
-</li>
-<li>
-<p>Optionally, to avoid installing the Python packages into your user account,
-create a virtual environment first:</p>
+<p>Install uv<br />
+uv provides a standalone installer to download and install uv:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="running-401-docs-locally-macos-and-linux" name="__tabbed_1" type="radio" /><input id="running-401-docs-locally-windows" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="running-401-docs-locally-macos-and-linux">macOS and Linux</label><label for="running-401-docs-locally-windows">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use <code>curl</code> to download the script and execute it with <code>sh</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</code></pre></div>
+<p>If your system doesn't have <code>curl</code>, you can use <code>wget</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>wget<span class="w"> </span>-qO-<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Use <code>irm</code> to download the script and execute it with <code>iex</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">powershell</span> <span class="n">-ExecutionPolicy</span> <span class="n">ByPass</span> <span class="n">-c</span> <span class="s2">&quot;irm https://astral.sh/uv/install.ps1 | iex&quot;</span>
+</code></pre></div>
+<p>Changing the <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4#powershell-execution-policies">execution policy</a> allows running a script from the internet.</p>
+</div>
+</div>
+</div>
 </li>
 </ol>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
-</span></code></pre></div></td></tr></table></div>
-<p>You must activate the environment every time you wish to use it:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate<span class="w">   </span><span class="c1"># on Unix/Linux/macOS</span>
-</span></code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>venv\Scripts\activate      # on Windows, command prompt
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>venv\Scripts\Activate.ps1  # on Windows, PowerShell
-</span></code></pre></div></td></tr></table></div>
-<p>where <code>venv</code> is a name and directory location you can choose.
-If you don't set up and activate a virtual environment first,
-<code>pip</code> will install <code>MkDocs</code> into your personal account.</p>
-<p>3 Then install Material for MkDocs and its dependencies: <code class="language-bash highlight">pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt</code></p>
-<p>4 Serve the site locally: <code class="language-bash highlight">mkdocs<span class="w"> </span>serve</code></p>
+<p>Information on other installation methods (PyPi, Homebrew, WinGet, Scoop, etc.) is available in the <a href="https://docs.astral.sh/uv/getting-started/installation/">uv install docs</a>.</p>
+<p>2. Clone this repo:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/team401/Docs
+</code></pre></div>
+3. Install Material for MkDocs and its dependencies:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>uv<span class="w"> </span>sync
+</code></pre></div>
+4. Serve the site locally:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdocs<span class="w"> </span>serve
+</code></pre></div></p>
 <h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link"></a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mkdocs.yml    # The configuration file.
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docs/
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    index.md  # The documentation homepage.
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    programming/
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        index.md # Programming section homepage
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        ... # Other programming files
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    ... # Other markdown pages, images and other files.
-</span></code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mkdocs.yml    # The configuration file.
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>docs/
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    index.md  # The documentation homepage.
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    programming/
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        index.md # Programming section homepage
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        ... # Other programming files
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    ... # Other markdown pages, images and other files.
+</code></pre></div>
 <h2 id="recommended-vscode-extensions">Recommended VSCode Extensions<a class="headerlink" href="#recommended-vscode-extensions" title="Permanent link"></a></h2>
 <ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint">markdownlint</a> automatically checks for style errors in markdown files.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=the0807.uv-toolkit">UV Toolkit</a> adds uv features to the vscode command palette and adds highlighting.</li>
 </ul>
 
 
@@ -1281,7 +1293,7 @@ If you don't set up and activate a virtual environment first,
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 11, 2025 14:56:15 UTC">September 11, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 18, 2025 21:23:32 UTC">September 18, 2025</span>
   </span>
 
     
@@ -1308,6 +1320,8 @@ If you don't set up and activate a virtual environment first,
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -1450,7 +1464,7 @@ If you don't set up and activate a virtual environment first,
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.expand", "navigation.path", "navigation.footer", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.expand", "navigation.path", "navigation.footer", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
