@@ -13,6 +13,7 @@ import com.ctre.phoenix6.configs.TorqueCurrentConfigs;
 import com.ctre.phoenix6.controls.MotionMagicExpoVoltage;
 import com.ctre.phoenix6.controls.TorqueCurrentFOC;
 import com.ctre.phoenix6.controls.VoltageOut;
+import com.ctre.phoenix6.hardware.CANcoder;
 import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.signals.FeedbackSensorSourceValue;
 import com.ctre.phoenix6.signals.GravityTypeValue;
@@ -31,9 +32,8 @@ import frc.robot.constants.JsonConstants;
 
 public class PivotIOTalonFX implements PivotIO {
     TalonFX pivotMotor = new TalonFX(JsonConstants.pivotConstants.pivotMotorId);
+    CANcoder pivotRotorSensor = new CANcoder(JsonConstants.pivotConstants.pivotRoborSensorId);
     
-    RotorSensor pivotRotorSensor = new RotorSensor(JsonConstants.pivotConstants.pivotRotorSensorId);
-
     private TalonFXConfiguration talonFXConfigs;
 
     private MutAngle pivotGoalPosition = Rotations.mutable(0.0);//placeholder

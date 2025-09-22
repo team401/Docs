@@ -32,8 +32,8 @@ public class PivotConstants {
           EnvironmentHandler.getEnvironmentHandler().getEnvironmentPathProvider(),
           new JSONSyncConfigBuilder().build());
 
-  public final Integer pivotMotorId = null; //placeholder 
-  public final Integer pivotRotorSensor = null; //placeholder
+  public final Integer pivotMotorId = 1; //placeholder 
+  public final Integer pivotRotorSensorId = 1; //placeholder
 
   /**
    * FusedCANcoder sensor to mechanism ratio
@@ -51,7 +51,7 @@ public class PivotConstants {
 
   public final NeutralModeValue pivotNeutralModeValue = NeutralModeValue.Brake;
 
-  public final Current SupplyCurrentLimit = Amps.of(40.0);
+  public final Current pivotSupplyCurrentLimit = Amps.of(40.0);
   public final Current pivotStatorCurrentLimit = Amps.of(40.0);
 
   /** Peak forward and reverse current for FieldOriented */

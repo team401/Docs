@@ -9,6 +9,7 @@ import static edu.wpi.first.units.Units.Seconds;
 
 import org.littletonrobotics.junction.Logger;
 
+import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.sim.TalonFXSimState;
 
 import edu.wpi.first.math.system.plant.DCMotor;
@@ -18,9 +19,11 @@ import edu.wpi.first.units.measure.MutAngle;
 import edu.wpi.first.wpilibj.RobotController;
 import edu.wpi.first.wpilibj.simulation.SingleJointedArmSim;
 import frc.robot.constants.JsonConstants;
+import frc.robot.constants.SimConstants;
 
 public class PivotIOSim extends PivotIOTalonFX{
-  //CANcoderSimState wristCANcoderSimState = wristCANcoder.getSimState();
+  
+  var pivotMotorSimCollection = pivotMotor.getSimCollection();
 
   TalonFXSimState pivotMotorSimState = pivotMotor.getSimState();
 
@@ -51,9 +54,8 @@ public class PivotIOSim extends PivotIOTalonFX{
     Angle diffAngle = pivotAngle.minus(lastPivotAngle);
     lastPivotAngle.mut_replace(pivotAngle);
 
-    // 1:1 ratio of wrist to CANcoder makes this math very easy
-    pivotRotorSensor.addPosition(diffAngle);
-    pivotRotorSensor.setVelocity(pivotVelocity);
+    pivotRotorSensor.addPosition(diffAngle); //idk if this math is still easy
+    pivotRotorSensor.setVelocity(pivotVelocity); //idk if this math is still easy
 
     Angle rotorDiffAngle = diffAngle.times(JsonConstants.pivotConstants.pivotReduction);
     AngularVelocity rotorVelocity =
