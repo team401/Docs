@@ -76,11 +76,11 @@ public class PivotConstants {
   public final Double pivotMotionMagicExpo_kA = 6.0; //
   public final Double pivotMotionMagicExpo_kV = 6.0; //
 
-  //public final Angle pivotCANcoderAbsoluteSensorDiscontinuityPoint =
-    //  Rotations.of(0.3); // TODO: Confirm this
-  //public final Angle wristCANcoderMagnetOffset = Rotations.of(0.0); // TODO: Tune this value
-  //public final SensorDirectionValue wristCANcoderSensorDirection =
-    //  SensorDirectionValue.CounterClockwise_Positive;
+  public final Angle pivotCANcoderAbsoluteSensorDiscontinuityPoint =
+      Rotations.of(0.3); // TODO: Confirm this
+  public final Angle wristCANcoderMagnetOffset = Rotations.of(0.0); // TODO: Tune this value
+  public final SensorDirectionValue wristCANcoderSensorDirection =
+      SensorDirectionValue.CounterClockwise_Positive;
 
   // These clamps are the default clamps for the pivot, as well as limiting the moving clamps of the
   // pivot themselves.
@@ -107,7 +107,7 @@ public class PivotConstants {
     // This value is a Double because MomentOfInertia units don't serialize properly with JSONSync
     public final Double pivotMomentOfInertiaKgM2 = 0.0672304487; //find real value
 
-    //@JSONExclude
+    @JSONExclude
     public final MomentOfInertia pivotMomentOfInertia =
         KilogramSquareMeters.of(pivotMomentOfInertiaKgM2);
 

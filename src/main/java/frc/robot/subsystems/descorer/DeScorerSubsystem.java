@@ -24,26 +24,26 @@ public class DeScorerSubsystem {
     MutAngle goalAngle = Rotations.mutable(0.0);
     MutAngle clampedGoalAngle = Rotations.mutable(0.0);
   
-    MutAngle minAngle = JsonConstants.pivotConstants.pivotMinMinAngle.mutableCopy();
-    MutAngle maxAngle = JsonConstants.pivotConstants.pivotMaxMaxAngle.mutableCopy();
+    MutAngle minAngle = JsonConstants.pivotConstants.pivotMinAngle.mutableCopy();
+    MutAngle maxAngle = JsonConstants.pivotConstants.pivotMaxAngle.mutableCopy();
   
-    LoggedTunableNumber wristkP;
-    LoggedTunableNumber wristkI;
-    LoggedTunableNumber wristkD;
+    LoggedTunableNumber pivotkP;
+    LoggedTunableNumber pivotkI;
+    LoggedTunableNumber pivotkD;
   
-    LoggedTunableNumber wristkS;
-    LoggedTunableNumber wristkV;
-    LoggedTunableNumber wristkA;
-    LoggedTunableNumber wristkG;
+    LoggedTunableNumber pivotkS;
+    LoggedTunableNumber pivotkV;
+    LoggedTunableNumber pivotkA;
+    LoggedTunableNumber pivotkG;
   
-    LoggedTunableNumber wristCruiseVelocity;
-    LoggedTunableNumber wristExpokV;
-    LoggedTunableNumber wristExpokA;
+    LoggedTunableNumber pivotCruiseVelocity;
+    LoggedTunableNumber pivotExpokV;
+    LoggedTunableNumber pivotExpokA;
   
-    LoggedTunableNumber wristTuningSetpointRotations;
-    LoggedTunableNumber wristTuningOverrideAmps;
+    LoggedTunableNumber pivotTuningSetpointRotations;
+    LoggedTunableNumber pivotTuningOverrideAmps;
   
-    public DescorerSubsystem(PivotIO io) {
+    public DeScorerSubsystem(PivotIO io) {
       pivotkP =
           new LoggedTunableNumber("PivotTunables/pivotkP", JsonConstants.pivotConstants.pivotKP);
       pivotkI =

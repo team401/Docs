@@ -8,10 +8,10 @@ import static edu.wpi.first.units.Units.Rotations;
 import static edu.wpi.first.units.Units.Seconds;
 
 import org.littletonrobotics.junction.Logger;
-
-import com.ctre.phoenix6.hardware.TalonFX;
+import com.ctre.phoenix6.hardware.CANcoder;
 import com.ctre.phoenix6.sim.TalonFXSimState;
 
+import com.ctre.phoenix6.sim.CANcoderSimState;
 import edu.wpi.first.math.system.plant.DCMotor;
 import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.AngularVelocity;
@@ -23,7 +23,7 @@ import frc.robot.constants.SimConstants;
 
 public class PivotIOSim extends PivotIOTalonFX{
 
-  var pivotMotorSimCollection = pivotMotor.getSimCollection();
+  CANcoderSimState pivotCANcoderSimState = pivotRotorSensor.getSimState();
 
   TalonFXSimState pivotMotorSimState = pivotMotor.getSimState();
 
@@ -31,14 +31,14 @@ public class PivotIOSim extends PivotIOTalonFX{
       new SingleJointedArmSim(
           DCMotor.getKrakenX60Foc(1),
           JsonConstants.pivotConstants.pivotReduction,
-          JsonConstants.pivotConstants.pivotMomentOfInertia.in(KilogramSquareMeters),
-          JsonConstants.pivotConstants.pivotArmLength.in(Meters),
-          JsonConstants.pivotConstants.pivotMinAngle.in(Radians),
-          JsonConstants.pivotConstants.pivotMaxAngle.in(Radians),
+          JsonConstants.pivotConstantsSim.pivotMomentOfInertia.in(KilogramSquareMeters),
+          JsonConstants.pivotConstantsSim.pivotArmLength.in(Meters),
+          JsonConstants.pivotConstantsSim.pivotMinAngle.in(Radians),
+          JsonConstants.pivotConstantsSim.pivotMaxAngle.in(Radians),
           true,
-          JsonConstants.pivotConstants.pivotStartingAngle.in(Radians));
+          JsonConstants.pivotConstantsSim.pivotStartingAngle.in(Radians));
 
-  public void pivotIOSim() {
+  public PivotIOSim() {
     super();
 
     // Initialize sim state so that the first periodic runs with accurate data
@@ -54,8 +54,8 @@ public class PivotIOSim extends PivotIOTalonFX{
     Angle diffAngle = pivotAngle.minus(lastPivotAngle);
     lastPivotAngle.mut_replace(pivotAngle);
 
-    pivotRotorSensor.addPosition(diffAngle); //idk if this math is still easy
-    pivotRotorSensor.setVelocity(pivotVelocity); //idk if this math is still easy
+    pivotCANcoderSimState.addPosition(diffAngle); //idk if this math is still easy
+    pivotCANcoderSimState.setVelocity(pivotVelocity); //idk if this math is still easy
 
     Angle rotorDiffAngle = diffAngle.times(JsonConstants.pivotConstants.pivotReduction);
     AngularVelocity rotorVelocity =
@@ -78,5 +78,4 @@ public class PivotIOSim extends PivotIOTalonFX{
 
     super.updateInputs(inputs);
   }
-}
 }

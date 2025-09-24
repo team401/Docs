@@ -10,11 +10,14 @@ public class JsonConstants {
 
     FeatureFlags.synced.loadData();
     PivotConstants.synced.loadData();
+    PivotConstants.Sim.synced.loadData();
 
     featureFlags = FeatureFlags.synced.getObject();
     pivotConstants = PivotConstants.synced.getObject();
+    pivotConstantsSim = PivotConstants.Sim.synced.getObject();
   }
 
   public static FeatureFlags featureFlags;
   public static PivotConstants pivotConstants;
+  public static PivotConstants.Sim pivotConstantsSim;
 }
