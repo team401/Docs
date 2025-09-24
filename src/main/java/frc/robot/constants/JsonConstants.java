@@ -9,10 +9,12 @@ public class JsonConstants {
         Filesystem.getDeployDirectory().toPath().resolve("constants/config.json").toString());
 
     FeatureFlags.synced.loadData();
+    PivotConstants.synced.loadData();
 
     featureFlags = FeatureFlags.synced.getObject();
+    pivotConstants = PivotConstants.synced.getObject();
   }
 
   public static FeatureFlags featureFlags;
-  public static Object pivotConstants;
+  public static PivotConstants pivotConstants;
 }

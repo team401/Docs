@@ -84,8 +84,8 @@ public class PivotConstants {
 
   // These clamps are the default clamps for the pivot, as well as limiting the moving clamps of the
   // pivot themselves.
-  public final Angle pivotMinMinAngle = Rotations.of(-0.8); // find real value for this
-  public final Angle pivotMaxMaxAngle = Rotations.of(0.25); // find real value for this
+  public final Angle pivotMinAngle = Rotations.of(-0.8); // find real value for this
+  public final Angle pivotMaxAngle = Rotations.of(0.25); // find real value for this
 
   /** The maximum angle the pivot can be at while passing by the crossbar without hitting it. */
   public final Angle maxCrossBarSafeAngle = Rotations.of(0.0); // TODO: Actual value
@@ -107,7 +107,7 @@ public class PivotConstants {
     // This value is a Double because MomentOfInertia units don't serialize properly with JSONSync
     public final Double pivotMomentOfInertiaKgM2 = 0.0672304487; //find real value
 
-    @JSONExclude
+    //@JSONExclude
     public final MomentOfInertia pivotMomentOfInertia =
         KilogramSquareMeters.of(pivotMomentOfInertiaKgM2);
 

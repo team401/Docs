@@ -22,7 +22,7 @@ import frc.robot.constants.JsonConstants;
 import frc.robot.constants.SimConstants;
 
 public class PivotIOSim extends PivotIOTalonFX{
-  
+
   var pivotMotorSimCollection = pivotMotor.getSimCollection();
 
   TalonFXSimState pivotMotorSimState = pivotMotor.getSimState();
@@ -31,12 +31,12 @@ public class PivotIOSim extends PivotIOTalonFX{
       new SingleJointedArmSim(
           DCMotor.getKrakenX60Foc(1),
           JsonConstants.pivotConstants.pivotReduction,
-          JsonConstants.pivotConstantsSim.pivotMomentOfInertia.in(KilogramSquareMeters),
-          JsonConstants.pivotConstantsSim.pivotArmLength.in(Meters),
-          JsonConstants.pivotConstantsSim.pivotMinAngle.in(Radians),
-          JsonConstants.pivotConstantsSim.pivotMaxAngle.in(Radians),
+          JsonConstants.pivotConstants.pivotMomentOfInertia.in(KilogramSquareMeters),
+          JsonConstants.pivotConstants.pivotArmLength.in(Meters),
+          JsonConstants.pivotConstants.pivotMinAngle.in(Radians),
+          JsonConstants.pivotConstants.pivotMaxAngle.in(Radians),
           true,
-          JsonConstants.pivotConstantsSim.pivotStartingAngle.in(Radians));
+          JsonConstants.pivotConstants.pivotStartingAngle.in(Radians));
 
   public void pivotIOSim() {
     super();

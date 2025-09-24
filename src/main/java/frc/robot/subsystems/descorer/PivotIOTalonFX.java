@@ -32,7 +32,7 @@ import frc.robot.constants.JsonConstants;
 
 public class PivotIOTalonFX implements PivotIO {
     TalonFX pivotMotor = new TalonFX(JsonConstants.pivotConstants.pivotMotorId);
-    CANcoder pivotRotorSensor = new CANcoder(JsonConstants.pivotConstants.pivotRoborSensorId);
+    CANcoder pivotRotorSensor = new CANcoder(JsonConstants.pivotConstants.pivotRotorSensorId);
     
     private TalonFXConfiguration talonFXConfigs;
 
@@ -47,9 +47,10 @@ public class PivotIOTalonFX implements PivotIO {
     private MutCurrent overrideCurrent = Amps.mutable(0.0);
 
     public PivotIOTalonFX() {
-        talonFXConfigs = new TalonFXConfiguration();
-        .withFeedback(new FeedbackConfigs(pivotRotorSensor.Id)
-        .withFeedbackSensorSource(FeedbackSensorSourceValue.FusedCancoder)
+        talonFXConfigs = new TalonFXConfiguration()
+        .withFeedback(new FeedbackConfigs()
+        .withFeedbackRemoteSensorID(JsonConstants.pivotConstants.pivotRotorSensorId)
+        .withFeedbackSensorSource(FeedbackSensorSourceValue.FusedCANcoder)
         .withSensorToMechanismRatio(
             JsonConstants.pivotConstants.sensorToMechanismRatio))
         .withMotorOutput(

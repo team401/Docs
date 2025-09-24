@@ -6,6 +6,8 @@ import static edu.wpi.first.units.Units.Rotations;
 import static edu.wpi.first.units.Units.RotationsPerSecond;
 
 import com.ctre.phoenix6.configs.CurrentLimitsConfigs;
+import com.ctre.phoenix6.configs.VoltageConfigs;
+
 import edu.wpi.first.units.AngularAccelerationUnit;
 import edu.wpi.first.units.AngularVelocityUnit;
 import edu.wpi.first.units.VoltageUnit;
@@ -21,7 +23,6 @@ import frc.robot.subsystems.descorer.PivotIO.PivotIOInputs;
 import org.littletonrobotics.junction.AutoLog;
 
 public interface WheelIO {
-    @AutoLog
     public static class WheelIOInputs{
         public boolean connected = false;
         public MutAngle wheelPosition = Rotations.mutable(0.0);
@@ -42,6 +43,6 @@ public interface WheelIO {
     public default void setCurrentLimits(CurrentLimitsConfigs limits) {}
     public default void setMotorsDisabled(boolean disabled) {}
     public default void setOverrideMode(boolean override) {}
-    public default void setOverrideCurrent(Current current) {}
+    public default void setOverrideVoltage(VoltageUnit voltage) {}
 
     }
