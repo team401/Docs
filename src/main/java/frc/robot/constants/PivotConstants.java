@@ -1,6 +1,5 @@
 package frc.robot.constants;
 
-
 import static edu.wpi.first.units.Units.Amps;
 import static edu.wpi.first.units.Units.Degrees;
 import static edu.wpi.first.units.Units.KilogramSquareMeters;
@@ -11,7 +10,6 @@ import static edu.wpi.first.units.Units.RotationsPerSecond;
 import com.ctre.phoenix6.signals.InvertedValue;
 import com.ctre.phoenix6.signals.NeutralModeValue;
 import com.ctre.phoenix6.signals.SensorDirectionValue;
-
 import coppercore.parameter_tools.json.JSONExclude;
 import coppercore.parameter_tools.json.JSONSync;
 import coppercore.parameter_tools.json.JSONSyncConfigBuilder;
@@ -32,8 +30,8 @@ public class PivotConstants {
           EnvironmentHandler.getEnvironmentHandler().getEnvironmentPathProvider(),
           new JSONSyncConfigBuilder().build());
 
-  public final Integer pivotMotorId = 1; //placeholder 
-  public final Integer pivotRotorSensorId = 1; //placeholder
+  public final Integer pivotMotorId = 1; // placeholder
+  public final Integer pivotRotorSensorId = 1; // placeholder
 
   /**
    * FusedCANcoder sensor to mechanism ratio
@@ -43,7 +41,7 @@ public class PivotConstants {
    */
   public final Double sensorToMechanismRatio = 1.0; // TODO: Actual value
 
-  public final Double pivotReduction = 20.0; //placeholder
+  public final Double pivotReduction = 20.0; // placeholder
 
   @JSONExclude public final Double rotorToSensorRatio = pivotReduction;
 
@@ -67,7 +65,8 @@ public class PivotConstants {
   public final Double pivotKD = 0.0;
 
   // This value is a a Double because RotationsPerSecond doesn't serialize properly with JSONSync
-  public final Double pivotMotionMagicCruiseVelocityRotationsPerSecond = 0.1; //maybe look for real value
+  public final Double pivotMotionMagicCruiseVelocityRotationsPerSecond =
+      0.1; // maybe look for real value
 
   @JSONExclude
   public final AngularVelocity pivotMotionMagicCruiseVelocity =
@@ -76,11 +75,11 @@ public class PivotConstants {
   public final Double pivotMotionMagicExpo_kA = 6.0; //
   public final Double pivotMotionMagicExpo_kV = 6.0; //
 
-  public final Angle pivotCANcoderAbsoluteSensorDiscontinuityPoint =
-      Rotations.of(0.3); // TODO: Confirm this
-  public final Angle wristCANcoderMagnetOffset = Rotations.of(0.0); // TODO: Tune this value
-  public final SensorDirectionValue wristCANcoderSensorDirection =
-      SensorDirectionValue.CounterClockwise_Positive;
+  //public final Angle pivotCANcoderAbsoluteSensorDiscontinuityPoint =
+   //   Rotations.of(0.3); // TODO: Confirm this
+  //public final Angle pivotCANcoderMagnetOffset = Rotations.of(0.0); // TODO: Tune this value
+  //public final SensorDirectionValue wristCANcoderSensorDirection =
+   //   SensorDirectionValue.CounterClockwise_Positive;
 
   // These clamps are the default clamps for the pivot, as well as limiting the moving clamps of the
   // pivot themselves.
@@ -91,7 +90,7 @@ public class PivotConstants {
   public final Angle maxCrossBarSafeAngle = Rotations.of(0.0); // TODO: Actual value
 
   /** The pivot can be this far away from the goal and considered "at the setpoint" */
-  public final Angle pivotSetpointEpsilon = Degrees.of(1.0); //find real value
+  public final Angle pivotSetpointEpsilon = Degrees.of(1.0); // find real value
 
   public static final class Sim {
     @JSONExclude
@@ -105,7 +104,7 @@ public class PivotConstants {
             new JSONSyncConfigBuilder().build());
 
     // This value is a Double because MomentOfInertia units don't serialize properly with JSONSync
-    public final Double pivotMomentOfInertiaKgM2 = 0.0672304487; //find real value
+    public final Double pivotMomentOfInertiaKgM2 = 0.0672304487; // find real value
 
     @JSONExclude
     public final MomentOfInertia pivotMomentOfInertia =

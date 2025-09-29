@@ -11,13 +11,19 @@ public class JsonConstants {
     FeatureFlags.synced.loadData();
     PivotConstants.synced.loadData();
     PivotConstants.Sim.synced.loadData();
+    WheelConstants.synced.loadData();
+    WheelConstants.Sim.synced.loadData();
 
     featureFlags = FeatureFlags.synced.getObject();
     pivotConstants = PivotConstants.synced.getObject();
     pivotConstantsSim = PivotConstants.Sim.synced.getObject();
+    wheelConstants = WheelConstants.synced.getObject();
+    wheelConstantsSim = WheelConstants.Sim.synced.getObject();
   }
 
   public static FeatureFlags featureFlags;
   public static PivotConstants pivotConstants;
   public static PivotConstants.Sim pivotConstantsSim;
+  public static WheelConstants wheelConstants;
+  public static WheelConstants.Sim wheelConstantsSim;
 }
