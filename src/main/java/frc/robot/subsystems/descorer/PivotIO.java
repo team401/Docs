@@ -10,10 +10,13 @@ import edu.wpi.first.units.AngularVelocityUnit;
 import edu.wpi.first.units.VoltageUnit;
 import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.AngularVelocity;
+import edu.wpi.first.units.measure.Current;
 import edu.wpi.first.units.measure.MutAngle;
 import edu.wpi.first.units.measure.MutAngularVelocity;
 import edu.wpi.first.units.measure.MutCurrent;
 import edu.wpi.first.units.measure.Per;
+import edu.wpi.first.units.measure.Voltage;
+
 import org.littletonrobotics.junction.AutoLog;
 
 public interface PivotIO {
@@ -115,5 +118,5 @@ public interface PivotIO {
    * @param voltage The voltage to apply. This will only be applied ofter setOverrideMode(true) is
    *     called.
    */
-  public default void setOverrideVoltage(VoltageUnit voltage) {}
+  public default void setOverrideVoltage(Voltage voltage) {}
 }
