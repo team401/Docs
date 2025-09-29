@@ -10,7 +10,6 @@ import edu.wpi.first.units.AngularVelocityUnit;
 import edu.wpi.first.units.VoltageUnit;
 import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.AngularVelocity;
-import edu.wpi.first.units.measure.Current;
 import edu.wpi.first.units.measure.MutAngle;
 import edu.wpi.first.units.measure.MutAngularVelocity;
 import edu.wpi.first.units.measure.MutCurrent;
@@ -109,12 +108,12 @@ public interface PivotIO {
    */
   public default void setOverrideMode(boolean override) {}
   /**
-   * Set the current to apply in override mode.
+   * Set the voltage to apply in override mode.
    *
-   * <p>This is a current because the pivot uses TorqueCurrentFOC for control instead of voltage
+   * <p>This is a voltage because the pivot uses TorqueVoltageFOC for control instead of voltage
    *
-   * @param current The current to apply. This will only be applied ofter setOverrideMode(true) is
+   * @param voltage The voltage to apply. This will only be applied ofter setOverrideMode(true) is
    *     called.
    */
-  public default void setOverrideCurrent(Current current) {}
+  public default void setOverrideVoltage(VoltageUnit voltage) {}
 }

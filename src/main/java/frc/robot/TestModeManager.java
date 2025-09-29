@@ -7,8 +7,10 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 /** Object to handle switching between test modes. */
 public class TestModeManager {
   public enum TestMode {
-    PivotCurrentTuning,
+    PivotVoltageTuning,
     PivotClosedLoopTuning,
+    WheelVoltageTuning,
+    WheelClosedLoopTuning,
     None, // Default test mode that does nothing until a new one is selected.
   }
 
@@ -23,8 +25,10 @@ public class TestModeManager {
 
     testModeChooser.setDefaultOption("None", TestMode.None);
 
-    testModeChooser.addOption("Pivot Current Tuning", TestMode.PivotCurrentTuning);
+    testModeChooser.addOption("Pivot Current Tuning", TestMode.PivotVoltageTuning);
     testModeChooser.addOption("Pivot Closed-Loop Tuning", TestMode.PivotClosedLoopTuning);
+    testModeChooser.addOption("Wheel Current Tuning", TestMode.WheelVoltageTuning);
+    testModeChooser.addOption("Wheel Closed-Loop Tuning", TestMode.WheelClosedLoopTuning);
 
     SmartDashboard.putData("Test Mode Selector", testModeChooser);
   }

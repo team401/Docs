@@ -1,7 +1,7 @@
 package frc.robot.subsystems.descorer;
 
-import static edu.wpi.first.units.Units.Amps;
 import static edu.wpi.first.units.Units.Rotations;
+import static edu.wpi.first.units.Units.Volts;
 
 import com.ctre.phoenix6.StatusSignal;
 import com.ctre.phoenix6.configs.CurrentLimitsConfigs;
@@ -12,7 +12,6 @@ import com.ctre.phoenix6.configs.Slot0Configs;
 import com.ctre.phoenix6.configs.TalonFXConfiguration;
 import com.ctre.phoenix6.configs.TorqueCurrentConfigs;
 import com.ctre.phoenix6.controls.MotionMagicExpoVoltage;
-import com.ctre.phoenix6.controls.TorqueCurrentFOC;
 import com.ctre.phoenix6.controls.VoltageOut;
 import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.signals.GravityTypeValue;
@@ -22,10 +21,10 @@ import edu.wpi.first.units.AngularVelocityUnit;
 import edu.wpi.first.units.VoltageUnit;
 import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.AngularVelocity;
-import edu.wpi.first.units.measure.Current;
 import edu.wpi.first.units.measure.MutAngle;
-import edu.wpi.first.units.measure.MutCurrent;
+import edu.wpi.first.units.measure.MutVoltage;
 import edu.wpi.first.units.measure.Per;
+import edu.wpi.first.units.measure.Voltage;
 import frc.robot.constants.JsonConstants;
 
 public class PivotIOTalonFX implements PivotIO {
@@ -41,11 +40,13 @@ public class PivotIOTalonFX implements PivotIO {
 
   private MotionMagicExpoVoltage request = new MotionMagicExpoVoltage(pivotGoalPosition);
 
+  private VoltageOut overrideRequest = new VoltageOut(0.0);
+
   private boolean motorsDisabled = false;
 
   private boolean isOverriding = false;
 
-  private MutCurrent overrideCurrent = Amps.mutable(0.0);
+  private MutVoltage overrideVoltage = Volts.mutable(0.0);
 
   public PivotIOTalonFX() {
     talonFXConfigs =
@@ -112,8 +113,8 @@ public class PivotIOTalonFX implements PivotIO {
       return;
 
     } else if (isOverriding) {
-      pivotMotor.setControl(new TorqueCurrentFOC(overrideCurrent));
-      outputs.pivotClosedLoopOutput = overrideCurrent.in(Amps);
+      pivotMotor.setControl(overrideRequest.withOutput(overrideVoltage));
+      outputs.pivotClosedLoopOutput = overrideVoltage.in(Volts);
 
       return;
     }
@@ -178,7 +179,7 @@ public class PivotIOTalonFX implements PivotIO {
     isOverriding = override;
   }
 
-  public void setOverrideCurrent(Current current) {
-    overrideCurrent.mut_replace(current);
+  public void setOverrideVoltage(Voltage voltage) {
+    overrideVoltage.mut_replace(voltage);
   }
 }

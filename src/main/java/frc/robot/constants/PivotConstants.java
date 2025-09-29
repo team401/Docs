@@ -9,7 +9,6 @@ import static edu.wpi.first.units.Units.RotationsPerSecond;
 
 import com.ctre.phoenix6.signals.InvertedValue;
 import com.ctre.phoenix6.signals.NeutralModeValue;
-import com.ctre.phoenix6.signals.SensorDirectionValue;
 import coppercore.parameter_tools.json.JSONExclude;
 import coppercore.parameter_tools.json.JSONSync;
 import coppercore.parameter_tools.json.JSONSyncConfigBuilder;
@@ -75,11 +74,11 @@ public class PivotConstants {
   public final Double pivotMotionMagicExpo_kA = 6.0; //
   public final Double pivotMotionMagicExpo_kV = 6.0; //
 
-  //public final Angle pivotCANcoderAbsoluteSensorDiscontinuityPoint =
-   //   Rotations.of(0.3); // TODO: Confirm this
-  //public final Angle pivotCANcoderMagnetOffset = Rotations.of(0.0); // TODO: Tune this value
-  //public final SensorDirectionValue wristCANcoderSensorDirection =
-   //   SensorDirectionValue.CounterClockwise_Positive;
+  // public final Angle pivotCANcoderAbsoluteSensorDiscontinuityPoint =
+  //   Rotations.of(0.3); // TODO: Confirm this
+  // public final Angle pivotCANcoderMagnetOffset = Rotations.of(0.0); // TODO: Tune this value
+  // public final SensorDirectionValue wristCANcoderSensorDirection =
+  //   SensorDirectionValue.CounterClockwise_Positive;
 
   // These clamps are the default clamps for the pivot, as well as limiting the moving clamps of the
   // pivot themselves.

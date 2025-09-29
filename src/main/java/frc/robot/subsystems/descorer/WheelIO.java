@@ -14,8 +14,12 @@ import edu.wpi.first.units.measure.MutAngle;
 import edu.wpi.first.units.measure.MutAngularVelocity;
 import edu.wpi.first.units.measure.MutCurrent;
 import edu.wpi.first.units.measure.Per;
+import edu.wpi.first.units.measure.Voltage;
+import org.littletonrobotics.junction.AutoLog;
 
 public interface WheelIO {
+
+  @AutoLog
   public static class WheelIOInputs {
     public boolean connected = false;
     public MutAngle wheelPosition = Rotations.mutable(0.0);
@@ -29,6 +33,8 @@ public interface WheelIO {
   }
 
   public default void updateInputs(WheelIOInputs inputs) {}
+
+  public default void applyOutputs(WheelIOInputs outputs) {}
 
   public default void setWheelGoalPos(Angle goalPos) {}
 
@@ -49,5 +55,5 @@ public interface WheelIO {
 
   public default void setOverrideMode(boolean override) {}
 
-  public default void setOverrideVoltage(VoltageUnit voltage) {}
+  public default void setOverrideVoltage(Voltage voltage) {}
 }

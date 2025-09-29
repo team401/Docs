@@ -3,27 +3,23 @@ package frc.robot.constants;
 import static edu.wpi.first.units.Units.Amps;
 import static edu.wpi.first.units.Units.Degrees;
 import static edu.wpi.first.units.Units.KilogramSquareMeters;
-import static edu.wpi.first.units.Units.Meters;
 import static edu.wpi.first.units.Units.Rotations;
 import static edu.wpi.first.units.Units.RotationsPerSecond;
-import static edu.wpi.first.units.Units.KilogramSquareMeters;
 
 import com.ctre.phoenix6.signals.InvertedValue;
 import com.ctre.phoenix6.signals.NeutralModeValue;
-import com.ctre.phoenix6.signals.SensorDirectionValue;
 import coppercore.parameter_tools.json.JSONExclude;
 import coppercore.parameter_tools.json.JSONSync;
 import coppercore.parameter_tools.json.JSONSyncConfigBuilder;
 import coppercore.parameter_tools.path_provider.EnvironmentHandler;
-import edu.wpi.first.units.Measure;
 import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.AngularVelocity;
 import edu.wpi.first.units.measure.Current;
-import edu.wpi.first.units.measure.Distance;
 import edu.wpi.first.units.measure.MomentOfInertia;
 import edu.wpi.first.wpilibj.Filesystem;
+
 public class WheelConstants {
-    @JSONExclude
+  @JSONExclude
   public static final JSONSync<WheelConstants> synced =
       new JSONSync<WheelConstants>(
           new WheelConstants(),
@@ -73,11 +69,13 @@ public class WheelConstants {
   public final AngularVelocity wheelMotionMagicCruiseVelocity =
       RotationsPerSecond.of(wheelMotionMagicCruiseVelocityRotationsPerSecond); // TODO: Tune this!
 
-  public final Double wheelMotionMagicExpo_kA = 6.0; //IDK if these are the real values
+  public final Double wheelMotionMagicExpo_kA = 6.0; // IDK if these are the real values
   public final Double wheelMotionMagicExpo_kV = 6.0; //
 
   /** The wheel can be this far away from the goal and considered "at the setpoint" */
   public final Angle wheelSetpointEpsilon = Degrees.of(1.0); // find real value
+
+  public final Angle wheelSpinAmount = Degrees.of(1.0); // find real value
 
   public static final class Sim {
     @JSONExclude
@@ -95,7 +93,8 @@ public class WheelConstants {
 
     @JSONExclude
     public final MomentOfInertia wheelMomentOfInertia =
-        KilogramSquareMeters.of(wheelMomentOfInertiaKgM2); 
+        KilogramSquareMeters.of(wheelMomentOfInertiaKgM2);
+
     public final Angle wheelStartingAngle = Rotations.of(0.0);
   }
 }
