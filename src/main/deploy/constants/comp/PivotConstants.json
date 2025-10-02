@@ -1,0 +1,73 @@
+{
+  "pivotMotorId": 1,
+  "pivotCANcoderId": 2,
+  "sensorToMechanismRatio": 1.0,
+  "pivotReduction": 20.0,
+  "pivotMotorInvertedValue": "Clockwise_Positive",
+  "pivotNeutralModeValue": "Brake",
+  "pivotSupplyCurrentLimit": {
+    "value": 40.0,
+    "unit": "Amp"
+  },
+  "pivotStatorCurrentLimit": {
+    "value": 40.0,
+    "unit": "Amp"
+  },
+  "peakFOCCurrent": {
+    "value": 40.0,
+    "unit": "Amp"
+  },
+  "pivotKG": 0.34,
+  "pivotKS": 0.2,
+  "pivotKV": 1.0,
+  "pivotKA": 0.0,
+  "pivotKP": 25.0,
+  "pivotKI": 1.0,
+  "pivotKD": 0.0,
+  "pivotMotionMagicCruiseVelocityRotationsPerSecond": 3.0,
+  "pivotMotionMagicExpo_kA": 0.4,
+  "pivotMotionMagicExpo_kV": 0.1,
+  "pivotCANcoderAbsoluteSensorDiscontinuityPoint": {
+    "value": 0.5,
+    "unit": "Rotation"
+  },
+  "pivotCANcoderMagnetOffset": {
+    "value": 0.190185546875,
+    "unit": "Rotation"
+  },
+  "pivotCANcoderSensorDirection": "Clockwise_Positive",
+  "pivotMinAngle": {
+    "value": -1.68,
+    "unit": "Radian"
+  },
+  "pivotMaxAngle": {
+    "value": 2.0,
+    "unit": "Radian"
+  },
+  "minElevatorDownSafeAngle": {
+    "value": -0.503,
+    "unit": "Radian"
+  },
+  "minReefSafeAngle": {
+    "value": 1.56,
+    "unit": "Radian"
+  },
+  "closeToReefThreshold": {
+    "value": 2.5,
+    "unit": "Meter"
+  },
+  "pivotSetpointEpsilon": {
+    "value": 5.0,
+    "unit": "Degree"
+  },
+  "netShotRollerPivotEpsilon": {
+    "value": 45.0,
+    "unit": "Degree"
+  },
+  "maxPivotSetpointVelocityRotationsPerSecond": 0.008333,
+  "pivotStableDebounceTimeSeconds": 0.1,
+  "algaeUnderCrossbarAngle": {
+    "value": -0.105,
+    "unit": "Radian"
+  }
+}

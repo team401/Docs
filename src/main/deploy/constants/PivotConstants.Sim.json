@@ -1,0 +1,19 @@
+{
+  "pivotMomentOfInertiaKgM2": 0.0672304487,
+  "pivotArmLength": {
+    "value": 0.5,
+    "unit": "Meter"
+  },
+  "pivotMinAngle": {
+    "value": -0.8,
+    "unit": "Rotation"
+  },
+  "pivotMaxAngle": {
+    "value": 0.3,
+    "unit": "Rotation"
+  },
+  "pivotStartingAngle": {
+    "value": 0.0,
+    "unit": "Rotation"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "wheelMotorId": 1,
+  "wheelCANcoderId": 2,
+  "sensorToMechanismRatio": 1.0,
+  "wheelReduction": 20.0,
+  "wheelMotorInvertedValue": "Clockwise_Positive",
+  "wheelNeutralModeValue": "Brake",
+  "wheelSupplyCurrentLimit": {
+    "value": 40.0,
+    "unit": "Amp"
+  },
+  "wheelStatorCurrentLimit": {
+    "value": 40.0,
+    "unit": "Amp"
+  },
+  "peakFOCCurrent": {
+    "value": 40.0,
+    "unit": "Amp"
+  },
+  "wheelKG": 0.34,
+  "wheelKS": 0.2,
+  "wheelKV": 1.0,
+  "wheelKA": 0.0,
+  "wheelKP": 25.0,
+  "wheelKI": 1.0,
+  "wheelKD": 0.0,
+  "wheelMotionMagicCruiseVelocityRotationsPerSecond": 3.0,
+  "wheelMotionMagicExpo_kA": 0.4,
+  "wheelMotionMagicExpo_kV": 0.1,
+  "wheelCANcoderAbsoluteSensorDiscontinuityPoint": {
+    "value": 0.5,
+    "unit": "Rotation"
+  },
+  "wheelCANcoderMagnetOffset": {
+    "value": 0.190185546875,
+    "unit": "Rotation"
+  },
+  "wheelCANcoderSensorDirection": "Clockwise_Positive",
+  "wheelMinAngle": {
+    "value": -1.68,
+    "unit": "Radian"
+  },
+  "wheelMaxAngle": {
+    "value": 2.0,
+    "unit": "Radian"
+  },
+  "minElevatorDownSafeAngle": {
+    "value": -0.503,
+    "unit": "Radian"
+  },
+  "minReefSafeAngle": {
+    "value": 1.56,
+    "unit": "Radian"
+  },
+  "closeToReefThreshold": {
+    "value": 2.5,
+    "unit": "Meter"
+  },
+  "wheelSetpointEpsilon": {
+    "value": 5.0,
+    "unit": "Degree"
+  },
+  "netShotRollerPivotEpsilon": {
+    "value": 45.0,
+    "unit": "Degree"
+  },
+  "maxWheelSetpointVelocityRotationsPerSecond": 0.008333,
+  "wheelStableDebounceTimeSeconds": 0.1,
+  "algaeUnderCrossbarAngle": {
+    "value": -0.105,
+    "unit": "Radian"
+  }
+}

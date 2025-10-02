@@ -26,7 +26,6 @@ import edu.wpi.first.units.measure.MutAngle;
 import edu.wpi.first.units.measure.MutCurrent;
 import edu.wpi.first.units.measure.Per;
 import frc.robot.constants.JsonConstants;
-import frc.robot.subsystems.descorer.WheelIO.WheelIOInputs;
 
 public class WheelIOTalonFX implements WheelIO {
   TalonFX wheelMotor = new TalonFX(JsonConstants.wheelConstants.wheelMotorId);

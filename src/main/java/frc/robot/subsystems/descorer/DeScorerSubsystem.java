@@ -149,10 +149,10 @@ public class DeScorerSubsystem {
     wheelio.updateInputs(wheelInputs);
     wheelio.applyOutputs(wheelOutputs);
 
-    Logger.processInputs("pivot/inputs", pivotInputs);
-    Logger.processInputs("pivot/outputs", pivotOutputs);
-    Logger.processInputs("wheel/inputs", wheelInputs);
-    Logger.processInputs("wheel/outputs", wheelOutputs);
+    Logger.processInputs("Pivot/inputs", pivotInputs);
+    Logger.processInputs("Pivot/outputs", pivotOutputs);
+    Logger.processInputs("Wheel/inputs", wheelInputs);
+    Logger.processInputs("Wheel/outputs", wheelOutputs);
   }
 
   /** This method must be called from the subsystem's test periodic! */
@@ -383,9 +383,9 @@ public class DeScorerSubsystem {
   }
 
   public void descoreAt(Height height) {
-    if (height == height.L2) {
+    if (height == Height.L2) {
       setGoalAngle(Degrees.of(0.0)); // find real value
-    } else if (height == height.L3) {
+    } else if (height == Height.L3) {
       setGoalAngle(Degrees.of(0.0)); // find real value
     }
     sendGoalAngleToIO();

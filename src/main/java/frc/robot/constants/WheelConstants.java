@@ -54,8 +54,8 @@ public class WheelConstants {
 
   public final Double wheelKG = 0.0; // TODO: Automatic feedforward characterization
   public final Double wheelKS = 0.0;
-  public final Double wheelKV = 0.0;
-  public final Double wheelKA = 0.0;
+  public final Double wheelKV = 1.0;
+  public final Double wheelKA = 1.0;
 
   public final Double wheelKP = 0.0; // TODO: Tune these
   public final Double wheelKI = 0.0;

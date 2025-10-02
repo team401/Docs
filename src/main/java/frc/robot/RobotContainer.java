@@ -25,6 +25,7 @@ import edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine;
 import frc.robot.commands.DriveCommands;
 import frc.robot.constants.FeatureFlags;
 import frc.robot.constants.JsonConstants;
+import frc.robot.subsystems.descorer.DeScorerSubsystem;
 import frc.robot.subsystems.drive.Drive;
 import org.littletonrobotics.junction.networktables.LoggedDashboardChooser;
 
@@ -37,6 +38,7 @@ import org.littletonrobotics.junction.networktables.LoggedDashboardChooser;
 public class RobotContainer {
   // Subsystems
   private Drive drive = null;
+  private DeScorerSubsystem descorer = null;
 
   // Controller
   private final CommandXboxController controller = new CommandXboxController(0);
@@ -79,6 +81,9 @@ public class RobotContainer {
   public void configureSubsystems() {
     if (FeatureFlags.synced.getObject().runDrive) {
       drive = InitSubsystems.initDrive();
+    }
+    if (FeatureFlags.synced.getObject().runDescorer) {
+      descorer = InitSubsystems.initDescorer();
     }
   }
   /**

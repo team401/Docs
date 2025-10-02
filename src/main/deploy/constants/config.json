@@ -6,7 +6,9 @@
       "name": "comp",
       "filepath": "comp",
       "files": [
-        "FeatureFlags.json"
+        "FeatureFlags.json",
+        "PivotConstants.json",
+        "WheelConstants.json"
       ]
     }
   ]
