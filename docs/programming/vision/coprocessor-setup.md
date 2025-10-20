@@ -13,21 +13,22 @@ You will need:
 
 With your resources assembled,
 
-- [ ] Navigate to [ubuntu.com](https://ubuntu.com/). In the navigation bar at the top, go to `Products > Ubuntu Server`. Download the latest image.
+- [x] Navigate to [ubuntu.com](https://ubuntu.com/). In the navigation bar at the top, go to `Products > Ubuntu Server`. Download the latest image.
 
-- [ ] Copy the image to your thumbdrive with a tool like [Balena Etcher](https://etcher.balena.io/).
+- [x] Copy the image to your thumbdrive with a tool like [Balena Etcher](https://etcher.balena.io/).
 
-- [ ] Plug the thumbdrive into the coprocessor, reboot it, and look for a message telling you what key to press to enter the bootloader. This is `Del` for our trigkey mini-PCs. Boot from the thumbdrive to run the installer.
+- [x] Plug the thumbdrive into the coprocessor, reboot it, and look for a message telling you what key to press to enter the bootloader. This is `Del` for our trigkey mini-PCs. Boot from the thumbdrive to run the installer.
 
-- [ ] Advance through the install wizard using default settings except for the following:
+- [x] Advance through the install wizard using default settings except for the following:
 
     - Use `minimal install` rather than the standard install.
 
-    - Install OpenSSH server.
+    - Install OpenSSH server when prompted.
 
-    - Make sure you set a hostname, username, and password that is consistent with other coprocessors and consult other members and mentors of the subteam. Label the machine physically with the correct hostname and username, and potentially also the password.
+    - Make sure you set a hostname, username, and password that is consistent with other coprocessors and consult other members and mentors of the subteam. Label the machine physically with the correct hostname and username, and potentially also the password.  For instance, `team401-photonvision1` or `team401-photonvision2` as the hostname, and `team401` as the
+    username.
 
-- [ ] Once you've made it to a terminal, you'll have to set up a wifi connection. However, since you've used a minimal install, it's a bit more challenging than normal:
+- [x] Once you've made it to a terminal, you'll have to set up networking. However, since you've used a minimal install, it's a bit more challenging than normal:
 
     - Many of the next steps will require administrator permissions.
 
@@ -46,39 +47,88 @@ With your resources assembled,
     ```
 
     You should see something like `wlp88s0`. Look for one that starts with `wl` for a wireless interface.
+    Also look for one that starts with `en`, such as `enp89s0`. This will be your wired Ethernet interface.
 
-    Enable it with:
+- [x] Set up netplan. To that end, create yaml files in
+    `/etc/netplan/` to configure interfaces on startup. You
+    can find docs on the YAML format on the [netplan
+    docs](https://netplan.readthedocs.io/en/stable/netplan-yaml/).
 
-    ```sh
-    ip link set <interface> up
-    ```
+    To that end, you need to create two files in `/etc/netplan`.
+    First, create `10-ethernet-static.yaml` with this content:
+```yaml
+network:
+  version: 2
+  ethernets:
+    enp89s0:
+      optional: true
+      dhcp4: false
+      dhcp6: false
+      addresses:
+        - 10.4.1.11/24
+```
+    where `enp89s0` should be the name of the Ethernet interface from the previous step.
 
-    - Next, create a wpa_supplicant configuration file to configure a network SSID and password:
+    To set up Wi-Fi, create a file such as `20-wifi-chromebook.yaml` in `/etc/netplan` with this content:
+```yaml
+network:
+  version: 2
+  wifis:
+    wlp88s0:
+      optional: true
+      access-points:
+        "access point name SSID":
+          password: "xxxxxx"
+      dhcp4: true
+      dhcp6: false
+```
+    Replace `wlp88s0` with the name of the WiFi interface you learned earlier.
+    Replace `access point name SSID` with the SSID of your access point, and enter the WiFi password.
+    Finally, run (from a root shell),
+```bash
+netplan apply
+```
+    This will render (=apply) this network configuration.
 
-    ```sh
-    wpa_passphrase "<SSID>" "<Password>" > /etc/wpa_supplicant/wpa_supplicant.conf
-    ```
+- [x] Test network connectivity.
 
-    - Start wpa_supplicant in the background:
+    - If your WiFi provides Internet connectivity, you should now be able
+      to update packages with `apt update` and `apt upgrade`.
 
-    ```sh
-    wpa_supplicant -Bc /etc/wpa_supplicant/wpa_supplicant.conf -i <interface>
-    ```
+    - If you need to know your assigned IP address, run `ip addr`. Look for
+      a section that corresponds to the `wlp88s0` interface:
+```
+3: wlp88s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    inet 10.90.161.58/16 brd 10.90.255.255 scope global dynamic noprefixroute wlp88s0
+       valid_lft 34652sec preferred_lft 34652sec
+```
+    In this example, `10.90.161.58` is the IP address assigned.
 
-    - To get an IP address on the local network, start dhcpd:
+    - Since openssh is enabled, you should be able to `ssh team401@10.90.161.58` from any
+      laptop connected to the same subnet as the robot.
 
-    ```sh
-    dhcpd
-    ```
+    - Install `ping` with `apt install iputils-ping`.
 
-    - You can update packages with `apt update` and `apt upgrade`. Install `ping` with `apt install iputils-ping`.
-
-    - At this point, we recommend you install a text editor like Vim (`apt install vim`).
+    - Install a text editor like Vim (`apt install vim`).
 
     - Reboot the machine with `shutdown -r now`.
 
-## Permanently configuring network connection for ethernet and wifi
+    - The machine should boot up without delay and connect to the network.
+    The netplan configuration should be permanent.
 
-Create yaml files in `/etc/netplan/` to configure interfaces on startup. You can find docs on the YAML format on the [netplan docs](https://netplan.readthedocs.io/en/stable/netplan-yaml/).
+## Installing Photonvision.
 
-**We have yet to successfully configure this. As soon as we do (probably Monday, 8/20/2025) this section will be updated.**
+- [x] To install Photonvision, we are following the instructions for [Other Debian-Based Co-Processor Installation](https://docs.photonvision.org/en/latest/docs/advanced-installation/sw_install/other-coprocessors.html).
+
+   Currently, these are:
+```bash
+$ wget https://git.io/JJrEP -O install.sh
+$ sudo chmod +x install.sh
+$ sudo ./install.sh
+$ sudo reboot now
+```
+    This will install the latest version of PhotonVision.
+    For whatever reason, Photonvision will make a number of configuration changes,
+    one of which will be to activate `NetworkManager` as the default renderer for `netplan`.
+    This should not cause any issues.
+
