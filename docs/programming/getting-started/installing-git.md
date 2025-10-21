@@ -1,5 +1,9 @@
 
-# Installing Git
+# Git Access (Including Tokens)
+
+## Installing Git
+
+Before your can use git, it needs to be installed on your machine
 
 === "macOS and Linux"
     If you are on a Linux or Macintosh, `git` should already be installed or can
@@ -13,8 +17,7 @@
 
     Click the blue download button inside the picture of a computer monitor.  This screenshot shows the Windows version selected, but the link should automatically be set for whatever operating system you are using.
 
-## Setting up git access to a repository
-
+## Using ssh keys and tokens
 When you are cloning a private repository, or pushing changes to one, you need
 to be authenticated by Github.  This requires the use of a private (ssh) key or of
 a token.  For your computer at home, we suggest that you create either
@@ -22,6 +25,16 @@ a private (ssh) key, see [instructions](https://docs.github.com/en/authenticatio
 a classic personal access token (PAT).
 For shop computers, we suggest that you create a fine-grained access token
 for a specific repository instead.
+
+### Cloning via ssh
+
+On your home machine or personal laptop, if you set up an ssh key, you would use the
+`ssh` method of cloning, as shown below using the example of this repository:
+
+![clone from github via ssh](/images/clone-from-github-ssh.png)
+
+However, when using access tokens, you would be using the `https` method instead, which
+will be explained below.
 
 ### Creating Access Tokens
 
@@ -72,7 +85,8 @@ Whenever you are cloning a Github repository, use the `https` method (not `ssh`)
 and insert the token in the URL like so: `https://token goes here@github.com/team401/....`.
 
 For instance, the repo for these Docs is at `https://github.com/team401/Docs.git` when using the `https` methods, which is shown here:
-![clone from github](/images/clone-from-github.png)
+![clone from github via https](/images/clone-from-github-https.png)
+
 
 You would therefore use
 `https://ghp_rv4djkhsdfEWIkJHSKJfd787fsRV@github.com/team401/Docs.git` to clone it using your token, for instance,
@@ -98,15 +112,14 @@ git config --local user.email your@email
 git config --local user.name "Your Name"
 ```
 
-For shared shop commits, use
+For shared shop/pit commits, use
 ```bash
-git config --local user.email team401@gmail.com
-git config --local user.name "Team 401 in shop work"
+git config --local user.email team401@mcps.org
+git config --local user.name "Team 401 shop work@blueridgeramble"
 ```
-or something more specific to describe who participated.
+or something more specific to describe who participated and when.
 (Remember that you must use double quotes if the `user.name` has more than one word.)
 
 *Note* this method is **not** necessary if students work in different project
 directories. In that case, the settings from the active project directory will be used.
 
-*Side note* an alternative authentication method is to use private ssh keys, in which case the remote URL will start with `git@github.com`, e.g. `git@github.com:team401/Docs.git`.
