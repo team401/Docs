@@ -25,7 +25,7 @@ FRC Team 401: Copperhead Robotics">
     
     
       
-        <title>Installing Git - Docs</title>
+        <title>Git Access (Including Tokens) - Docs</title>
       
     
     
@@ -62,7 +62,7 @@ FRC Team 401: Copperhead Robotics">
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Installing Git - Docs" >
+        <meta  property="og:title"  content="Git Access (Including Tokens) - Docs" >
       
         <meta  property="og:description"  content="FIRST Robotics Competition documentation developed by 
 FRC Team 401: Copperhead Robotics" >
@@ -79,7 +79,7 @@ FRC Team 401: Copperhead Robotics" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Installing Git - Docs" >
+        <meta  name="twitter:title"  content="Git Access (Including Tokens) - Docs" >
       
         <meta  name="twitter:description"  content="FIRST Robotics Competition documentation developed by 
 FRC Team 401: Copperhead Robotics" >
@@ -107,7 +107,7 @@ FRC Team 401: Copperhead Robotics" >
     <div data-md-component="skip">
       
         
-        <a href="#installing-git" class="md-skip">
+        <a href="#git-access-including-tokens" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +142,7 @@ FRC Team 401: Copperhead Robotics" >
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installing Git
+              Git Access (Including Tokens)
             
           </span>
         </div>
@@ -786,7 +786,7 @@ FRC Team 401: Copperhead Robotics" >
   
   
   <span class="md-ellipsis">
-    Installing Git
+    Git Access (Including Tokens)
     
   </span>
   
@@ -799,7 +799,7 @@ FRC Team 401: Copperhead Robotics" >
   
   
   <span class="md-ellipsis">
-    Installing Git
+    Git Access (Including Tokens)
     
   </span>
   
@@ -822,11 +822,62 @@ FRC Team 401: Copperhead Robotics" >
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setting-up-git-access-to-a-repository" class="md-nav__link">
+  <a href="#installing-git" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting up git access to a repository
+      Installing Git
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-ssh-keys-and-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using ssh keys and tokens
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using ssh keys and tokens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloning-via-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloning via ssh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-access-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Access Tokens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-fine-grained-tokens-for-shop-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Fine-grained tokens for shop use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-created-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using created tokens.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1226,11 +1277,62 @@ FRC Team 401: Copperhead Robotics" >
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setting-up-git-access-to-a-repository" class="md-nav__link">
+  <a href="#installing-git" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting up git access to a repository
+      Installing Git
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-ssh-keys-and-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using ssh keys and tokens
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using ssh keys and tokens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloning-via-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloning via ssh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-access-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Access Tokens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-fine-grained-tokens-for-shop-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Fine-grained tokens for shop use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-created-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using created tokens.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1253,7 +1355,9 @@ FRC Team 401: Copperhead Robotics" >
   
 
 
-<h1 id="installing-git">Installing Git<a class="headerlink" href="#installing-git" title="Permanent link"></a></h1>
+<h1 id="git-access-including-tokens">Git Access (Including Tokens)<a class="headerlink" href="#git-access-including-tokens" title="Permanent link"></a></h1>
+<h2 id="installing-git">Installing Git<a class="headerlink" href="#installing-git" title="Permanent link"></a></h2>
+<p>Before your can use git, it needs to be installed on your machine</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="installing-git-macos-and-linux" name="__tabbed_1" type="radio" /><input id="installing-git-windows" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="installing-git-macos-and-linux">macOS and Linux</label><label for="installing-git-windows">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1267,23 +1371,52 @@ be installed through the package manager of your OS.</p>
 </div>
 </div>
 </div>
-<h2 id="setting-up-git-access-to-a-repository">Setting up git access to a repository<a class="headerlink" href="#setting-up-git-access-to-a-repository" title="Permanent link"></a></h2>
+<h2 id="using-ssh-keys-and-tokens">Using ssh keys and tokens<a class="headerlink" href="#using-ssh-keys-and-tokens" title="Permanent link"></a></h2>
 <p>When you are cloning a private repository, or pushing changes to one, you need
-to be authenticated by Github.  This requires the use of a private key or of
-a token.  We suggest that you create a personal access token (PAT).</p>
-<p>Go to <a href="https://github.com/settings/tokens">Personal Access Tokens</a> on github.com.
-The <a href="https://github.com/settings/tokens">link</a> should work, if it doesn't, go to Settings, then Developer Settings, then Personal Access Tokens:</p>
+to be authenticated by Github.  This requires the use of a private (ssh) key or of
+a token.  For your computer at home, we suggest that you create either
+a private (ssh) key, see <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">instructions</a>, or that you create
+a classic personal access token (PAT).
+For shop computers, we suggest that you create a fine-grained access token
+for a specific repository instead.</p>
+<h3 id="cloning-via-ssh">Cloning via ssh<a class="headerlink" href="#cloning-via-ssh" title="Permanent link"></a></h3>
+<p>On your home machine or personal laptop, if you set up an ssh key, you would use the
+<code>ssh</code> method of cloning, as shown below using the example of this repository:</p>
+<p><img alt="clone from github via ssh" src="../../../images/clone-from-github-ssh.png" /></p>
+<p>However, when using access tokens, you would be using the <code>https</code> method instead, which
+will be explained below.</p>
+<h3 id="creating-access-tokens">Creating Access Tokens<a class="headerlink" href="#creating-access-tokens" title="Permanent link"></a></h3>
+<p>To create a classic token for home use, go to
+<a href="https://github.com/settings/tokens">Tokens (classic)</a> on github.com.
+<a href="https://github.com/settings/tokens">This link</a> should work, if it doesn't, go to 
+Settings, then Developer Settings, then Personal Access Tokens:</p>
 <p><img alt="create a personal access token on github" src="../../../images/create-pat-on-github.png" /></p>
 <p>Check the repo box, give it a name and an expiration date, and create the token.
 Once created, copy the key and store it somewhere secure. GitHub will
 only display it to you once, so it's important to store it elsewhere so
 that you can use it to authenticate later.</p>
 <p>Your token will look like this: <code>ghp_rv4djkhsdfEWIkJHSKJfd787fsRV</code>.</p>
-<p>Now you are able to use this token as follows.
+<h3 id="creating-fine-grained-tokens-for-shop-use">Creating Fine-grained tokens for shop use<a class="headerlink" href="#creating-fine-grained-tokens-for-shop-use" title="Permanent link"></a></h3>
+<p>The link to create a fine-grained token is <a href="https://github.com/settings/personal-access-tokens">here</a>.
+Enter a name, a description, and <strong>make sure to select team401</strong> as resource owner:</p>
+<p><img alt="create a fine-grained token on github" src="../../../images/create-fine-grained-token1.png" /></p>
+<p>Then, select the repository (or repositories) for which the token shall be valid:</p>
+<p><img alt="create a fine-grained token on github" src="../../../images/create-fine-grained-token2.png" /></p>
+<p>Shop tokens shall be valid for only one or two repositories.
+Finally, click <strong>Add Permissions</strong> and select <em>Contents</em>, then select <em>Read and Write</em>:</p>
+<p><img alt="create a fine-grained token on github" src="../../../images/create-fine-grained-token3.png" /></p>
+<p>(Metadata is Required and will be added automatically).</p>
+<p>Finally, select <strong>Generate Token</strong>.  This will send a request to a team organizer.
+Let them know about this in person for a quick response!</p>
+<p>Team organizers approve the token using <a href="https://github.com/organizations/team401/settings/personal-access-token-requests">this URL</a>.</p>
+<p>Once approved, you may start using the token.</p>
+<h3 id="using-created-tokens">Using created tokens.<a class="headerlink" href="#using-created-tokens" title="Permanent link"></a></h3>
+<p>These instructions apply to both kinds of tokens.  Once you have obtained a token,
+you are able to use this token as follows.
 Whenever you are cloning a Github repository, use the <code>https</code> method (not <code>ssh</code>)
-and insert the token in the URL.</p>
+and insert the token in the URL like so: <code>https://token goes here@github.com/team401/....</code>.</p>
 <p>For instance, the repo for these Docs is at <code>https://github.com/team401/Docs.git</code> when using the <code>https</code> methods, which is shown here:
-<img alt="clone from github" src="../../../images/clone-from-github.png" /></p>
+<img alt="clone from github via https" src="../../../images/clone-from-github-https.png" /></p>
 <p>You would therefore use
 <code>https://ghp_rv4djkhsdfEWIkJHSKJfd787fsRV@github.com/team401/Docs.git</code> to clone it using your token, for instance,</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://ghp_rv4djkhsdfEWIkJHSKJfd787fsRV@github.com/team401/Docs.git
@@ -1299,9 +1432,14 @@ the name and email settings for this repo.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span>your@email
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
 </code></pre></div>
+<p>For shared shop/pit commits, use
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span>team401@mcps.org
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Team 401 shop work@blueridgeramble&quot;</span>
+</code></pre></div>
+or something more specific to describe who participated and when.
+(Remember that you must use double quotes if the <code>user.name</code> has more than one word.)</p>
 <p><em>Note</em> this method is <strong>not</strong> necessary if students work in different project
 directories. In that case, the settings from the active project directory will be used.</p>
-<p><em>Side note</em> an alternative authentication method is to use private ssh keys, in which case the remote URL will start with <code>git@github.com</code>, e.g. <code>git@github.com:team401/Docs.git</code>.</p>
 
 
 
@@ -1324,7 +1462,7 @@ directories. In that case, the settings from the active project directory will b
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 18, 2025 20:04:01 UTC">September 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 21, 2025 02:05:08 UTC">October 21, 2025</span>
   </span>
 
     
