@@ -27,8 +27,8 @@ public class WheelConstants {
           EnvironmentHandler.getEnvironmentHandler().getEnvironmentPathProvider(),
           new JSONSyncConfigBuilder().build());
 
-  public final Integer wheelMotorId = 1; // placeholder
-  public final Integer wheelRotorSensorId = 1; // placeholder
+  public final Integer wheelMotorId = 2; // placeholder
+  public final Integer wheelRotorSensorId = 2; // placeholder
 
   /**
    * FusedCANcoder sensor to mechanism ratio
@@ -36,7 +36,7 @@ public class WheelConstants {
    * <p>see talonFX docs:
    * https://api.ctr-electronics.com/phoenix6/latest/java/com/ctre/phoenix6/configs/FeedbackConfigs.html#SensorToMechanismRatio
    */
-  public final Double sensorToMechanismRatio = 1.0; // TODO: Actual value
+  public final Double sensorToMechanismRatio = 40.0; // TODO Actual Value
 
   public final Double wheelReduction = 20.0; // placeholder
 

@@ -12,11 +12,12 @@ import coppercore.parameter_tools.LoggedTunableNumber;
 import coppercore.wpilib_interface.UnitUtils;
 import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.MutAngle;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.TestModeManager;
 import frc.robot.constants.JsonConstants;
 import org.littletonrobotics.junction.Logger;
 
-public class DeScorerSubsystem {
+public class DeScorerSubsystem extends SubsystemBase {
   PivotIO pivotio;
   PivotIOInputsAutoLogged pivotInputs = new PivotIOInputsAutoLogged();
   PivotIOInputsAutoLogged pivotOutputs = new PivotIOInputsAutoLogged();
@@ -149,10 +150,10 @@ public class DeScorerSubsystem {
     wheelio.updateInputs(wheelInputs);
     wheelio.applyOutputs(wheelOutputs);
 
-    Logger.processInputs("Pivot/inputs", pivotInputs);
-    Logger.processInputs("Pivot/outputs", pivotOutputs);
-    Logger.processInputs("Wheel/inputs", wheelInputs);
-    Logger.processInputs("Wheel/outputs", wheelOutputs);
+    Logger.processInputs("Descorer/Pivot/inputs", pivotInputs);
+    Logger.processInputs("Descorer/Pivot/outputs", pivotOutputs);
+    Logger.processInputs("Descorer/Wheel/inputs", wheelInputs);
+    Logger.processInputs("Descorer/Wheel/outputs", wheelOutputs);
   }
 
   /** This method must be called from the subsystem's test periodic! */
@@ -383,10 +384,11 @@ public class DeScorerSubsystem {
   }
 
   public void descoreAt(Height height) {
+    setMotorsDisabled(false);
     if (height == Height.L2) {
-      setGoalAngle(Degrees.of(0.0)); // find real value
+      setGoalAngle(Degrees.of(5.0)); // find real value
     } else if (height == Height.L3) {
-      setGoalAngle(Degrees.of(0.0)); // find real value
+      setGoalAngle(Degrees.of(10.0)); // find real value
     }
     sendGoalAngleToIO();
   }

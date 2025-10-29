@@ -100,6 +100,7 @@ dependencies {
 
     def akitJson = new groovy.json.JsonSlurper().parseText(new File(projectDir.getAbsolutePath() + "/vendordeps/AdvantageKit.json").text)
     annotationProcessor "org.littletonrobotics.akit:akit-autolog:$akitJson.version"
+    compileOnly        "org.littletonrobotics.akit:akit-autolog:$akitJson.version"
 
     def coppercoreVersion = "2025.1.12"
 

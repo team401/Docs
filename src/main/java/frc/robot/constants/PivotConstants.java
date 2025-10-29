@@ -38,7 +38,7 @@ public class PivotConstants {
    * <p>see talonFX docs:
    * https://api.ctr-electronics.com/phoenix6/latest/java/com/ctre/phoenix6/configs/FeedbackConfigs.html#SensorToMechanismRatio
    */
-  public final Double sensorToMechanismRatio = 1.0; // TODO: Actual value
+  public final Double sensorToMechanismRatio = 1.0; // TODO actual value
 
   public final Double pivotReduction = 20.0; // placeholder
 
@@ -54,25 +54,25 @@ public class PivotConstants {
   /** Peak forward and reverse current for FieldOriented */
   public final Current peakFOCCurrent = Amps.of(40.0);
 
-  public final Double pivotKG = 0.0; // TODO: Automatic feedforward characterization
-  public final Double pivotKS = 0.0;
-  public final Double pivotKV = 0.0;
-  public final Double pivotKA = 0.0;
+  public final Double pivotKG = 0.43;
+  public final Double pivotKS = 0.1;
+  public final Double pivotKV = 12.41;
+  public final Double pivotKA = 0.14;
 
-  public final Double pivotKP = 0.0; // TODO: Tune these
-  public final Double pivotKI = 0.0;
-  public final Double pivotKD = 0.0;
+  public final Double pivotKP = 50.0;
+  public final Double pivotKI = 1.0;
+  public final Double pivotKD = 0.5;
 
   // This value is a a Double because RotationsPerSecond doesn't serialize properly with JSONSync
   public final Double pivotMotionMagicCruiseVelocityRotationsPerSecond =
-      0.1; // maybe look for real value
+      3.0; // maybe look for real value
 
   @JSONExclude
   public final AngularVelocity pivotMotionMagicCruiseVelocity =
       RotationsPerSecond.of(pivotMotionMagicCruiseVelocityRotationsPerSecond); // TODO: Tune this!
 
-  public final Double pivotMotionMagicExpo_kA = 6.0; //
-  public final Double pivotMotionMagicExpo_kV = 6.0; //
+  public final Double pivotMotionMagicExpo_kA = 0.14; //
+  public final Double pivotMotionMagicExpo_kV = 12.41; //
 
   // public final Angle pivotCANcoderAbsoluteSensorDiscontinuityPoint =
   //   Rotations.of(0.3); // TODO: Confirm this
@@ -111,8 +111,8 @@ public class PivotConstants {
 
     public final Distance pivotArmLength = Meters.of(0.5); // find real value
 
-    public final Angle pivotMinAngle = Rotations.of(-0.80); // find real value
-    public final Angle pivotMaxAngle = Rotations.of(0.30); // find real value
+    public final Angle pivotMinAngle = Rotations.of(0.0); // find real value
+    public final Angle pivotMaxAngle = Rotations.of(0.60); // find real value
 
     public final Angle pivotStartingAngle = Rotations.of(0.0);
   }
