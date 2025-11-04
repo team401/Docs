@@ -2,7 +2,7 @@
   "pivotMotorId": 1,
   "pivotCANcoderId": 2,
   "sensorToMechanismRatio": 1.0,
-  "pivotReduction": 20.0,
+  "pivotReduction": 1.0,
   "pivotMotorInvertedValue": "Clockwise_Positive",
   "pivotNeutralModeValue": "Brake",
   "pivotSupplyCurrentLimit": {

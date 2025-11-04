@@ -40,7 +40,7 @@ public class PivotConstants {
    */
   public final Double sensorToMechanismRatio = 1.0; // TODO actual value
 
-  public final Double pivotReduction = 20.0; // placeholder
+  public final Double pivotReduction = 1.0; // placeholder
 
   @JSONExclude public final Double rotorToSensorRatio = pivotReduction;
 
