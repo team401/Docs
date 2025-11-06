@@ -52,7 +52,7 @@ public interface PivotIO {
    */
   public default void updateInputs(PivotIOInputs inputs) {}
 
-  public default void applyOutputs(PivotIOInputs outputs) {}
+  public default void applyOutputs(PivotIOInputs outputs) {}//DIFERENT THIS IS DIFFERENT FROM WRIST IO I REPREAT THIS IS DIFFERENT
   /**
    * Set the pivot's goal position.
    *

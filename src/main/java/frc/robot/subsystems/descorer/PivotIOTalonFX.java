@@ -26,6 +26,7 @@ import edu.wpi.first.units.measure.MutVoltage;
 import edu.wpi.first.units.measure.Per;
 import edu.wpi.first.units.measure.Voltage;
 import frc.robot.constants.JsonConstants;
+import org.littletonrobotics.junction.Logger;
 
 public class PivotIOTalonFX implements PivotIO {
   TalonFX pivotMotor = new TalonFX(JsonConstants.pivotConstants.pivotMotorId);
@@ -107,6 +108,7 @@ public class PivotIOTalonFX implements PivotIO {
   }
 
   public void applyOutputs(PivotIOInputs outputs) {
+    Logger.recordOutput("pivotIOTalonFX/isOverriding", isOverriding);
     if (motorsDisabled) {
       pivotMotor.setControl(new VoltageOut(0.0));
       outputs.pivotClosedLoopOutput = 0.0;

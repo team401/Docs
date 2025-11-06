@@ -1,6 +1,5 @@
 package frc.robot.subsystems.descorer;
 
-import static edu.wpi.first.units.Units.Amps;
 import static edu.wpi.first.units.Units.KilogramSquareMeters;
 import static edu.wpi.first.units.Units.Meters;
 import static edu.wpi.first.units.Units.Radians;
@@ -24,7 +23,7 @@ public class PivotIOSim extends PivotIOTalonFX {
   // CANcoderSimState pivotCANcoderSimState = pivotRotorSensor.getSimState(); I dont think I need
   // this but I don't really know so I will leave it here until I get more infomation
 
-  TalonFXSimState pivotMotorSimState = pivotMotor.getSimState();
+  TalonFXSimState pivotMotorSimState;
 
   private final SingleJointedArmSim pivotSim =
       new SingleJointedArmSim(
@@ -40,6 +39,8 @@ public class PivotIOSim extends PivotIOTalonFX {
   public PivotIOSim() {
     super();
 
+    pivotMotorSimState = pivotMotor.getSimState();
+
     // Initialize sim state so that the first periodic runs with accurate data
     updateSimState();
   }
@@ -47,7 +48,6 @@ public class PivotIOSim extends PivotIOTalonFX {
   MutAngle lastPivotAngle = Radians.mutable(0.0);
 
   private void updateSimState() {
-
     Angle pivotAngle = Radians.of(pivotSim.getAngleRads());
     AngularVelocity pivotVelocity = RadiansPerSecond.of(pivotSim.getVelocityRadPerSec());
 
@@ -68,6 +68,7 @@ public class PivotIOSim extends PivotIOTalonFX {
     pivotSim.setInputVoltage(pivotMotorSimState.getMotorVoltage());
     Logger.recordOutput("pivotSim/diffAngle", diffAngle.in(Rotations));
     Logger.recordOutput("pivotSim/position", pivotAngle.in(Rotations));
+    Logger.recordOutput("pivotSim/inputVoltage", pivotMotorSimState.getMotorVoltage());
   }
 
   @Override
@@ -78,8 +79,8 @@ public class PivotIOSim extends PivotIOTalonFX {
 
     super.updateInputs(inputs);
 
-    inputs.pivotSupplyCurrent.mut_replace(Amps.of(pivotMotorSimState.getSupplyCurrent()));
-    inputs.pivotStatorCurrent.mut_replace(
-        pivotMotor.getStatorCurrent().getValue()); // i changed this
+    // inputs.pivotSupplyCurrent.mut_replace(Amps.of(pivotMotorSimState.getSupplyCurrent()));
+    // inputs.pivotStatorCurrent.mut_replace(
+    //     pivotMotor.getStatorCurrent().getValue()); // i changed this
   }
 }

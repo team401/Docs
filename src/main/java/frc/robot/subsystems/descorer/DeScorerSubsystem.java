@@ -384,7 +384,6 @@ public class DeScorerSubsystem extends SubsystemBase {
   }
 
   public void descoreAt(Height height) {
-    setMotorsDisabled(false);
     if (height == Height.L2) {
       setGoalAngle(Degrees.of(5.0)); // find real value
     } else if (height == Height.L3) {
@@ -396,6 +395,5 @@ public class DeScorerSubsystem extends SubsystemBase {
   public void stopDescoring() {
     setGoalAngle(Degrees.of(0.0));
     sendGoalAngleToIO();
-    setMotorsDisabled(true);
   }
 }

@@ -11,8 +11,10 @@ public class TestModeManager {
     PivotClosedLoopTuning,
     WheelVoltageTuning,
     WheelClosedLoopTuning,
-    None, // Default test mode that does nothing until a new one is selected.
+    None; // Default test mode that does nothing until a new one is selected.
   }
+
+  private TestModeManager() {}
 
   private static SendableChooser<TestMode> testModeChooser;
 
