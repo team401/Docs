@@ -132,3 +132,12 @@ $ sudo reboot now
     one of which will be to activate `NetworkManager` as the default renderer for `netplan`.
     This should not cause any issues.
 
+## Changing BIOS settings
+
+To help improve performance, we've made the following changes to the BIOS:
+
+- Advanced -> Power & Performance -> CPU - Power Management Control -> View/Configure Turbo Options:
+    - Energy-efficient Turbo - OFF - Hopefully prevents a little bit of opportunistic throttling of turbo frequency
+- Boot -> Fast Boot - ON (boot faster??)
+
+We still need to find and modify the setting to make the coprocessor boot when power is applied (or, if it is already enabled, document it here!).
