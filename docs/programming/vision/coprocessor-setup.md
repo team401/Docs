@@ -90,7 +90,7 @@ netplan apply
 
     - If you need to know your assigned IP address, run `ip addr`. Look for
       a section that corresponds to the `wlp88s0` interface:
-```
+```text
 3: wlp88s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
     inet 10.90.161.58/16 brd 10.90.255.255 scope global dynamic noprefixroute wlp88s0
        valid_lft 34652sec preferred_lft 34652sec
