@@ -2,3 +2,4 @@
 _site/
 .python-version
 .vscode/
+.cache/
