@@ -33,6 +33,9 @@ theme:
     - navigation.expand
     - navigation.path
     - navigation.footer
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.preview
     - toc.follow
 
     # - toc.integrate
@@ -98,7 +101,9 @@ extra:
       link: https://www.youtube.com/@FRCTeam401CopperheadRobotics
 
 plugins:
-  - search
+  - optimize:
+      enabled: !ENV CI
+  - search:
   - group:
       enabled: !ENV CI
       plugins:
