@@ -22,6 +22,9 @@ jobs:
         with:
           python-version: "3.10"
 
+      - name: Install pngquant
+        run: sudo apt-get update && sudo apt-get install -y pngquant
+
       - name: Install uv and enable cache
         uses: astral-sh/setup-uv@v6.5.0
         with:
