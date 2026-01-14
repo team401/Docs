@@ -1,0 +1,16 @@
+
+Usage on Linux:
+
+- make sure you have pngquant installed
+- either install `uv` and run `uv run mkdocs serve` (for instance)
+- or create a virtual environment, activate it, install the
+  packages in `requirements.txt` into it and then just run `mkdocs`
+
+Usage on Windows 11:
+- Python 3.14 is not supported by Pillow, which is one of the packages needed for mkdocs
+- Use Python 3.12 instead
+- You need to install pngquant.  You may download a Windows binary from [pngquant.org](pngquant.org)
+  and place it in a directory in your `PATH`.
+- We have not found a way to make this work with Smart App Control (SAC). You may need to turn SAC off.
+
+Make sure to run `mkdocs build` to test; this is what the CI will run.
