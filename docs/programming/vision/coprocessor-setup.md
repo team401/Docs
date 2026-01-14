@@ -125,6 +125,14 @@ network:
     netplan apply
     ```
 
+    - Add the IP address to the login prompt.  To that end, change `/etc/issue` to read
+```text
+Ubuntu 24.04.3 LTS \n \l
+IP: \4
+```
+    This should allow us to learn which IP address the box acquired without needing to
+    attach a keyboard to it.
+
     - Reboot the machine with `shutdown -r now`.
 
     - The machine should boot up without delay and connect to the network.

@@ -1,5 +1,7 @@
 
 _site/
+site/
+.venv/
 .python-version
 .vscode/
 .cache/
