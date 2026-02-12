@@ -14,7 +14,7 @@ FRC Team 401: Copperhead Robotics">
         <link rel="canonical" href="https://team401.github.io/Docs/programming/vision/coprocessor-setup/">
       
       
-        <link rel="prev" href="../apriltags/">
+        <link rel="prev" href="../camera-setup/">
       
       
         <link rel="next" href="../overlayroot/">
@@ -1152,6 +1152,8 @@ FRC Team 401: Copperhead Robotics" />
       
         
       
+        
+      
     
     
     
@@ -1261,6 +1263,34 @@ FRC Team 401: Copperhead Robotics" />
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../camera-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting Up The Cameras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1342,6 +1372,34 @@ FRC Team 401: Copperhead Robotics" />
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Installing Photonvision.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-photonvision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrading PhotonVision
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-the-coprocessor-later" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging the Coprocessor Later
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1509,6 +1567,34 @@ FRC Team 401: Copperhead Robotics" />
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Installing Photonvision.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-photonvision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrading PhotonVision
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-the-coprocessor-later" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging the Coprocessor Later
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1722,30 +1808,10 @@ In this example, <code>10.90.161.58</code> is the IP address assigned.</p>
 <li>
 <p>Install a text editor like Vim (<code>apt install vim</code>).</p>
 </li>
-</ul>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Add the setup for the static ethernet. In <code>/etc/netplan</code>,  create <code>10-ethernet-static.yaml</code> with this content:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">network</span><span class="p">:</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">ethernets</span><span class="p">:</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nt">enp89s0</span><span class="p">:</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">      </span><span class="nt">optional</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">      </span><span class="nt">dhcp4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="nt">dhcp6</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">      </span><span class="nt">addresses</span><span class="p">:</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.4.1.11/24</span>
-</code></pre></div>
-    where <code>enp89s0</code> should be the name of the Ethernet interface from the previous step.
-    Change the permissions to satisfy netplan's expectations:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>chmod<span class="w"> </span>go-r<span class="w"> </span>/etc/netplan/10-ethernet-static.yaml
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>netplan<span class="w"> </span>apply
-</code></pre></div>
-<ul>
 <li>
 <p>Add the IP address to the login prompt.  To that end, change <code>/etc/issue</code> to read
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Ubuntu 24.04.3 LTS \n \l
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>IP: \4
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Ubuntu 24.04.3 LTS \n \l
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>IP: \4
 </code></pre></div>
 This should allow us to learn which IP address the box acquired without needing to
 attach a keyboard to it.</p>
@@ -1765,20 +1831,48 @@ The netplan configuration should be permanent.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> To install Photonvision, we are following the instructions for <a href="https://docs.photonvision.org/en/latest/docs/advanced-installation/sw_install/other-coprocessors.html">Other Debian-Based Co-Processor Installation</a>.</li>
 </ul>
 <p>Currently, these are:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$<span class="w"> </span>wget<span class="w"> </span>https://git.io/JJrEP<span class="w"> </span>-O<span class="w"> </span>install.sh
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>install.sh
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>$<span class="w"> </span>sudo<span class="w"> </span>./install.sh
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>$<span class="w"> </span>sudo<span class="w"> </span>reboot<span class="w"> </span>now
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>wget<span class="w"> </span>https://git.io/JJrEP<span class="w"> </span>-O<span class="w"> </span>install.sh
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>install.sh
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>$<span class="w"> </span>sudo<span class="w"> </span>./install.sh
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>$<span class="w"> </span>sudo<span class="w"> </span>reboot<span class="w"> </span>now
 </code></pre></div>
-   This will install the latest version of PhotonVision.
-   For whatever reason, Photonvision will make a number of configuration changes,
-   one of which will be to activate <code>NetworkManager</code> as the default renderer for <code>netplan</code>.
-   This should not cause any issues.</p>
-<p>After Photonvision is installed and running, visit the URL of the machine
+   This will install the latest version of PhotonVision.</p>
+<p>The install script will run through a number of prompts. Choose the default settings.
+   One of the prompt will be asking whether PhotonVision should manage the machine's
+   networking settings.</p>
+<p>Although we may revisit this decision in the future, on our current coprocessors,
+   we have this flag activated, that is, we let PhotonVision manage networking.
+   PhotonVision will activate <code>NetworkManager</code> as the default renderer for <code>netplan</code>,
+   and use <code>nmcli</code> to create configurations.</p>
+<p>This means that the static IP configuration will have to be done through
+   the web UI as follows:
+   after Photonvision is installed and running, visit the URL of the machine
    using port 5800; for instance, <code>http://10.90.161.58:5800/</code> where you need to replace <code>10.90.161.58</code>
    with the IP reported by <code>ip a</code>.  Note that your laptop must be connected to the
    same network (typically, WiFi network) as the MiniPC.</p>
+<p>Go to network settings, enter the team number (401) and select 10.4.1.11 as the
+   IP address.  You'll get an error if the coprocessor is not connected to the robot
+   network, but it should work.</p>
+<h3 id="upgrading-photonvision">Upgrading PhotonVision<a class="headerlink" href="#upgrading-photonvision" title="Permanent link"></a></h3>
+<p>PhotonVision releases are <a href="https://github.com/PhotonVision/photonvision/releases">available here</a>.
+Updates involve downloading the latest .jar file for <code>linuxx64</code>, (say <code>photonvision-v2026.2.2-linuxx64.jar</code>),
+and then replacing <code>/opt/photonvision/photonvision.jar</code> with it.</p>
+<h3 id="debugging-the-coprocessor-later">Debugging the Coprocessor Later<a class="headerlink" href="#debugging-the-coprocessor-later" title="Permanent link"></a></h3>
+<p>If it it's not reachable on the network, attach keyboard and monitor via HDMI.
+You may have to hit Enter to get a login prompt (or reboot).</p>
 <h2 id="changing-bios-settings">Changing BIOS settings<a class="headerlink" href="#changing-bios-settings" title="Permanent link"></a></h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> To make sure the coprocessor turns on when power is provided, you must change
+a BIOS setting.  For the TrigKey PC, this is a bit obscured:</p>
+<ul>
+<li>Hold down the DEL key when booting.</li>
+<li>Look for Chipset settings.</li>
+<li>Look for PCH-IO Configuration</li>
+<li>Look for "State after G3" -- set this to S0 (not S5).</li>
+</ul>
+</li>
+</ul>
 <p>To help improve performance, we've made the following changes to the BIOS:</p>
 <ul>
 <li>Advanced -&gt; Power &amp; Performance -&gt; CPU - Power Management Control -&gt; View/Configure Turbo Options:<ul>
@@ -1787,7 +1881,6 @@ The netplan configuration should be permanent.</p>
 </li>
 <li>Boot -&gt; Fast Boot - ON (boot faster??)</li>
 </ul>
-<p>We still need to find and modify the setting to make the coprocessor boot when power is applied (or, if it is already enabled, document it here!).</p>
 
 
 
@@ -1810,7 +1903,7 @@ The netplan configuration should be permanent.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 14, 2026 00:42:05 UTC">January 14, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 12, 2026 14:16:19 UTC">February 12, 2026</span>
   </span>
 
     
@@ -1857,7 +1950,7 @@ The netplan configuration should be permanent.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../apriltags/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using AprilTags">
+          <a href="../camera-setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Setting Up The Cameras">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1867,7 +1960,7 @@ The netplan configuration should be permanent.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Using AprilTags
+                Setting Up The Cameras
               </div>
             </div>
           </a>
