@@ -105,26 +105,6 @@ netplan apply
 
     - Install a text editor like Vim (`apt install vim`).
 
-- [x] Add the setup for the static ethernet. In `/etc/netplan`,  create `10-ethernet-static.yaml` with this content:
-```yaml
-network:
-  version: 2
-  ethernets:
-    enp89s0:
-      optional: true
-      dhcp4: false
-      dhcp6: false
-      addresses:
-        - 10.4.1.11/24
-```
-    where `enp89s0` should be the name of the Ethernet interface from the previous step.
-    Change the permissions to satisfy netplan's expectations:
-
-    ```bash
-    chmod go-r /etc/netplan/10-ethernet-static.yaml
-    netplan apply
-    ```
-
     - Add the IP address to the login prompt.  To that end, change `/etc/issue` to read
 ```text
 Ubuntu 24.04.3 LTS \n \l
@@ -150,16 +130,47 @@ $ sudo ./install.sh
 $ sudo reboot now
 ```
    This will install the latest version of PhotonVision.
-   For whatever reason, Photonvision will make a number of configuration changes,
-   one of which will be to activate `NetworkManager` as the default renderer for `netplan`.
-   This should not cause any issues.
 
-   After Photonvision is installed and running, visit the URL of the machine
+   The install script will run through a number of prompts. Choose the default settings.
+   One of the prompt will be asking whether PhotonVision should manage the machine's
+   networking settings.
+
+   Although we may revisit this decision in the future, on our current coprocessors,
+   we have this flag activated, that is, we let PhotonVision manage networking.
+   PhotonVision will activate `NetworkManager` as the default renderer for `netplan`,
+   and use `nmcli` to create configurations.
+
+   This means that the static IP configuration will have to be done through
+   the web UI as follows:
+   after Photonvision is installed and running, visit the URL of the machine
    using port 5800; for instance, `http://10.90.161.58:5800/` where you need to replace `10.90.161.58`
    with the IP reported by `ip a`.  Note that your laptop must be connected to the
    same network (typically, WiFi network) as the MiniPC.
 
+   Go to network settings, enter the team number (401) and select 10.4.1.11 as the
+   IP address.  You'll get an error if the coprocessor is not connected to the robot
+   network, but it should work.
+
+### Upgrading PhotonVision
+
+PhotonVision releases are [available here](https://github.com/PhotonVision/photonvision/releases).
+Updates involve downloading the latest .jar file for `linuxx64`, (say `photonvision-v2026.2.2-linuxx64.jar`),
+and then replacing `/opt/photonvision/photonvision.jar` with it.
+
+### Debugging the Coprocessor Later
+
+If it it's not reachable on the network, attach keyboard and monitor via HDMI.
+You may have to hit Enter to get a login prompt (or reboot).
+
 ## Changing BIOS settings
+
+- [x] To make sure the coprocessor turns on when power is provided, you must change
+a BIOS setting.  For the TrigKey PC, this is a bit obscured:
+
+    - Hold down the DEL key when booting.
+    - Look for Chipset settings.
+    - Look for PCH-IO Configuration
+    - Look for "State after G3" -- set this to S0 (not S5).
 
 To help improve performance, we've made the following changes to the BIOS:
 
@@ -167,4 +178,3 @@ To help improve performance, we've made the following changes to the BIOS:
     - Energy-efficient Turbo - OFF - Hopefully prevents a little bit of opportunistic throttling of turbo frequency
 - Boot -> Fast Boot - ON (boot faster??)
 
-We still need to find and modify the setting to make the coprocessor boot when power is applied (or, if it is already enabled, document it here!).
