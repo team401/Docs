@@ -1740,14 +1740,14 @@ FRC Team 401: Copperhead Robotics" />
 <li>Many of the next steps will require administrator permissions.</li>
 </ul>
 <p>Enter a root shell with:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span>
-</code></pre></div>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span>
+</span></code></pre></div></td></tr></table></div>
 <p>Now that you have elevated permissions, <strong>be very careful</strong> as many confirmations will be skipped.</p>
 <ul>
 <li>First, check what interfaces you have with:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ip<span class="w"> </span>link
-</code></pre></div>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>ip<span class="w"> </span>link
+</span></code></pre></div></td></tr></table></div>
 <p>You should see something like <code>wlp88s0</code>. Look for one that starts with <code>wl</code> for a wireless interface.
 Also look for one that starts with <code>en</code>, such as <code>enp89s0</code>. This will be your wired Ethernet interface.</p>
 </li>
@@ -1759,26 +1759,38 @@ Also look for one that starts with <code>en</code>, such as <code>enp89s0</code>
 <p>To that end, you need to create two files in <code>/etc/netplan</code>.
 Since you don't have an editor, you need to write these files with cat.
 To set up Wi-Fi, create a file such as <code>20-wifi-chromebook.yaml</code> in <code>/etc/netplan</code> with this content:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># cat &gt; /etc/netplan/20-wifi-chromebook.yaml</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">network</span><span class="p">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">wifis</span><span class="p">:</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">wlp88s0</span><span class="p">:</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="nt">optional</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">access-points</span><span class="p">:</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="s">&quot;access</span><span class="nv"> </span><span class="s">point</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">SSID&quot;</span><span class="p p-Indicator">:</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">          </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;xxxxxx&quot;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="nt">dhcp4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">      </span><span class="nt">dhcp6</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="l l-Scalar l-Scalar-Plain">^D  &lt;- just type Control-D here</span>
-</code></pre></div>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># cat &gt; /etc/netplan/20-wifi-chromebook.yaml</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nt">network</span><span class="p">:</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="nt">wifis</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">wlp88s0</span><span class="p">:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">      </span><span class="nt">optional</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">      </span><span class="nt">access-points</span><span class="p">:</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="s">&quot;access</span><span class="nv"> </span><span class="s">point</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">SSID&quot;</span><span class="p p-Indicator">:</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">          </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;xxxxxx&quot;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">      </span><span class="nt">dhcp4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">      </span><span class="nt">dhcp6</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="l l-Scalar l-Scalar-Plain">^D  &lt;- just type Control-D here</span>
+</span></code></pre></div></td></tr></table></div>
 Replace <code>wlp88s0</code> with the name of the WiFi interface you learned earlier.
 Replace <code>access point name SSID</code> with the SSID of your access point, and enter the WiFi password.
 Make sure to keep the double quotes.
 Finally, run (from a root shell),
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>chmod<span class="w"> </span>go-r<span class="w"> </span>/etc/netplan/20-wifi-chromebook.yaml
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>netplan<span class="w"> </span>apply
-</code></pre></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>chmod<span class="w"> </span>go-r<span class="w"> </span>/etc/netplan/20-wifi-chromebook.yaml
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>netplan<span class="w"> </span>apply
+</span></code></pre></div></td></tr></table></div>
 This will render (=apply) this network configuration.</p>
 </li>
 <li class="task-list-item">
@@ -1791,10 +1803,12 @@ This will render (=apply) this network configuration.</p>
 <li>
 <p>If you need to know your assigned IP address, run <code>ip addr</code>. Look for
   a section that corresponds to the <code>wlp88s0</code> interface:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>3: wlp88s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    inet 10.90.161.58/16 brd 10.90.255.255 scope global dynamic noprefixroute wlp88s0
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>       valid_lft 34652sec preferred_lft 34652sec
-</code></pre></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>3: wlp88s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    inet 10.90.161.58/16 brd 10.90.255.255 scope global dynamic noprefixroute wlp88s0
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>       valid_lft 34652sec preferred_lft 34652sec
+</span></code></pre></div></td></tr></table></div>
 In this example, <code>10.90.161.58</code> is the IP address assigned.</p>
 </li>
 <li>
@@ -1810,9 +1824,10 @@ In this example, <code>10.90.161.58</code> is the IP address assigned.</p>
 </li>
 <li>
 <p>Add the IP address to the login prompt.  To that end, change <code>/etc/issue</code> to read
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Ubuntu 24.04.3 LTS \n \l
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>IP: \4
-</code></pre></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Ubuntu 24.04.3 LTS \n \l
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>IP: \4
+</span></code></pre></div></td></tr></table></div>
 This should allow us to learn which IP address the box acquired without needing to
 attach a keyboard to it.</p>
 </li>
@@ -1831,11 +1846,14 @@ The netplan configuration should be permanent.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> To install Photonvision, we are following the instructions for <a href="https://docs.photonvision.org/en/latest/docs/advanced-installation/sw_install/other-coprocessors.html">Other Debian-Based Co-Processor Installation</a>.</li>
 </ul>
 <p>Currently, these are:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>wget<span class="w"> </span>https://git.io/JJrEP<span class="w"> </span>-O<span class="w"> </span>install.sh
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>install.sh
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>$<span class="w"> </span>sudo<span class="w"> </span>./install.sh
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>$<span class="w"> </span>sudo<span class="w"> </span>reboot<span class="w"> </span>now
-</code></pre></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>$<span class="w"> </span>wget<span class="w"> </span>https://git.io/JJrEP<span class="w"> </span>-O<span class="w"> </span>install.sh
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>install.sh
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>$<span class="w"> </span>sudo<span class="w"> </span>./install.sh
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>$<span class="w"> </span>sudo<span class="w"> </span>reboot<span class="w"> </span>now
+</span></code></pre></div></td></tr></table></div>
    This will install the latest version of PhotonVision.</p>
 <p>The install script will run through a number of prompts. Choose the default settings.
    One of the prompt will be asking whether PhotonVision should manage the machine's
