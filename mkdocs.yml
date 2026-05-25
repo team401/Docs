@@ -99,8 +99,8 @@ extra:
       link: https://www.youtube.com/@FRCTeam401CopperheadRobotics
 
 plugins:
-  - optimize:
-      enabled: !ENV CI
+  - offline:
+      enabled: !ENV [OFFLINE, false]
   - search:
   - group:
       enabled: !ENV CI
